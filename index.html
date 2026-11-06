@@ -905,7 +905,7 @@
         "publisher": {
           "@id": "https://se.informatics.buu.ac.th/#organization"
         },
-        "dateModified": "2026-04-02"
+        "dateModified": "2026-11-06"
       },
       {
         "@type": "CollegeOrUniversity",
@@ -935,7 +935,7 @@
         "educationalCredentialAwarded": "Bachelor of Science (Software Engineering)",
         "inLanguage": "th-TH",
         "isAccessibleForFree": true,
-        "dateModified": "2026-04-02"
+        "dateModified": "2026-11-06"
       }
     ]
   }
@@ -1551,21 +1551,21 @@
             const startDate = new Date(`${item.registrationStart}T00:00:00`);
             const endDate = new Date(`${item.registrationEnd}T23:59:59`);
   
-            if (now < startDate) {
-              return { status: 'upcoming', statusLabel: 'ยังไม่ถึงวันเปิดรับสมัคร' };
-            }
-  
-            if (now <= endDate) {
+            if (now >= startDate && now <= endDate) {
               return { status: 'open', statusLabel: 'เปิดรับสมัครอยู่' };
             }
   
-            return { status: 'closed', statusLabel: 'ปิดรับสมัคร' };
+            return null;
           }
   
-          return {
-            status: item.status || 'closed',
-            statusLabel: item.statusLabel || (item.status === 'open' ? 'เปิดรับสมัครอยู่' : 'ปิดรับสมัคร')
-          };
+          if (item.status === 'open') {
+            return {
+              status: 'open',
+              statusLabel: item.statusLabel || 'เปิดรับสมัครอยู่'
+            };
+          }
+  
+          return null;
         };
   
         const sanitizeCredits = (credits = {}) => {
@@ -1585,18 +1585,16 @@
             const borderClass = isActive ? 'border-red-600 bg-red-50/60' : 'border-slate-200 bg-white';
             const roundClass = isActive ? 'text-red-700 bg-white' : 'text-slate-500 bg-slate-100';
             const statusInfo = getAdmissionStatus(item);
-            const statusClass = statusInfo.status === 'open'
-              ? 'bg-emerald-100 text-emerald-700 ring-green-500/20'
-              : statusInfo.status === 'upcoming'
-                ? 'bg-amber-100 text-amber-700 ring-amber-500/20'
-                : 'bg-slate-200 text-slate-600 ring-slate-500/20';
+            const statusBadge = (statusInfo && statusInfo.status === 'open')
+              ? `<span class="bg-emerald-100 text-emerald-700 ring-green-500/20 text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset whitespace-nowrap">${statusInfo.statusLabel}</span>`
+              : '';
   
             return `
               <button type="button" data-admission-round-index="${index}"
                 class="ui-card-compact text-left h-full border ${borderClass}">
                 <div class="flex items-start justify-between gap-3">
                   <span class="${roundClass} font-bold text-xs px-3 py-1 rounded-lg inline-block">${item.round}</span>
-                  <span class="${statusClass} text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset whitespace-nowrap">${statusInfo.statusLabel}</span>
+                  ${statusBadge}
                 </div>
                 <h4 class="font-extrabold text-xl mt-3 tracking-tight text-slate-800">${item.title}</h4>
                 <p class="text-slate-600 text-sm mt-2 leading-relaxed">${item.description || ''}</p>
@@ -1777,21 +1775,14 @@
             const startDate = new Date(`${item.registrationStart}T00:00:00`);
             const endDate = new Date(`${item.registrationEnd}T23:59:59`);
   
-            if (now < startDate) {
-              return { status: 'upcoming', label: 'Upcoming' };
-            }
-  
-            if (now <= endDate) {
+            if (now >= startDate && now <= endDate) {
               return { status: 'open', label: 'Open Now' };
             }
-  
-            return { status: 'closed', label: 'Closed' };
+            return null;
           }
   
-          const status = item.status || 'upcoming';
-          if (status === 'open') return { status, label: 'Open Now' };
-          if (status === 'closed') return { status, label: 'Closed' };
-          return { status: 'upcoming', label: 'Upcoming' };
+          if (item.status === 'open') return { status: 'open', label: 'Open Now' };
+          return null;
         };
   
         if (!Array.isArray(items) || items.length === 0) {
@@ -1801,11 +1792,9 @@
   
         container.innerHTML = items.map((item, index) => {
           const statusInfo = getTimelineStatus(item);
-          const badgeClass = statusInfo.status === 'open'
-            ? 'bg-emerald-100 text-emerald-700 ring-green-500/20'
-            : statusInfo.status === 'closed'
-              ? 'bg-slate-200 text-slate-600 ring-slate-500/20'
-              : 'bg-amber-100 text-amber-700 ring-amber-500/20';
+          const statusBadge = (statusInfo && statusInfo.status === 'open')
+            ? `<span class="text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset bg-emerald-100 text-emerald-700 ring-green-500/20">${statusInfo.label}</span>`
+            : '';
   
           return `
             <div class="admission-timeline-item relative pl-10">
@@ -1814,7 +1803,7 @@
               <div class="bg-white border border-slate-200 rounded-2xl p-4 md:p-5 shadow-sm">
                 <div class="flex flex-wrap items-center gap-2 justify-between">
                   <p class="text-sm font-bold text-red-600">${item.period || ''}</p>
-                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset ${badgeClass}">${statusInfo.label}</span>
+                  ${statusBadge}
                 </div>
                 <h4 class="text-lg font-extrabold text-slate-900 mt-2">${item.title || ''}</h4>
                 <p class="text-slate-600 text-sm mt-1 leading-relaxed">${item.description || ''}</p>
