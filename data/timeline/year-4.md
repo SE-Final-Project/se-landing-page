@@ -10,5 +10,11 @@
 ### ภาพรวมเมื่อเรียนจบ
 คุณจะไม่ใช่แค่นักเขียนโปรแกรม (Programmer) แต่จะเป็น **"วิศวกรซอฟต์แวร์ (Software Engineer)"** ที่เข้าใจทั้งธุรกิจ การบริหารจัดการโครงการ การทำงานเป็นทีม และการสร้างซอฟต์แวร์ที่มีคุณภาพพร้อมใช้งานจริง
 
+### ผลงานในรายวิชา สัมมนาวิศวกรรมซอฟต์แวร์ (Seminar Showcase)
+สามารถรับชมบันทึกการนำเสนอผลงานสัมมนาวิชาการของนิสิตแต่ละปีการศึกษาได้ทาง YouTube Playlist:
+- [Seminar ปีการศึกษา 2567](https://www.youtube.com/watch?v=dRR4leR7Ah0&list=PLIpuo20_xgwJVeflB0oa5tzE63dVD6Wqw)
+- [Seminar ปีการศึกษา 2566](https://www.youtube.com/watch?v=431ASPE9Trc&list=PLIpuo20_xgwJvIWW8IHuqKEjxHrOgut8q)
+- [Seminar ปีการศึกษา 2565](https://www.youtube.com/watch?v=OJI7KBGEslU&list=PLIpuo20_xgwKg-N_w3qY0xXOX78q7Xsa0)
+
 ### ภาพบรรยากาศ
 ![รูปรวม SE#12 ในรายวิชาสัมมนาวิศวกรรมซอฟต์แวร์](./images/byese12.jpg)
