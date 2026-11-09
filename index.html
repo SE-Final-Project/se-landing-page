@@ -905,7 +905,7 @@
         "publisher": {
           "@id": "https://se.informatics.buu.ac.th/#organization"
         },
-        "dateModified": "2026-04-02"
+        "dateModified": "2026-11-06"
       },
       {
         "@type": "CollegeOrUniversity",
@@ -935,7 +935,7 @@
         "educationalCredentialAwarded": "Bachelor of Science (Software Engineering)",
         "inLanguage": "th-TH",
         "isAccessibleForFree": true,
-        "dateModified": "2026-04-02"
+        "dateModified": "2026-11-06"
       }
     ]
   }
@@ -968,6 +968,7 @@
           <a href="#admission" class="ui-nav-link">การรับสมัคร</a>
           <a href="#program-overview" class="ui-nav-link">หลักสูตร</a>
           <a href="#timeline" class="ui-nav-link">Timeline</a>
+          <a href="#seminar" class="ui-nav-link">ผลงานสัมมนา</a>
           <a href="#future-work" class="ui-nav-link">งานที่ทำได้ในอนาคต</a>
           <a href="#faq" class="ui-nav-link">FAQ</a>
           <a href="#portal" class="ui-nav-link text-red-600">ระบบสารสนเทศ</a>
@@ -1004,6 +1005,10 @@
           <a href="#timeline" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-timeline"></i></span>
             Timeline
+          </a>
+          <a href="#seminar" class="ui-nav-item">
+            <span class="w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center text-red-600 shrink-0"><i class="fa-brands fa-youtube"></i></span>
+            ผลงานสัมมนา
           </a>
           <a href="#future-work" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-briefcase"></i></span>
@@ -1256,6 +1261,28 @@
     </div>
   </section>
 
+  <!-- Seminar Showcase Section -->
+  <section id="seminar" class="py-20 bg-white scroll-mt-20 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12 px-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wider mb-4 border border-red-200">
+          <i class="fa-brands fa-youtube text-red-600 text-sm"></i>
+          <span>Student Showcase • YouTube Playlist</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
+          ผลงานในรายวิชา <span class="text-red-600">สัมมนาวิศวกรรมซอฟต์แวร์</span>
+        </h2>
+        <p class="text-slate-500 mt-4 text-lg reveal reveal-delay-100 max-w-3xl mx-auto">
+          รับชมการนำเสนอหัวข้อสัมมนาวิชาการและการค้นคว้าเทคโนโลยีทางวิศวกรรมซอฟต์แวร์ของนิสิตชั้นปีที่ 4 ในแต่ละปีการศึกษา
+        </p>
+      </div>
+
+      <div id="seminar-container" class="max-w-5xl mx-auto" style="min-height: 480px;">
+        <!-- Seminar content injected here via JavaScript -->
+      </div>
+    </div>
+  </section>
+
   <!-- Tech Stack Section -->
   <section class="py-20 bg-slate-900 text-white scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -1295,15 +1322,16 @@
         </div>
 
         <div class="relative md:rounded-2xl overflow-hidden border md:border-slate-200 md:bg-slate-100">
+          <!-- shortcut: uses Meta's legacy show_posts flag; switch back once tabs=timeline returns posts. -->
           <iframe title="Software Engineering BUU Facebook Timeline"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSoftEngBUU&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSoftEngBUU&show_posts=true&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"
             width="500" height="700" class="w-full max-w-[500px] h-[520px] sm:h-[620px] md:h-[700px] mx-auto block"
             style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
             loading="lazy"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
           </iframe>
-          <div class="absolute inset-0" aria-hidden="true"></div>
-          <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent" aria-hidden="true">
+          <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" aria-hidden="true">
           </div>
         </div>
 
@@ -1517,6 +1545,137 @@
         }
       }
   
+      function renderSeminarShowcase(items = []) {
+        const container = document.getElementById('seminar-container');
+        if (!container) return;
+
+        if (!Array.isArray(items) || items.length === 0) {
+          container.innerHTML = '<p class="text-slate-500 text-center">กำลังอัปเดตข้อมูลผลงานสัมมนา</p>';
+          return;
+        }
+
+        let selectedIndex = 0;
+
+        const render = () => {
+          const current = items[selectedIndex] || items[0];
+          const embedUrl = `https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(current.playlistId)}`;
+
+          container.innerHTML = `
+            <!-- Year Selector Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
+              ${items.map((item, index) => {
+                const isActive = index === selectedIndex;
+                const activeClass = isActive
+                  ? 'bg-red-600 text-white shadow-lg shadow-red-600/30 ring-2 ring-red-600'
+                  : 'bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900';
+                const badge = index === 0
+                  ? `<span class="ml-1.5 px-2 py-0.5 text-[10px] font-extrabold uppercase rounded-full ${isActive ? 'bg-white/25 text-white' : 'bg-red-100 text-red-600'}">ล่าสุด</span>`
+                  : '';
+                return `
+                  <button type="button"
+                    data-seminar-index="${index}"
+                    class="px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 flex items-center ${activeClass}">
+                    <span>${item.academicYear || item.title}</span>
+                    ${badge}
+                  </button>
+                `;
+              }).join('')}
+            </div>
+
+            <!-- Main Video Player -->
+            <div class="ui-card-elevated mobile-flat-shell overflow-hidden p-3 sm:p-5 md:p-6 mb-8">
+              <div class="relative w-full rounded-2xl overflow-hidden bg-slate-950 shadow-inner" style="aspect-ratio: 16 / 9;">
+                <iframe
+                  id="seminar-player-iframe"
+                  title="${current.title}"
+                  src="${embedUrl}"
+                  class="w-full h-full absolute inset-0 border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  loading="lazy">
+                </iframe>
+              </div>
+
+              <!-- Video Info & CTA -->
+              <div class="mt-5 sm:mt-6 flex flex-col md:flex-row md:items-center justify-between gap-4 pt-4 border-t border-slate-100">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-red-100 text-red-700">
+                      <i class="fa-brands fa-youtube text-red-600"></i> YouTube Playlist
+                    </span>
+                    <span class="text-xs text-slate-400 font-semibold">• ${current.academicYear || ''}</span>
+                  </div>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">${current.title}</h3>
+                  <p class="text-slate-600 text-sm mt-1 max-w-2xl">${current.description || ''}</p>
+                </div>
+
+                <a href="${current.url}" target="_blank" rel="noopener noreferrer"
+                  class="ui-btn ui-btn-md bg-red-600 hover:bg-red-500 text-white font-bold inline-flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-red-900/20">
+                  <i class="fa-brands fa-youtube text-lg"></i>
+                  <span>เปิดดูใน YouTube</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Cards Grid for All Years -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              ${items.map((item, index) => {
+                const isActive = index === selectedIndex;
+                const border = isActive ? 'border-red-500 ring-2 ring-red-500/20 bg-red-50/40' : 'border-slate-200 hover:border-slate-300 bg-white';
+                return `
+                  <div class="ui-card-compact border rounded-2xl p-4 transition-all duration-200 flex flex-col justify-between ${border}">
+                    <div>
+                      <div class="flex items-center justify-between gap-2 mb-2">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-lg ${isActive ? 'bg-red-600 text-white' : 'bg-slate-100 text-slate-600'}">
+                          ${item.year ? `ปี ${item.year}` : item.academicYear}
+                        </span>
+                        <a href="${item.url}" target="_blank" rel="noopener noreferrer"
+                          class="text-slate-400 hover:text-red-600 text-xs font-bold inline-flex items-center gap-1"
+                          title="เปิดใน YouTube">
+                          <i class="fa-brands fa-youtube text-base text-red-600"></i>
+                        </a>
+                      </div>
+                      <h4 class="font-extrabold text-slate-900 text-base mb-1">${item.title}</h4>
+                      <p class="text-slate-500 text-xs line-clamp-2">${item.description || ''}</p>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                      <button type="button" data-seminar-index="${index}"
+                        class="text-xs font-bold ${isActive ? 'text-red-600' : 'text-slate-700 hover:text-red-600'} inline-flex items-center gap-1">
+                        <i class="fa-solid ${isActive ? 'fa-circle-play text-red-600' : 'fa-play text-xs'}"></i>
+                        ${isActive ? 'กำลังเล่นอยู่นี้' : 'เลือกรับชม'}
+                      </button>
+                      <a href="${item.url}" target="_blank" rel="noopener noreferrer"
+                        class="text-xs text-slate-400 hover:text-red-600 flex items-center gap-1">
+                        <span>เปิดบน YouTube</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                      </a>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          `;
+
+          container.querySelectorAll('[data-seminar-index]').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const idx = Number(btn.getAttribute('data-seminar-index'));
+              if (!Number.isNaN(idx) && idx !== selectedIndex) {
+                selectedIndex = idx;
+                render();
+                const player = document.getElementById('seminar-player-iframe');
+                if (player) {
+                  player.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+              }
+            });
+          });
+        };
+
+        render();
+      }
+
       function renderUniqueSellingPoints(items = []) {
         const container = document.getElementById('usp-grid');
         if (!container) return;
@@ -1551,21 +1710,21 @@
             const startDate = new Date(`${item.registrationStart}T00:00:00`);
             const endDate = new Date(`${item.registrationEnd}T23:59:59`);
   
-            if (now < startDate) {
-              return { status: 'upcoming', statusLabel: 'ยังไม่ถึงวันเปิดรับสมัคร' };
-            }
-  
-            if (now <= endDate) {
+            if (now >= startDate && now <= endDate) {
               return { status: 'open', statusLabel: 'เปิดรับสมัครอยู่' };
             }
   
-            return { status: 'closed', statusLabel: 'ปิดรับสมัคร' };
+            return null;
           }
   
-          return {
-            status: item.status || 'closed',
-            statusLabel: item.statusLabel || (item.status === 'open' ? 'เปิดรับสมัครอยู่' : 'ปิดรับสมัคร')
-          };
+          if (item.status === 'open') {
+            return {
+              status: 'open',
+              statusLabel: item.statusLabel || 'เปิดรับสมัครอยู่'
+            };
+          }
+  
+          return null;
         };
   
         const sanitizeCredits = (credits = {}) => {
@@ -1585,18 +1744,16 @@
             const borderClass = isActive ? 'border-red-600 bg-red-50/60' : 'border-slate-200 bg-white';
             const roundClass = isActive ? 'text-red-700 bg-white' : 'text-slate-500 bg-slate-100';
             const statusInfo = getAdmissionStatus(item);
-            const statusClass = statusInfo.status === 'open'
-              ? 'bg-emerald-100 text-emerald-700 ring-green-500/20'
-              : statusInfo.status === 'upcoming'
-                ? 'bg-amber-100 text-amber-700 ring-amber-500/20'
-                : 'bg-slate-200 text-slate-600 ring-slate-500/20';
+            const statusBadge = (statusInfo && statusInfo.status === 'open')
+              ? `<span class="bg-emerald-100 text-emerald-700 ring-green-500/20 text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset whitespace-nowrap">${statusInfo.statusLabel}</span>`
+              : '';
   
             return `
               <button type="button" data-admission-round-index="${index}"
                 class="ui-card-compact text-left h-full border ${borderClass}">
                 <div class="flex items-start justify-between gap-3">
                   <span class="${roundClass} font-bold text-xs px-3 py-1 rounded-lg inline-block">${item.round}</span>
-                  <span class="${statusClass} text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset whitespace-nowrap">${statusInfo.statusLabel}</span>
+                  ${statusBadge}
                 </div>
                 <h4 class="font-extrabold text-xl mt-3 tracking-tight text-slate-800">${item.title}</h4>
                 <p class="text-slate-600 text-sm mt-2 leading-relaxed">${item.description || ''}</p>
@@ -1777,21 +1934,14 @@
             const startDate = new Date(`${item.registrationStart}T00:00:00`);
             const endDate = new Date(`${item.registrationEnd}T23:59:59`);
   
-            if (now < startDate) {
-              return { status: 'upcoming', label: 'Upcoming' };
-            }
-  
-            if (now <= endDate) {
+            if (now >= startDate && now <= endDate) {
               return { status: 'open', label: 'Open Now' };
             }
-  
-            return { status: 'closed', label: 'Closed' };
+            return null;
           }
   
-          const status = item.status || 'upcoming';
-          if (status === 'open') return { status, label: 'Open Now' };
-          if (status === 'closed') return { status, label: 'Closed' };
-          return { status: 'upcoming', label: 'Upcoming' };
+          if (item.status === 'open') return { status: 'open', label: 'Open Now' };
+          return null;
         };
   
         if (!Array.isArray(items) || items.length === 0) {
@@ -1801,11 +1951,9 @@
   
         container.innerHTML = items.map((item, index) => {
           const statusInfo = getTimelineStatus(item);
-          const badgeClass = statusInfo.status === 'open'
-            ? 'bg-emerald-100 text-emerald-700 ring-green-500/20'
-            : statusInfo.status === 'closed'
-              ? 'bg-slate-200 text-slate-600 ring-slate-500/20'
-              : 'bg-amber-100 text-amber-700 ring-amber-500/20';
+          const statusBadge = (statusInfo && statusInfo.status === 'open')
+            ? `<span class="text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset bg-emerald-100 text-emerald-700 ring-green-500/20">${statusInfo.label}</span>`
+            : '';
   
           return `
             <div class="admission-timeline-item relative pl-10">
@@ -1814,7 +1962,7 @@
               <div class="bg-white border border-slate-200 rounded-2xl p-4 md:p-5 shadow-sm">
                 <div class="flex flex-wrap items-center gap-2 justify-between">
                   <p class="text-sm font-bold text-red-600">${item.period || ''}</p>
-                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset ${badgeClass}">${statusInfo.label}</span>
+                  ${statusBadge}
                 </div>
                 <h4 class="text-lg font-extrabold text-slate-900 mt-2">${item.title || ''}</h4>
                 <p class="text-slate-600 text-sm mt-1 leading-relaxed">${item.description || ''}</p>
@@ -2554,12 +2702,13 @@
         const portalContainer = document.getElementById('portal-grid');
   
         try {
-          const [uspData, admissionData, admissionTimelineData, programOverviewData, timelineData, techStackData, portalData, quickLinksData, contactData, faqData, futureWorkData, partnersData] = await Promise.all([
+          const [uspData, admissionData, admissionTimelineData, programOverviewData, timelineData, seminarData, techStackData, portalData, quickLinksData, contactData, faqData, futureWorkData, partnersData] = await Promise.all([
             fetchJson('./data/usp.json'),
             fetchJson('./data/admission.json'),
             fetchJson('./data/admission-timeline.json'),
             fetchJson('./data/program-overview.json'),
             fetchJson('./data/timeline.json'),
+            fetchJson('./data/seminar.json'),
             fetchJson('./data/tech-stack.json'),
             fetchJson('./data/portal.json'),
             fetchJson('./data/quick-links.json'),
@@ -2574,6 +2723,7 @@
             renderAdmissionTimeline(admissionTimelineData);
           await renderTimeline(timelineData);
             renderProgramOverview(programOverviewData);
+          renderSeminarShowcase(seminarData);
           renderTechStack(techStackData);
           renderPortals(portalData);
           renderQuickLinks(quickLinksData);
@@ -3344,7 +3494,7 @@
           // Wait for dynamic content to be rendered before observing
           setTimeout(() => {
             // Add reveal class to dynamic grids if they don't have it
-            const grids = ['#admission-grid > button', '#admission-timeline-list > .admission-timeline-item', '#timeline-list > .relative', '#program-overview-content > div', '#portal-grid > a', '#future-work-grid > div'];
+            const grids = ['#admission-grid > button', '#admission-timeline-list > .admission-timeline-item', '#timeline-list > .relative', '#program-overview-content > div', '#seminar-container > div', '#portal-grid > a', '#future-work-grid > div'];
             grids.forEach(selector => {
               document.querySelectorAll(selector).forEach((el, index) => {
                 el.classList.add('reveal');

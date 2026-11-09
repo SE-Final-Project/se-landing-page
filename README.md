@@ -19,14 +19,18 @@
 ├── images/                     # รูปทั่วไป (เช่น hero, timeline photos)
 └── data/
     ├── admission.json
+    ├── admission-timeline.json
     ├── contact.json
     ├── faq.json
     ├── future-work.json
+    ├── hero-config.json
     ├── hero-images.json
     ├── partners.json
     ├── partners/               # โลโก้พาร์ทเนอร์
     ├── portal.json
+    ├── program-overview.json
     ├── quick-links.json
+    ├── seminar.json            # เพลย์ลิสต์ผลงานสัมมนาวิศวกรรมซอฟต์แวร์ (YouTube)
     ├── tech-stack.json
     ├── timeline.json
     ├── timeline/               # เนื้อหา markdown รายปี (year-1.md ... year-4.md)

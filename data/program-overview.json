@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-11-06",
   "degree": {
     "thaiFull": "วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)",
     "thaiShort": "วท.บ. (วิศวกรรมซอฟต์แวร์)",
@@ -42,15 +42,15 @@
   "curriculumDocuments": [
     {
       "title": "หลักสูตรปรับปรุง พ.ศ. 2565",
-      "url": "https://www.informatics.buu.ac.th/2020/wp-content/uploads/2023/06/BSc-SE-2565-Web.pdf"
+      "url": "https://www.informatics.buu.ac.th/wp-content/uploads/2023/06/BSc-SE-2565-Web.pdf"
     },
     {
       "title": "หลักสูตรปรับปรุง พ.ศ. 2564",
-      "url": "https://www.informatics.buu.ac.th/2020/wp-content/uploads/2021/01/2564_BSc_SE_ProgramSpec_Complete-Web.pdf"
+      "url": "https://www.informatics.buu.ac.th/wp-content/uploads/2021/01/2564_BSc_SE_ProgramSpec_Complete-Web.pdf"
     },
     {
       "title": "หลักสูตรปรับปรุง พ.ศ. 2559",
-      "url": "https://www.informatics.buu.ac.th/2020/wp-content/uploads/2018/10/BSc-SE-ProgramSpec-59.pdf"
+      "url": "https://www.informatics.buu.ac.th/wp-content/uploads/2018/10/BSc-SE-ProgramSpec-59.pdf"
     }
   ],
   "plo": {
