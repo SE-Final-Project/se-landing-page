@@ -108,30 +108,6 @@
         opacity: 0.16;
       }
 
-      .hero-orb {
-        position: absolute;
-        pointer-events: none;
-        border-radius: 9999px;
-        filter: blur(74px);
-        opacity: 0.55;
-        mix-blend-mode: screen;
-      }
-
-      .hero-orb-primary {
-        width: min(45vw, 560px);
-        height: min(45vw, 560px);
-        right: -8rem;
-        top: -8rem;
-        background: radial-gradient(circle, rgba(255, 228, 230, 0.62) 0%, rgba(252, 165, 165, 0.26) 45%, rgba(239, 68, 68, 0) 80%);
-      }
-
-      .hero-orb-secondary {
-        width: min(38vw, 460px);
-        height: min(38vw, 460px);
-        left: -10rem;
-        bottom: -10rem;
-        background: radial-gradient(circle, rgba(190, 24, 93, 0.5) 0%, rgba(220, 38, 38, 0.2) 45%, rgba(127, 29, 29, 0) 80%);
-      }
 
       .hero-layout {
         display: grid;
@@ -213,15 +189,6 @@
         backdrop-filter: blur(12px);
       }
 
-      .hero-stage-glow {
-        position: absolute;
-        inset: auto 6% -13% 6%;
-        height: 28%;
-        border-radius: 9999px;
-        background: radial-gradient(circle, rgba(254, 202, 202, 0.5), transparent 70%);
-        filter: blur(18px);
-        pointer-events: none;
-      }
 
       .hero-carousel-frame {
         position: relative;
@@ -809,7 +776,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start; /* logos share one top line; names may wrap below */
         gap: 0.5rem;
         flex-shrink: 0;
       }
@@ -834,6 +801,7 @@
         color: #64748b;
         text-align: center;
         line-height: 1.3;
+        min-height: 2.6em; /* reserve 2 lines: equal card heights */
       }
   
       @keyframes partners-marquee-scroll {
@@ -991,35 +959,35 @@
         <!-- Links -->
         <nav class="px-4 py-3 divide-y divide-slate-100">
           <a href="#facebook-posts" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-newspaper"></i></span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-newspaper"></i></span>
             ข่าวสาร
           </a>
           <a href="#admission" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-file-signature"></i></span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-file-signature"></i></span>
             การรับสมัคร
           </a>
           <a href="#program-overview" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-book-open"></i></span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-book-open"></i></span>
             หลักสูตร
           </a>
           <a href="#timeline" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-timeline"></i></span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-timeline"></i></span>
             Timeline
           </a>
           <a href="#seminar" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center text-red-600 shrink-0"><i class="fa-brands fa-youtube"></i></span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-brands fa-youtube"></i></span>
             ผลงานสัมมนา
           </a>
           <a href="#future-work" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-briefcase"></i></span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-briefcase"></i></span>
             งานในอนาคต
           </a>
           <a href="#faq" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-circle-question"></i></span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-circle-question"></i></span>
             FAQ
           </a>
           <a href="#portal" class="ui-nav-item bg-red-50 text-red-600">
-            <span class="w-9 h-9 rounded-lg bg-red-100 flex items-center justify-center text-red-500 shrink-0"><i class="fa-solid fa-door-open"></i></span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-door-open"></i></span>
             ระบบสารสนเทศ
           </a>
         </nav>
@@ -1031,8 +999,6 @@
 
   <!-- Hero Section -->
   <section id="about" class="hero-premium text-white px-4 overflow-hidden relative scroll-mt-20 min-h-[100svh]" aria-labelledby="hero-title">
-    <div class="hero-orb hero-orb-primary" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-secondary" aria-hidden="true"></div>
 
     <div class="max-w-7xl mx-auto min-h-[100svh] py-12 md:py-16 lg:py-20 flex flex-col justify-center relative z-10">
       <div class="hero-layout">
@@ -1091,7 +1057,6 @@
               <div id="hero-carousel-dots" class="absolute bottom-3 inset-x-0 flex items-center justify-center gap-2"></div>
             </div>
 
-            <div class="hero-stage-glow" aria-hidden="true"></div>
           </div>
         </aside>
       </div>
@@ -1202,7 +1167,7 @@
         และฝึกความเป็นผู้นำ/ผู้ตาม (PLO8) ตั้งแต่วันแรกที่เข้าเรียน เพื่อให้ทุกคนมีเพื่อนร่วมทางที่คอยสนับสนุนและผลักดันกันตลอด 4 ปี
       </p>
       
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto reveal reveal-delay-300">
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-left reveal reveal-delay-300">
         <div class="ui-card-dark">
           <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <i class="fa-solid fa-handshake-angle text-3xl text-blue-400"></i>
@@ -1233,7 +1198,7 @@
     <div class="max-w-5xl mx-auto px-4">
       <div class="text-center mb-20 px-4">
         <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">สงสัยไหม...
-          <br /><br /><span class="text-red-600">ตลอด 4 ปีที่ SE</span> เรียนอะไรบ้าง?</h2>
+          <br /><span class="text-red-600">ตลอด 4 ปีที่ SE</span> เรียนอะไรบ้าง?</h2>
         <p class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">Roadmap
           การเรียนรู้ที่จะเปลี่ยนคุณให้เป็น Software Engineer ตัวจริง</p>
       </div>
@@ -1265,10 +1230,6 @@
   <section id="seminar" class="py-20 bg-white scroll-mt-20 border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12 px-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wider mb-4 border border-red-200">
-          <i class="fa-brands fa-youtube text-red-600 text-sm"></i>
-          <span>Student Showcase • YouTube Playlist</span>
-        </div>
         <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
           ผลงานในรายวิชา <span class="text-red-600">สัมมนาวิศวกรรมซอฟต์แวร์</span>
         </h2>
@@ -1681,10 +1642,8 @@
         if (!container) return;
   
         container.innerHTML = items.map(item => `
-          <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 text-2xl shadow-inner">
-              <i class="${item.icon}"></i>
-            </div>
+          <div class="flex flex-col items-start text-left border-t-2 border-red-600 pt-5">
+            <i class="${item.icon} text-2xl text-red-600 mb-4" aria-hidden="true"></i>
             <h3 class="text-xl font-bold mb-3 text-slate-900">${item.title}</h3>
             <p class="text-slate-600">${item.description}</p>
           </div>
@@ -2133,7 +2092,7 @@
   
         container.innerHTML = items.map(item => `
           <a href="${item.url}" target="_blank" class="portal-card ui-card-elevated group flex items-start gap-5 h-full">
-            <div class="${item.themeColor} text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-md ${item.shadow} group-hover:scale-105 transition shrink-0 ring-4 ring-red-50">
+            <div class="${item.themeColor} text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-md ${item.shadow} shrink-0">
               <i class="${item.icon} text-xl"></i>
             </div>
             <div class="flex flex-col flex-grow min-h-[4rem]">
@@ -2684,7 +2643,7 @@
             : `<span class="text-xs font-extrabold text-slate-400 tracking-wide">${initials}</span>`;
   
           return `
-            <div class="partner-card grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105" title="${partnerName}">
+            <div class="partner-card grayscale hover:grayscale-0 transition-[filter] duration-300" title="${partnerName}">
               <div class="partner-logo-shell">
                 ${logoMarkup}
               </div>
