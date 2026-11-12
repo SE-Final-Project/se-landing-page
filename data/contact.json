@@ -26,6 +26,7 @@
   {
     "type": "text",
     "icon": "fa-solid fa-location-dot mt-1 text-red-600",
-    "label": "169 ถนนลงหาดบางแสน ตำบลแสนสุข<br>อำเภอเมือง จังหวัดชลบุรี 20131"
+    "label": "169 ถนนลงหาดบางแสน ตำบลแสนสุข<br>อำเภอเมือง จังหวัดชลบุรี 20131",
+    "labelEn": "169 Longhad Bangsaen Rd., Saensuk,<br>Mueang, Chonburi 20131, Thailand"
   }
 ]

@@ -5,7 +5,9 @@
     "url": "https://profile.informatics.buu.ac.th",
     "icon": "fa-solid fa-address-book",
     "themeColor": "bg-red-700",
-    "shadow": "shadow-red-200"
+    "shadow": "shadow-red-200",
+    "titleEn": "IF Student Profile",
+    "descriptionEn": "Student competencies repository and portfolio tracking system"
   },
   {
     "title": "ผลงานนิสิต (Online Exhibition)",
@@ -13,7 +15,9 @@
     "url": "https://prepro.informatics.buu.ac.th/exhi",
     "icon": "fa-solid fa-palette",
     "themeColor": "bg-red-500",
-    "shadow": "shadow-red-100"
+    "shadow": "shadow-red-100",
+    "titleEn": "Student Projects (Online Exhibition)",
+    "descriptionEn": "Showcase platform for senior student capstone and course projects"
   },
   {
     "title": "ระบบ AppDOSI",
@@ -21,7 +25,9 @@
     "url": "http://se.informatics.buu.ac.th/AppDOSI",
     "icon": "fa-solid fa-file-signature",
     "themeColor": "bg-red-600",
-    "shadow": "shadow-red-200"
+    "shadow": "shadow-red-200",
+    "titleEn": "AppDOSI System",
+    "descriptionEn": "Progress tracking system for Personal Software Process (PSP)"
   },
   {
     "title": "Gamification - OSSD",
@@ -29,7 +35,9 @@
     "url": "http://se.informatics.buu.ac.th/gami_ossd",
     "icon": "fa-solid fa-trophy",
     "themeColor": "bg-rose-600",
-    "shadow": "shadow-rose-200"
+    "shadow": "shadow-rose-200",
+    "titleEn": "Gamification - OSSD",
+    "descriptionEn": "Scrumification platform for Open Source Software Developers camp"
   },
   {
     "title": "ระบบสัมมนา (Seminar)",
@@ -37,7 +45,9 @@
     "url": "http://se.informatics.buu.ac.th/seminar",
     "icon": "fa-solid fa-microphone-lines",
     "themeColor": "bg-red-900",
-    "shadow": "shadow-red-300"
+    "shadow": "shadow-red-300",
+    "titleEn": "Seminar System",
+    "descriptionEn": "Academic seminar topic and schedule management system"
   },
   {
     "title": "Learning Programming Platforms",
@@ -45,6 +55,8 @@
     "url": "http://lpp.informatics.buu.ac.th",
     "icon": "fa-solid fa-laptop-code",
     "themeColor": "bg-red-800",
-    "shadow": "shadow-red-300"
+    "shadow": "shadow-red-300",
+    "titleEn": "Learning Programming Platforms",
+    "descriptionEn": "Interactive programming practice and automated grading platform"
   }
 ]

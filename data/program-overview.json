@@ -1,55 +1,60 @@
 {
   "lastUpdated": "2026-11-06",
+  "programName": "วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)",
+  "programNameEn": "Bachelor of Science in Software Engineering",
   "degree": {
     "thaiFull": "วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)",
-    "thaiShort": "วท.บ. (วิศวกรรมซอฟต์แวร์)",
     "englishFull": "Bachelor of Science (Software Engineering)",
+    "thaiShort": "วท.บ. (วิศวกรรมซอฟต์แวร์)",
     "englishShort": "B.Sc. (Software Engineering)"
   },
-  "description": "วิศวกรรมซอฟต์แวร์ (Software Engineering: SE) เป็นศาสตร์ด้านการพัฒนาซอฟต์แวร์อย่างเป็นระบบ ตั้งแต่การเก็บความต้องการ ออกแบบ พัฒนา ตรวจสอบ ประเมินผล ติดตามโครงการ ประเมินต้นทุน และดูแลความมั่นคงปลอดภัย เพื่อให้ซอฟต์แวร์ทำงานได้ตามเป้าหมายภายใต้เงื่อนไขที่กำหนด",
-  "studyFormat": [
-    "หลักสูตรระดับปริญญาตรี 4 ปี",
-    "จัดการเรียนการสอนเป็นภาษาไทย",
-    "เน้นประสบการณ์ภาคปฏิบัติและการทำงานจริงร่วมกับสถานประกอบการ"
-  ],
-  "totalCredits": 131,
   "creditStructure": [
     {
       "category": "หมวดวิชาศึกษาทั่วไป",
-      "credits": "ไม่น้อยกว่า 30 หน่วยกิต",
-      "note": "ทักษะพื้นฐานและการเรียนรู้เชิงบูรณาการ"
+      "categoryEn": "General Education",
+      "credits": 30
     },
     {
-      "category": "หมวดวิชาเฉพาะ",
-      "credits": "89 หน่วยกิต",
-      "note": "แกนหลักด้านวิศวกรรมซอฟต์แวร์"
+      "category": "หมวดวิชาเฉพาะ (แกน / เอกบังคับ / เอกเลือก)",
+      "categoryEn": "Major Core & Electives",
+      "credits": 94
     },
     {
       "category": "หมวดวิชาเลือกเสรี",
-      "credits": "ไม่น้อยกว่า 6 หน่วยกิต",
-      "note": "เปิดโอกาสเลือกเรียนตามความสนใจ"
-    },
-    {
-      "category": "วิชาประสบการณ์ภาคสนาม",
-      "credits": "6 หน่วยกิต",
-      "note": "สหกิจศึกษาและประสบการณ์ในสถานประกอบการจริง"
+      "categoryEn": "Free Electives",
+      "credits": 6
     }
+  ],
+  "studyFormat": [
+    "หลักสูตรระดับปริญญาตรี 4 ปี",
+    "แผนการเรียนแบบปกติ (เรียนทฤษฎีควบคู่ปฏิบัติการ)",
+    "มีแผนสหกิจศึกษา (CWIE) ปฏิบัติงานจริงในสถานประกอบการ 1 ภาคการศึกษา"
+  ],
+  "studyFormatEn": [
+    "4-Year Bachelor of Science Degree",
+    "Integrated theory and laboratory practice",
+    "Full 1-semester on-site Cooperative Education (CWIE)"
   ],
   "tuition": {
     "perSemester": "23,000 บาท",
-    "total": "184,000 บาท"
+    "perSemesterEn": "23,000 THB",
+    "total": "184,000 บาท",
+    "totalEn": "184,000 THB"
   },
   "curriculumDocuments": [
     {
       "title": "หลักสูตรปรับปรุง พ.ศ. 2565",
+      "titleEn": "Revised Curriculum 2022 (B.E. 2565)",
       "url": "https://www.informatics.buu.ac.th/wp-content/uploads/2023/06/BSc-SE-2565-Web.pdf"
     },
     {
       "title": "หลักสูตรปรับปรุง พ.ศ. 2564",
+      "titleEn": "Revised Curriculum 2021 (B.E. 2564)",
       "url": "https://www.informatics.buu.ac.th/wp-content/uploads/2021/01/2564_BSc_SE_ProgramSpec_Complete-Web.pdf"
     },
     {
       "title": "หลักสูตรปรับปรุง พ.ศ. 2559",
+      "titleEn": "Revised Curriculum 2016 (B.E. 2559)",
       "url": "https://www.informatics.buu.ac.th/wp-content/uploads/2018/10/BSc-SE-ProgramSpec-59.pdf"
     }
   ],
@@ -58,20 +63,35 @@
       "ปฏิบัติตนด้วยความซื่อสัตย์สุจริต ตรงต่อเวลา และเคารพกฎระเบียบขององค์กรและสังคม",
       "อธิบายหลักการและทฤษฎีสำคัญด้านวิศวกรรมซอฟต์แวร์ได้อย่างถูกต้องตามหลักวิชาการ",
       "ประยุกต์ความรู้เพื่อแก้โจทย์การพัฒนาซอฟต์แวร์ตามแนวทางโอเพนซอร์ส",
-      "ใช้ภาษาและเครื่องมือโอเพนซอร์สที่เหมาะสมในการแก้ปัญหาด้านวิศวกรรมซอฟต์แวร์",
-      "สืบค้นและติดตามองค์ความรู้ใหม่ด้านวิศวกรรมซอฟต์แวร์ด้วยตนเองอย่างต่อเนื่อง",
-      "วิเคราะห์และออกแบบซอฟต์แวร์ขนาดกลางถึงขนาดใหญ่จากความต้องการจริงของผู้ใช้",
-      "พัฒนาซอฟต์แวร์ขนาดกลางถึงขนาดใหญ่ภายใต้สภาพแวดล้อมการทำงานจริง",
-      "ทำงานเป็นทีมได้ทั้งบทบาทผู้นำและผู้ตามเพื่อบรรลุเป้าหมายร่วม",
-      "สื่อสารด้วยการเขียนและการพูด พร้อมเลือกใช้รูปแบบการนำเสนอให้เหมาะกับสถานการณ์"
+      "วิเคราะห์ ออกแบบ และพัฒนาระบบซอฟต์แวร์ด้วยกระบวนการทางวิศวกรรมซอฟต์แวร์อย่างเป็นระบบ",
+      "บูรณาการทักษะวิชาชีพและเทคโนโลยีดิจิทัลเพื่อสร้างนวัตกรรมซอฟต์แวร์ที่ตอบสนองความต้องการของผู้ใช้",
+      "สื่อสารและนำเสนอผลงานทางวิชาการและวิชาชีพได้อย่างมีประสิทธิภาพทั้งภาษาไทยและสากล",
+      "ใช้เทคโนโลยีสารสนเทศ เครื่องมือวิศวกรรมซอฟต์แวร์ และการประมวลผลข้อมูลสมัยใหม่ได้อย่างเชี่ยวชาญ",
+      "ทำงานร่วมกับผู้อื่นในบทบาทผู้นำและสมาชิกทีมได้อย่างมีประสิทธิผลภายใต้ความหลากหลาย"
+    ],
+    "2565_en": [
+      "Demonstrate professional integrity, punctuality, and respect for organizational and social ethical standards.",
+      "Explain fundamental principles and theoretical foundations of modern software engineering.",
+      "Apply software engineering principles and open-source methodologies to solve complex real-world problems.",
+      "Analyze, design, and engineer software systems through systematic and disciplined development processes.",
+      "Integrate professional skills and emerging digital technologies to produce innovative user-centric software.",
+      "Communicate and present technical ideas effectively across local and international settings.",
+      "Proficiently utilize modern software engineering tools, cloud infrastructures, and data processing platforms.",
+      "Collaborate effectively in diverse teams with dynamic leadership and teamwork capabilities."
     ],
     "2564": [
-      "แสดงความซื่อสัตย์สุจริตที่เหมาะสมต่อวิชาชีพวิศวกรซอฟต์แวร์",
-      "ทำงานเป็นทีมได้ทั้งบทบาทผู้นำและผู้ตาม",
-      "อธิบายความรู้วิศวกรรมซอฟต์แวร์และใช้เครื่องมือตามกระบวนการพัฒนาซอฟต์แวร์วิถีโอเพนซอร์ส",
-      "ประยุกต์ความรู้และประสบการณ์เพื่อแก้ปัญหาในสถานการณ์จริง พร้อมนำกลับมาใช้ใหม่และต่อยอด",
-      "มีประสบการณ์ทำงานเป็นทีม แก้ปัญหาเฉพาะหน้า จัดลำดับความสำคัญภายใต้สภาพแวดล้อมจริง",
-      "สื่อสารด้วยการเขียนและการพูด พร้อมใช้รูปแบบการนำเสนอเชิงวิชาการได้เหมาะสม"
+      "มีคุณธรรม จริยธรรม และจรรยาบรรณวิชาชีพคอมพิวเตอร์",
+      "มีความรู้พื้นฐานและทักษะสำคัญในศาสตร์วิศวกรรมซอฟต์แวร์",
+      "สามารถประยุกต์ความรู้เพื่อแก้ปัญหาและพัฒนาระบบงานได้จริง",
+      "มีทักษะการสื่อสาร การทำงานเป็นทีม และการเรียนรู้ตลอดชีวิต"
+    ],
+    "2564_en": [
+      "Uphold professional ethics, moral values, and social responsibilities in computing.",
+      "Possess core foundational knowledge and competencies in software engineering disciplines.",
+      "Apply software engineering methodologies to analyze and implement functional enterprise systems.",
+      "Demonstrate effective interpersonal communication, agile teamwork, and lifelong learning habits."
     ]
-  }
+  },
+  "description": "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยบูรพา มุ่งเน้นการผลิตบัณฑิตที่มีทักษะการปฏิบัติจริง เข้าใจกระบวนการพัฒนาซอฟต์แวร์ตามมาตรฐานสากล พร้อมตอบสนองความต้องการของอุตสาหกรรมดิจิทัลในยุคปัจจุบัน",
+  "descriptionEn": "The Bachelor of Science in Software Engineering at Burapha University prepares students to become industry-ready software engineers equipped with modern agile processes, full-stack development skills, and international standards."
 }

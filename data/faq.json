@@ -1,30 +1,44 @@
 [
   {
     "question": "เข้าเรียนต้องเขียนโค้ดเป็นมาก่อนไหม?",
-    "answer": "ไม่จำเป็นครับ ทางหลักสูตรมีการปูพื้นฐานให้ตั้งแต่เริ่มในวิชา หลักการโปรแกรม (Programming Fundamental) ในปี 1 เทอม 1 เพื่อปรับพื้นฐานการคิดเชิงตรรกะและการแก้ปัญหาอย่างเป็นระบบ แต่ถ้าพอมีพื้นฐานมาบ้างก็จะช่วยให้เรียนรู้ได้สนุกและรวดเร็วขึ้นในช่วงแรกครับ"
+    "answer": "ไม่จำเป็นครับ ทางหลักสูตรมีการปูพื้นฐานให้ตั้งแต่เริ่มในวิชา หลักการโปรแกรม (Programming Fundamental) ในปี 1 เทอม 1 เพื่อปรับพื้นฐานการคิดเชิงตรรกะและการแก้ปัญหาอย่างเป็นระบบ แต่ถ้าพอมีพื้นฐานมาบ้างก็จะช่วยให้เรียนรู้ได้สนุกและรวดเร็วขึ้นในช่วงแรกครับ",
+    "questionEn": "Do I need to know how to code before enrolling?",
+    "answerEn": "Not at all. The curriculum starts from the ground up in Programming Fundamentals in Year 1, Semester 1 to build logical thinking and structured problem-solving skills. However, having some prior coding experience will help you learn faster and enjoy the initial courses."
   },
   {
     "question": "เข้ามาเรียนจะได้ทำเกมไหม?",
-    "answer": "ได้ลองทำแน่นอนครับ แม้เราจะเน้นการสร้างซอฟต์แวร์มาตรฐานสากล แต่ในชั้นปีที่ 1 เรามีวิชา ความคิดสร้างสรรค์เบื้องต้นและการประยุกต์ใช้ (Fundamental Creativity and Its Application) ที่จะให้น้องๆ ได้ใช้ทักษะการคิดนอกกรอบมาลองออกแบบและสร้างเกมขนาดเล็ก เพื่อเรียนรู้วิธีทำให้ซอฟต์แวร์สนุกและตอบสนองผู้ใช้งานได้ดีตลอด 1 เทอมครับ"
+    "answer": "ได้ลองทำแน่นอนครับ แม้เราจะเน้นการสร้างซอฟต์แวร์มาตรฐานสากล แต่ในชั้นปีที่ 1 เรามีวิชา ความคิดสร้างสรรค์เบื้องต้นและการประยุกต์ใช้ (Fundamental Creativity and Its Application) ที่จะให้น้องๆ ได้ใช้ทักษะการคิดนอกกรอบมาลองออกแบบและสร้างเกมขนาดเล็ก เพื่อเรียนรู้วิธีทำให้ซอฟต์แวร์สนุกและตอบสนองผู้ใช้งานได้ดีตลอด 1 เทอมครับ",
+    "questionEn": "Will I get to make games during my studies?",
+    "answerEn": "Definitely! While our focus is on international-standard software development, in Year 1 we have the course 'Fundamental Creativity and Its Application' where you will think outside the box to design and build mini-games, learning how to create engaging, responsive user experiences."
   },
   {
     "question": "จำเป็นต้องมีโน้ตบุ๊กหรือคอมพิวเตอร์ส่วนตัวตั้งแต่ปี 1 เลยไหม?",
-    "answer": "ในช่วงปีแรกยังไม่จำเป็นต้องมีก็ได้ครับ<br><br><strong>ปี 1:</strong> ทางคณะวิทยาการสารสนเทศมี ห้องปฏิบัติการคอมพิวเตอร์ (Lab) ที่ทันสมัยให้ใช้งานในชั่วโมงเรียนอยู่แล้ว หากต้องการทำงานกลุ่มหรือทบทวนบทเรียน น้องๆ สามารถใช้บริการห้องสมุดของคณะ (อยู่ที่ชั้น 2) ได้ครับ<br><br><strong>ปี 2 เป็นต้นไป:</strong> แนะนำว่าควรมีครับ เนื่องจากรูปแบบการเรียนจะเข้มข้นขึ้น มีการทำงานร่วมกับ \"มกุล\" (Cluster) และต้องลงพื้นที่เก็บ Requirement จริงกับสถานประกอบการ รวมถึงมี \"วิชาค่าย\" (Training Camp) ที่ต้องดึงศักยภาพการพัฒนาซอฟต์แวร์ออกมาอย่างเต็มที่ การมีโน้ตบุ๊กส่วนตัวจะช่วยให้การทำงานเป็นทีมสะดวก คล่องตัว และรองรับการทำงานได้ทุกที่ทุกเวลาครับ"
+    "answer": "ในช่วงปีแรกยังไม่จำเป็นต้องมีก็ได้ครับ<br><br><strong>ปี 1:</strong> ทางคณะวิทยาการสารสนเทศมี ห้องปฏิบัติการคอมพิวเตอร์ (Lab) ที่ทันสมัยให้ใช้งานในชั่วโมงเรียนอยู่แล้ว หากต้องการทำงานกลุ่มหรือทบทวนบทเรียน น้องๆ สามารถใช้บริการห้องสมุดของคณะ (อยู่ที่ชั้น 2) ได้ครับ<br><br><strong>ปี 2 เป็นต้นไป:</strong> แนะนำว่าควรมีครับ เนื่องจากรูปแบบการเรียนจะเข้มข้นขึ้น มีการทำงานร่วมกับ \"มกุล\" (Cluster) และต้องลงพื้นที่เก็บ Requirement จริงกับสถานประกอบการ รวมถึงมี \"วิชาค่าย\" (Training Camp) ที่ต้องดึงศักยภาพการพัฒนาซอฟต์แวร์ออกมาอย่างเต็มที่ การมีโน้ตบุ๊กส่วนตัวจะช่วยให้การทำงานเป็นทีมสะดวก คล่องตัว และรองรับการทำงานได้ทุกที่ทุกเวลาครับ",
+    "questionEn": "Is a personal laptop required right from Year 1?",
+    "answerEn": "In Year 1, it is not strictly required.<br><br><strong>Year 1:</strong> The Faculty of Informatics provides modern computer labs for hands-on classes. For group study or revision, students can use the faculty library on the 2nd floor.<br><br><strong>From Year 2 onwards:</strong> A personal laptop is strongly recommended as coursework intensifies, including collaboration in your 'Makul' (Cluster), real-world requirements gathering on-site, and training camps where you unleash your full development capabilities."
   },
   {
     "question": "จบวิศวกรรมซอฟต์แวร์มาทำงานอะไรได้บ้าง?",
-    "answer": "หลากหลายมากครับตั้งแต่ Software Engineer, System Analyst, Requirement Engineer, Tester/QA จนถึงระดับบริหารจัดการ (Project Manager) และ System Integrator"
+    "answer": "หลากหลายมากครับตั้งแต่ Software Engineer, System Analyst, Requirement Engineer, Tester/QA จนถึงระดับบริหารจัดการ (Project Manager) และ System Integrator",
+    "questionEn": "What careers can Software Engineering graduates pursue?",
+    "answerEn": "A wide spectrum of roles: Software Engineer, System Analyst, Requirement Engineer, QA/Test Engineer, DevOps Engineer, Project Manager, and System Integrator."
   },
   {
     "question": "ต้องเก่งคณิตศาสตร์ไหม?",
-    "answer": "ใช้ตรรกะ (Logic) เป็นหลักครับ คณิตศาสตร์จะได้ใช้เป็นพื้นฐานการคิดอย่างเป็นระบบ และวิชาเกี่ยวกับการประมวลผลอัลกอริทึม หากไม่เก่งมากก็สามารถเรียนปรับตัวได้ครับ"
+    "answer": "ใช้ตรรกะ (Logic) เป็นหลักครับ คณิตศาสตร์จะได้ใช้เป็นพื้นฐานการคิดอย่างเป็นระบบ และวิชาเกี่ยวกับการประมวลผลอัลกอริทึม หากไม่เก่งมากก็สามารถเรียนปรับตัวได้ครับ",
+    "questionEn": "Do I need to be exceptionally good at mathematics?",
+    "answerEn": "The core requirement is logic. Mathematics serves as a foundation for structured thinking and algorithmic analysis. Even if you're not a math genius, you can adapt smoothly with practice."
   },
   {
     "question": "สาขานี้เน้นการทำงานรูปแบบไหน?",
-    "answer": "เราเรียนแบบ Project-Based Learning เน้นวิถีโอเพนซอร์ส (Open Source Approach) และกระบวนการพัฒนาสากล (Agile) ทำงานเป็นทีมเหมือนบริษัทซอฟต์แวร์จริง"
+    "answer": "เราเรียนแบบ Project-Based Learning เน้นวิถีโอเพนซอร์ส (Open Source Approach) และกระบวนการพัฒนาสากล (Agile) ทำงานเป็นทีมเหมือนบริษัทซอฟต์แวร์จริง",
+    "questionEn": "What working style does this program emphasize?",
+    "answerEn": "We practice Project-Based Learning with an Open-Source mindset and global Agile/Scrum methodologies, working in collaborative teams just like in real tech companies."
   },
   {
     "question": "มีการฝึกงานหรือร่วมมือกับภาคอุตสาหกรรมไหม?",
-    "answer": "มีแน่นอนครับ นิสิตปี 4 ต้องออกสหกิจศึกษา (CWIE) ลงปฏิบัติงานจริงในสถานประกอบการนานกว่า 600 ชั่วโมงเต็ม (ประมาณ 4 เดือนเต็ม) โดยเฉพาะในเขต EEC ที่เป็นอุตสาหกรรมเป้าหมาย"
+    "answer": "มีแน่นอนครับ นิสิตปี 4 ต้องออกสหกิจศึกษา (CWIE) ลงปฏิบัติงานจริงในสถานประกอบการนานกว่า 600 ชั่วโมงเต็ม (ประมาณ 4 เดือนเต็ม) โดยเฉพาะในเขต EEC ที่เป็นอุตสาหกรรมเป้าหมาย",
+    "questionEn": "Are there internships or industry collaborations?",
+    "answerEn": "Absolutely. All Year 4 students participate in full-time Cooperative Education (CWIE) in partner companies for over 600 hours (approx. 4 full months), particularly within key industries in the Eastern Economic Corridor (EEC)."
   }
 ]

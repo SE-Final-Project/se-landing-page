@@ -210,6 +210,17 @@
           "condition": "รับผู้กำลังศึกษาระดับชั้นมัธยมศึกษาปีที่ 6",
           "detailsUrl": "https://regservice.buu.ac.th/"
         }
+      ],
+      "descriptionEn": "45 seats allocated based on qualifications and student portfolios under specialized sub-projects.",
+      "detailEn": "Regular Software Engineering program offers 45 seats in TCAS 1 across sub-projects including MOU, Special Quota, PRE BUU, SCiUS, Eastern Gems, and Nationwide Talents.",
+      "periodEn": "Period: According to university TCAS Portfolio announcements",
+      "examSubjectsEn": [],
+      "roundSpecificRequirementsEn": [
+        "Graduates from core curriculum high schools",
+        "International / Vocational / Non-formal / GED credentials not accepted",
+        "Must meet minimum GPAX and credit requirements",
+        "Certain sub-projects require graduation in the current academic year",
+        "Certain sub-projects have special health requirements (e.g., no color blindness)"
       ]
     },
     {
@@ -256,6 +267,20 @@
           "condition": "รับผู้กำลังศึกษาระดับชั้นมัธยมศึกษาปีที่ 6",
           "detailsUrl": "https://regservice.buu.ac.th/"
         }
+      ],
+      "descriptionEn": "25 seats allocated through regional quota across 12 Eastern provinces.",
+      "detailEn": "Quota round requires minimum GPAX and subject credits, along with minimum TGAT, TPAT3, and A-Level Applied Mathematics 1 scores.",
+      "periodEn": "Period: According to university TCAS Quota announcements",
+      "examSubjectsEn": [
+        "TGAT (Min. 30)",
+        "TPAT3 (Min. 20)",
+        "A-Level Applied Mathematics 1 (Min. 5)"
+      ],
+      "roundSpecificRequirementsEn": [
+        "Graduates from core curriculum high schools in 12 Eastern provinces",
+        "Studied in the Eastern region for at least 3 years or parents reside there",
+        "Must meet minimum GPAX and credit requirements",
+        "International / Vocational / Non-formal / GED credentials not accepted"
       ]
     },
     {
@@ -316,7 +341,20 @@
         ],
         "intake": 35
       },
-      "detailsUrl": "https://regservice.buu.ac.th/"
+      "detailsUrl": "https://regservice.buu.ac.th/",
+      "descriptionEn": "10 seats allocated via central examination scores and Admission scoring criteria.",
+      "detailEn": "Admission round considers weighted scores of GPAX, TGAT, TPAT3, and A-Level Applied Mathematics 1 for high school graduates.",
+      "periodEn": "Period: According to mytcas.com centralized announcements",
+      "examSubjectsEn": [
+        "TGAT (Min. 30)",
+        "TPAT3 (Min. 20)",
+        "A-Level Applied Mathematics 1 (Min. 5)"
+      ],
+      "roundSpecificRequirementsEn": [
+        "Graduates from accredited high schools nationwide",
+        "Must meet minimum GPAX and credit requirements",
+        "Vocational credentials not accepted"
+      ]
     }
   ],
   "commonQualifications": [
@@ -328,10 +366,17 @@
   ],
   "primaryCta": {
     "label": "รายละเอียดเพิ่มเติม (Reg Service)",
-    "url": "https://regservice.buu.ac.th/"
+    "url": "https://regservice.buu.ac.th/",
+    "labelEn": "Admission Details (Reg Service)"
   },
   "secondaryCta": {
     "label": "เข้าสู่ระบบ myTCAS",
-    "url": "https://www.mytcas.com/"
-  }
+    "url": "https://www.mytcas.com/",
+    "labelEn": "myTCAS Portal"
+  },
+  "commonQualificationsEn": [
+    "Graduates from Science-Math programs or accredited high schools meeting credit requirements",
+    "Strong passion for computing, coding, logic, and modern software technologies",
+    "Commitment to ethical values, intellectual curiosity, and collaborative teamwork"
+  ]
 }

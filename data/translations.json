@@ -1,0 +1,260 @@
+{
+  "th": {
+    "nav": {
+      "news": "ข่าวสาร",
+      "admission": "การรับสมัคร",
+      "program": "หลักสูตร",
+      "timeline": "Timeline",
+      "seminar": "ผลงานสัมมนา",
+      "career": "งานที่ทำได้ในอนาคต",
+      "faq": "FAQ",
+      "portal": "ระบบสารสนเทศ",
+      "langLabel": "ภาษา / Language"
+    },
+    "hero": {
+      "badge": "บัณฑิตพันธุ์ใหม่เพื่ออุตสาหกรรมดิจิทัล",
+      "titlePrefix": "Build the",
+      "titleHighlight": "Future",
+      "titleSuffix": "with Software",
+      "description": "หลักสูตรที่เน้นทักษะการสร้างซอฟต์แวร์ที่ใช้งานได้จริงในอุตสาหกรรม มุ่งเน้นกระบวนการพัฒนาที่มีประสิทธิภาพ และการฝึกประสบการณ์วิชาชีพในเขตเศรษฐกิจพิเศษ EEC",
+      "ctaAdmission": "ดูขั้นตอนสมัครเรียน",
+      "ctaPortal": "สำหรับนิสิต",
+      "quickWhat": "เรียนอะไร",
+      "quickApply": "สมัครอย่างไร",
+      "quickCareer": "จบแล้วทำงานอะไร",
+      "quickContact": "ช่องทางติดต่อ",
+      "exploreMore": "Explore More"
+    },
+    "discover": {
+      "title": "Discover <span class=\"text-red-600\">SE BUU</span>",
+      "subtitle": "ทำความรู้จักกับหลักสูตรวิศวกรรมซอฟต์แวร์ ผ่านภาพบรรยากาศการเรียนและการทำกิจกรรม"
+    },
+    "partners": {
+      "title": "เครือข่ายองค์กรพันธมิตรและสถานประกอบการ (CWIE Partners)"
+    },
+    "admission": {
+      "heading": "พร้อมที่จะมาเป็นครอบครัว <br class=\"md:hidden\" /><span class=\"text-red-600\">SE BUU</span> หรือยัง?",
+      "subtitle": "เตรียมตัวให้พร้อม! ส่องเส้นทางการสมัครและรอบการคัดเลือกล่าสุด (TCAS)",
+      "selectedRound": "รายละเอียดรอบที่เลือก",
+      "noVocational": "ไม่รับวุฒิ ปวช.",
+      "minCredits": "หน่วยกิตขั้นต่ำ",
+      "science": "วิทยาศาสตร์",
+      "math": "คณิตศาสตร์",
+      "english": "ภาษาต่างประเทศ",
+      "examSubjects": "วิชาที่ใช้คะแนน",
+      "noExamSubjects": "รอบนี้ไม่กำหนดวิชาคะแนนส่วนกลางเพิ่มเติม",
+      "conditions": "เงื่อนไขเฉพาะรอบ",
+      "defaultCondition": "ใช้เงื่อนไขทั่วไปตามประกาศรับสมัครของมหาวิทยาลัย",
+      "matrixTitle": "เทียบหน่วยกิตขั้นต่ำแต่ละรอบ",
+      "creditMatrixSub": "Credit Matrix",
+      "subjectGroup": "กลุ่มสาระ",
+      "commonQual": "คุณสมบัติที่ควรมี",
+      "timelineTitle": "Admission Timeline",
+      "timelineSubtitle": "ลำดับช่วงสำคัญตั้งแต่ประกาศรับสมัครจนถึงเริ่มเรียน",
+      "openStatus": "เปิดรับสมัครอยู่",
+      "viewMore": "ดูข้อมูลการรับสมัครเพิ่มเติม"
+    },
+    "makul": {
+      "heading": "\"มกุล (Cluster)\" — <span class=\"text-red-500\">More than a Team</span>",
+      "description": "เพื่อนร่วมชั้นเรียนหาได้ทั่วไป แต่เราสร้าง <strong>\"ทีมร่วมรบ\"</strong> <br>มกุล คือระบบกลุ่มย่อยที่จับคู่ให้นิสิตได้สร้างสัมพันธ์ เรียนรู้การทำงานร่วมกัน และฝึกความเป็นผู้นำ/ผู้ตาม (PLO8) ตั้งแต่วันแรกที่เข้าเรียน เพื่อให้ทุกคนมีเพื่อนร่วมทางที่คอยสนับสนุนและผลักดันกันตลอด 4 ปี",
+      "card1Title": "ปรับตัวง่าย ไม่ทิ้งใครไว้หลัง",
+      "card1Desc": "มีพี่ๆ และเพื่อนคอยพยุง แชร์เทคนิคการเรียน ทำให้ชีวิตเฟรชชี่ราบรื่นและอุ่นใจ",
+      "card2Title": "ฝึก Soft Skills ของจริง",
+      "card2Desc": "การทำงานเป็นทีมคือปัจจัยหลักในสาย Software Process ระบบนี้ปูพื้นฐานให้คุณทันที",
+      "card3Title": "สนุกกับกิจกรรมและทุนการศึกษา",
+      "card3Desc": "มีกิจกรรมหลากหลายและทุนการศึกษาให้ได้รับการสนับสนุนประสบการณ์ตลอดการศึกษา"
+    },
+    "timeline": {
+      "heading": "สงสัยไหม... <br /><br /><span class=\"text-red-600\">ตลอด 4 ปีที่ SE</span> เรียนอะไรบ้าง?",
+      "subtitle": "Roadmap การเรียนรู้ที่จะเปลี่ยนคุณให้เป็น Software Engineer ตัวจริง",
+      "readMore": "อ่านรายละเอียด",
+      "close": "ปิดหน้าต่าง"
+    },
+    "programOverview": {
+      "heading": "แผนการเรียนและ <span class=\"text-red-600\">หลักสูตร</span>",
+      "subtitle": "สรุปข้อมูลหลักสูตรที่ควรรู้ก่อนตัดสินใจสมัครเรียน",
+      "degreeLabel": "ชื่อปริญญา",
+      "thaiShortLabel": "ชื่อย่อภาษาไทย",
+      "englishShortLabel": "ชื่อย่อภาษาอังกฤษ",
+      "creditStructure": "โครงสร้างหน่วยกิต",
+      "totalCredits": "หน่วยกิตรวมตลอดหลักสูตร",
+      "creditsUnit": "หน่วยกิต",
+      "curriculumDocs": "เอกสารเล่มหลักสูตร",
+      "download": "ดาวน์โหลดเอกสาร",
+      "ploTitle": "ผลลัพธ์การเรียนรู้ที่คาดหวัง (PLOs)",
+      "tuition": "ค่าธรรมเนียมการศึกษา",
+      "tuitionPerTerm": "บาท / ภาคการศึกษา",
+      "tuitionTotal": "บาท (ตลอดหลักสูตร)",
+      "studyFormat": "รูปแบบการศึกษา"
+    },
+    "seminar": {
+      "badge": "Student Showcase • YouTube Playlist",
+      "heading": "ผลงานในรายวิชา <span class=\"text-red-600\">สัมมนาวิศวกรรมซอฟต์แวร์</span>",
+      "subtitle": "รับชมการนำเสนอหัวข้อสัมมนาวิชาการและการค้นคว้าเทคโนโลยีทางวิศวกรรมซอฟต์แวร์ของนิสิตชั้นปีที่ 4 ในแต่ละปีการศึกษา",
+      "latest": "ล่าสุด",
+      "openYoutube": "เปิดดูใน YouTube",
+      "nowPlaying": "กำลังเล่นอยู่นี้",
+      "selectToWatch": "เลือกรับชม"
+    },
+    "techStack": {
+      "heading": "เครื่องมือ <span class=\"text-red-500\">ภาษา และเนื้อหาที่เราจะได้เรียน</span>",
+      "subtitle": "ไม่ใช่แค่ทฤษฎี แต่เราจะได้ลงมือใช้เครื่องมือจริงที่ใช้ในอุตสาหกรรม"
+    },
+    "facebook": {
+      "heading": "อัปเดต <span class=\"text-red-600\">ข่าวสารจากสาขา</span>",
+      "subtitle": "ข่าวสารล่าสุดจากเพจวิศวกรรมซอฟต์แวร์ บูรพา",
+      "viewMore": "ดูเพิ่มเติมบน Facebook"
+    },
+    "portal": {
+      "heading": "รวมเครื่องมือสำหรับ <br class=\"md:hidden\" /><span class=\"text-red-600\">นิสิตปัจจุบัน</span>",
+      "subtitle": "แหล่งรวมระบบสำคัญและเครื่องมืออำนวยความสะดวก"
+    },
+    "futureWork": {
+      "heading": "จบไปแล้ว... <br /><span class=\"text-red-600\">อนาคตของคุณ</span> จะไปสุดที่ไหน?",
+      "subtitle": "ตัวอย่างอาชีพที่เปิดโอกาสให้กับนิสิต SE",
+      "roleBadge": "อาชีพสำหรับนิสิต SE",
+      "whatYouDo": "รายละเอียดสิ่งที่ต้องทำ",
+      "close": "ปิด"
+    },
+    "faq": {
+      "heading": "คำถาม <span class=\"text-red-600\">ที่พบบ่อย (FAQ)</span>",
+      "subtitle": "รวบรวมทุกข้อสงสัยให้ฉงนเกี่ยวกับการเรียน SE BUU"
+    },
+    "footer": {
+      "mission": "สร้างวิศวกรซอฟต์แวร์รุ่นใหม่ที่ขับเคลื่อนโลกด้วยนวัตกรรมและจริยธรรม ภายใต้คณะสารสนเทศศาสตร์ มหาวิทยาลัยบูรพา",
+      "slogan": "\"เรียนหนัก นอนดึก ความถึกต้องเรา วันหยุดไม่ได้หยุด วันลาไม่ได้ลา กลางวันนั่งหาว กลางคืนเฮฮา\"",
+      "quickLinks": "Quick Links",
+      "contactUs": "Contact Us",
+      "rights": "Software Engineering, Burapha University. All rights reserved."
+    }
+  },
+  "en": {
+    "nav": {
+      "news": "News",
+      "admission": "Admissions",
+      "program": "Curriculum",
+      "timeline": "Timeline",
+      "seminar": "Seminars",
+      "career": "Careers",
+      "faq": "FAQ",
+      "portal": "Student Portals",
+      "langLabel": "Language / ภาษา"
+    },
+    "hero": {
+      "badge": "Next-Gen Digital Workforce for Industry",
+      "titlePrefix": "Build the",
+      "titleHighlight": "Future",
+      "titleSuffix": "with Software",
+      "description": "A hands-on software engineering curriculum built for industry excellence, agile engineering processes, and professional co-op internships in Thailand's EEC digital corridor.",
+      "ctaAdmission": "How to Apply",
+      "ctaPortal": "For Students",
+      "quickWhat": "Curriculum",
+      "quickApply": "Admissions",
+      "quickCareer": "Careers",
+      "quickContact": "Contact Us",
+      "exploreMore": "Explore More"
+    },
+    "discover": {
+      "title": "Discover <span class=\"text-red-600\">SE BUU</span>",
+      "subtitle": "Get to know the Software Engineering BUU program through vibrant campus life, projects, and activities."
+    },
+    "partners": {
+      "title": "Industry & Cooperative Education Partners (CWIE Partners)"
+    },
+    "admission": {
+      "heading": "Ready to Join the <br class=\"md:hidden\" /><span class=\"text-red-600\">SE BUU</span> Family?",
+      "subtitle": "Get ready! Explore application pathways and the latest TCAS admission rounds.",
+      "selectedRound": "Selected Round Details",
+      "noVocational": "Vocational Diploma Not Accepted",
+      "minCredits": "Min. Credits",
+      "science": "Science",
+      "math": "Mathematics",
+      "english": "Foreign Language",
+      "examSubjects": "Required Exam Subjects",
+      "noExamSubjects": "No additional centralized exam scores required for this round",
+      "conditions": "Round-specific Requirements",
+      "defaultCondition": "Standard requirements according to official university announcements",
+      "matrixTitle": "Minimum Credit Matrix by Round",
+      "creditMatrixSub": "Credit Matrix",
+      "subjectGroup": "Subject Group",
+      "commonQual": "Recommended Qualifications",
+      "timelineTitle": "Admission Timeline",
+      "timelineSubtitle": "Key application milestones from announcement to first day of classes",
+      "openStatus": "Open Now",
+      "viewMore": "More Admission Details"
+    },
+    "makul": {
+      "heading": "\"Makul (Cluster)\" — <span class=\"text-red-500\">More than a Team</span>",
+      "description": "Classmates are everywhere, but here we forge a <strong>united squad</strong>.<br>Makul is our signature mentorship cluster pairing students to build friendships, collaborate, and nurture leadership/followership skills (PLO8) from Day 1 to graduation.",
+      "card1Title": "Smooth Transition, No One Left Behind",
+      "card1Desc": "Senior mentors and peers guide you with study strategies, making freshmen life warm and smooth.",
+      "card2Title": "Real-world Soft Skills",
+      "card2Desc": "Teamwork is fundamental in software engineering. Makul instills agile collaboration from the very start.",
+      "card3Title": "Engaging Activities & Scholarships",
+      "card3Desc": "Enjoy diverse community events, hackathons, and scholarship opportunities throughout your 4 years."
+    },
+    "timeline": {
+      "heading": "Curious About... <br /><br />What you will learn in <span class=\"text-red-600\">4 Years at SE</span>?",
+      "subtitle": "A 4-year learning roadmap that turns you into a true professional Software Engineer.",
+      "readMore": "Read Details",
+      "close": "Close Window"
+    },
+    "programOverview": {
+      "heading": "Study Plan & <span class=\"text-red-600\">Curriculum</span>",
+      "subtitle": "Key curriculum information you should know before deciding to apply.",
+      "degreeLabel": "Degree Title",
+      "thaiShortLabel": "Thai Abbrev.",
+      "englishShortLabel": "English Abbrev.",
+      "creditStructure": "Credit Structure",
+      "totalCredits": "Total Program Credits",
+      "creditsUnit": "Credits",
+      "curriculumDocs": "Curriculum Documents",
+      "download": "Download Document",
+      "ploTitle": "Program Learning Outcomes (PLOs)",
+      "tuition": "Tuition Fees",
+      "tuitionPerTerm": "THB / Semester",
+      "tuitionTotal": "THB (Entire Program)",
+      "studyFormat": "Study Format"
+    },
+    "seminar": {
+      "badge": "Student Showcase • YouTube Playlist",
+      "heading": "Student Showcase: <span class=\"text-red-600\">Software Engineering Seminar</span>",
+      "subtitle": "Watch 4th-year students present their academic seminar research and emerging technology evaluations.",
+      "latest": "Latest",
+      "openYoutube": "Open on YouTube",
+      "nowPlaying": "Now Playing",
+      "selectToWatch": "Watch Playlist"
+    },
+    "techStack": {
+      "heading": "Tools, <span class=\"text-red-500\">Languages & Technologies You'll Learn</span>",
+      "subtitle": "Not just theory — hands-on practice with industry-standard stacks and workflows."
+    },
+    "facebook": {
+      "heading": "Latest Updates from <span class=\"text-red-600\">SE BUU</span>",
+      "subtitle": "Recent news and activities from the Software Engineering BUU Facebook page.",
+      "viewMore": "View More on Facebook"
+    },
+    "portal": {
+      "heading": "Tools & Portals for <br class=\"md:hidden\" /><span class=\"text-red-600\">Current Students</span>",
+      "subtitle": "Central hub for essential academic systems and productivity tools."
+    },
+    "futureWork": {
+      "heading": "After Graduation... <br />Where Will <span class=\"text-red-600\">Your Future</span> Go?",
+      "subtitle": "Explore high-demand career pathways open to Software Engineering graduates.",
+      "roleBadge": "Career Path for SE Graduates",
+      "whatYouDo": "Key Responsibilities & Tasks",
+      "close": "Close"
+    },
+    "faq": {
+      "heading": "Frequently <span class=\"text-red-600\">Asked Questions (FAQ)</span>",
+      "subtitle": "Clear answers to all your questions about studying Software Engineering at BUU."
+    },
+    "footer": {
+      "mission": "Empowering new-generation software engineers driving the world through innovation and ethics, under Faculty of Informatics, Burapha University.",
+      "slogan": "\"Work hard, code late, resilience is our strength. A passionate journey of lifelong software craftsmanship.\"",
+      "quickLinks": "Quick Links",
+      "contactUs": "Contact Us",
+      "rights": "Software Engineering, Burapha University. All rights reserved."
+    }
+  }
+}

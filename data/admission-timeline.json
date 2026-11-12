@@ -2,26 +2,41 @@
   {
     "period": "รอบ Portfolio",
     "title": "เปิดรับสมัคร TCAS 1",
-    "description": "ยื่นเอกสารและแฟ้มสะสมผลงานตามประกาศรับสมัครของมหาวิทยาลัย"
+    "description": "ยื่นเอกสารและแฟ้มสะสมผลงานตามประกาศรับสมัครของมหาวิทยาลัย",
+    "periodEn": "Portfolio Round",
+    "titleEn": "TCAS 1 Application Open",
+    "descriptionEn": "Submit portfolio and credentials according to official university announcements."
   },
   {
     "period": "รอบ Quota",
     "title": "เปิดรับสมัคร TCAS 2",
-    "description": "สมัครตามเงื่อนไขโควตาและส่งคะแนนตามเกณฑ์ที่ประกาศ"
+    "description": "สมัครตามเงื่อนไขโควตาและส่งคะแนนตามเกณฑ์ที่ประกาศ",
+    "periodEn": "Quota Round",
+    "titleEn": "TCAS 2 Application Open",
+    "descriptionEn": "Apply under Eastern province quota criteria and submit examination scores."
   },
   {
     "period": "รอบ Admission",
     "title": "เปิดรับสมัคร TCAS 3",
-    "description": "สมัครผ่านระบบ mytcas พร้อมใช้คะแนน TGAT, TPAT3 และ A-Level Math ตามเกณฑ์ที่กำหนด"
+    "description": "สมัครผ่านระบบ mytcas พร้อมใช้คะแนน TGAT, TPAT3 และ A-Level Math ตามเกณฑ์ที่กำหนด",
+    "periodEn": "Admission Round",
+    "titleEn": "TCAS 3 Application Open",
+    "descriptionEn": "Apply centrally via mytcas.com with TGAT, TPAT3, and A-Level Math scores."
   },
   {
     "period": "หลังการรับสมัคร",
     "title": "ประกาศผลและยืนยันสิทธิ์",
-    "description": "ติดตามผลการคัดเลือกและดำเนินการยืนยันสิทธิ์ตามกำหนดเวลา"
+    "description": "ติดตามผลการคัดเลือกและดำเนินการยืนยันสิทธิ์ตามกำหนดเวลา",
+    "periodEn": "After Applications",
+    "titleEn": "Results & Confirmation",
+    "descriptionEn": "Check selection results and confirm enrollment rights within schedule."
   },
   {
     "period": "ก่อนเปิดภาคเรียน",
     "title": "รายงานตัวและเริ่มเรียน",
-    "description": "ผู้ผ่านการคัดเลือกเข้าสู่ขั้นตอนรายงานตัวเป็นนิสิตใหม่และเตรียมเปิดภาคเรียน"
+    "description": "ผู้ผ่านการคัดเลือกเข้าสู่ขั้นตอนรายงานตัวเป็นนิสิตใหม่และเตรียมเปิดภาคเรียน",
+    "periodEn": "Before Semester Starts",
+    "titleEn": "Registration & Orientation",
+    "descriptionEn": "Admitted students register as freshers and prepare for the academic semester."
   }
 ]

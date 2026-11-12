@@ -57,25 +57,29 @@
       "icon": "fa-brands fa-laravel",
       "iconColor": "text-red-500",
       "title": "Laravel",
-      "description": "เฟรมเวิร์กสมัยใหม่สำหรับพัฒนาแอปพลิเคชันเว็บมืออาชีพ"
+      "description": "เฟรมเวิร์กสมัยใหม่สำหรับพัฒนาแอปพลิเคชันเว็บมืออาชีพ",
+      "descriptionEn": "Modern framework for developing professional full-stack web applications"
     },
     {
       "icon": "fa-solid fa-database",
       "iconColor": "text-blue-400",
       "title": "MySQL",
-      "description": "ฝึกจัดการฐานข้อมูลระดับมืออาชีพและการทำระบบ"
+      "description": "ฝึกจัดการฐานข้อมูลระดับมืออาชีพและการทำระบบ",
+      "descriptionEn": "Mastering relational database architecture and enterprise data systems"
     },
     {
       "icon": "fa-brands fa-docker",
       "iconColor": "text-cyan-400",
       "title": "Docker",
-      "description": "จัดการอินฟราสตรัคเจอร์และ Containerization เหมือนผู้เชี่ยวชาญ"
+      "description": "จัดการอินฟราสตรัคเจอร์และ Containerization เหมือนผู้เชี่ยวชาญ",
+      "descriptionEn": "Managing containerization and modern DevOps infrastructure with confidence"
     },
     {
       "icon": "fa-brands fa-js",
       "iconColor": "text-yellow-400",
       "title": "JavaScript",
-      "description": "สร้างเว็บแอปพลิเคชันเชิงโต้ตอบและไดนามิก"
+      "description": "สร้างเว็บแอปพลิเคชันเชิงโต้ตอบและไดนามิก",
+      "descriptionEn": "Engineering interactive, dynamic, and reactive web applications"
     }
   ]
 }

@@ -1,32 +1,40 @@
 {
   "badgeText": "บัณฑิตพันธุ์ใหม่เพื่ออุตสาหกรรมดิจิทัล",
+  "badgeTextEn": "Next-Gen Digital Workforce for Industry",
   "titlePrefix": "Build the",
   "titleHighlight": "Future",
   "titleSuffix": "with Software",
   "description": "หลักสูตรที่เน้นทักษะการสร้างซอฟต์แวร์ที่ใช้งานได้จริงในอุตสาหกรรม มุ่งเน้นกระบวนการพัฒนาที่มีประสิทธิภาพ และการฝึกประสบการณ์วิชาชีพในเขตเศรษฐกิจพิเศษ EEC",
+  "descriptionEn": "A hands-on software engineering curriculum built for industry excellence, agile engineering processes, and professional co-op internships in Thailand's EEC digital corridor.",
   "primaryCta": {
     "label": "ดูขั้นตอนสมัครเรียน",
+    "labelEn": "How to Apply",
     "href": "#admission"
   },
   "secondaryCta": {
     "label": "สำหรับนิสิต",
+    "labelEn": "For Students",
     "href": "#portal"
   },
   "quickLinks": [
     {
       "label": "เรียนอะไร",
+      "labelEn": "What You'll Learn",
       "href": "#program-overview"
     },
     {
       "label": "สมัครอย่างไร",
+      "labelEn": "Admissions",
       "href": "#admission"
     },
     {
       "label": "จบแล้วทำงานอะไร",
+      "labelEn": "Careers",
       "href": "#future-work"
     },
     {
       "label": "ช่องทางติดต่อ",
+      "labelEn": "Contact Us",
       "href": "#contact-official"
     }
   ]

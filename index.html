@@ -963,22 +963,31 @@
         </a>
 
         <!-- Centered Navigation -->
-        <div class="hidden lg:flex space-x-8 justify-center">
-          <a href="#facebook-posts" class="ui-nav-link">ข่าวสาร</a>
-          <a href="#admission" class="ui-nav-link">การรับสมัคร</a>
-          <a href="#program-overview" class="ui-nav-link">หลักสูตร</a>
-          <a href="#timeline" class="ui-nav-link">Timeline</a>
-          <a href="#seminar" class="ui-nav-link">ผลงานสัมมนา</a>
-          <a href="#future-work" class="ui-nav-link">งานที่ทำได้ในอนาคต</a>
-          <a href="#faq" class="ui-nav-link">FAQ</a>
-          <a href="#portal" class="ui-nav-link text-red-600">ระบบสารสนเทศ</a>
+        <div class="hidden lg:flex space-x-6 xl:space-x-8 justify-center items-center">
+          <a id="nav-link-news" href="#facebook-posts" class="ui-nav-link">ข่าวสาร</a>
+          <a id="nav-link-admission" href="#admission" class="ui-nav-link">การรับสมัคร</a>
+          <a id="nav-link-program" href="#program-overview" class="ui-nav-link">หลักสูตร</a>
+          <a id="nav-link-timeline" href="#timeline" class="ui-nav-link">Timeline</a>
+          <a id="nav-link-seminar" href="#seminar" class="ui-nav-link">ผลงานสัมมนา</a>
+          <a id="nav-link-career" href="#future-work" class="ui-nav-link">งานที่ทำได้ในอนาคต</a>
+          <a id="nav-link-faq" href="#faq" class="ui-nav-link">FAQ</a>
+          <a id="nav-link-portal" href="#portal" class="ui-nav-link text-red-600">ระบบสารสนเทศ</a>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" type="button" class="lg:hidden ui-icon-btn ui-icon-btn-md ui-icon-btn-ghost"
-          aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
-          <i class="fa-solid fa-bars text-xl"></i>
-        </button>
+        <!-- Controls: Language Switcher & Mobile Menu Button -->
+        <div class="flex items-center gap-3">
+          <!-- Desktop Language Toggle -->
+          <div class="hidden lg:inline-flex items-center bg-slate-100 rounded-full p-1 border border-slate-200 text-xs font-extrabold shadow-sm" role="group" aria-label="Language selection">
+            <button type="button" id="lang-switch-th" class="px-2.5 py-1 rounded-full transition-all duration-200 bg-red-600 text-white shadow-sm" aria-pressed="true">TH</button>
+            <button type="button" id="lang-switch-en" class="px-2.5 py-1 rounded-full transition-all duration-200 text-slate-600 hover:text-slate-900" aria-pressed="false">EN</button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" type="button" class="lg:hidden ui-icon-btn ui-icon-btn-md ui-icon-btn-ghost"
+            aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
 
       </div>
 
@@ -988,39 +997,48 @@
         style="transform: translateY(-110%); transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); visibility: hidden;"
         aria-hidden="true">
 
+        <!-- Mobile Language Selector Row -->
+        <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+          <span id="mobile-lang-label" class="text-xs font-bold text-slate-500 uppercase tracking-wider">ภาษา / Language</span>
+          <div class="inline-flex items-center bg-white rounded-full p-1 border border-slate-200 text-xs font-extrabold shadow-sm">
+            <button type="button" id="mobile-lang-switch-th" class="px-3 py-1 rounded-full transition-all duration-200 bg-red-600 text-white shadow-sm">TH</button>
+            <button type="button" id="mobile-lang-switch-en" class="px-3 py-1 rounded-full transition-all duration-200 text-slate-600 hover:text-slate-900">EN</button>
+          </div>
+        </div>
+
         <!-- Links -->
         <nav class="px-4 py-3 divide-y divide-slate-100">
-          <a href="#facebook-posts" class="ui-nav-item">
+          <a id="mobile-nav-link-news" href="#facebook-posts" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-newspaper"></i></span>
-            ข่าวสาร
+            <span>ข่าวสาร</span>
           </a>
-          <a href="#admission" class="ui-nav-item">
+          <a id="mobile-nav-link-admission" href="#admission" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-file-signature"></i></span>
-            การรับสมัคร
+            <span>การรับสมัคร</span>
           </a>
-          <a href="#program-overview" class="ui-nav-item">
+          <a id="mobile-nav-link-program" href="#program-overview" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-book-open"></i></span>
-            หลักสูตร
+            <span>หลักสูตร</span>
           </a>
-          <a href="#timeline" class="ui-nav-item">
+          <a id="mobile-nav-link-timeline" href="#timeline" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-timeline"></i></span>
-            Timeline
+            <span>Timeline</span>
           </a>
-          <a href="#seminar" class="ui-nav-item">
+          <a id="mobile-nav-link-seminar" href="#seminar" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center text-red-600 shrink-0"><i class="fa-brands fa-youtube"></i></span>
-            ผลงานสัมมนา
+            <span>ผลงานสัมมนา</span>
           </a>
-          <a href="#future-work" class="ui-nav-item">
+          <a id="mobile-nav-link-career" href="#future-work" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-briefcase"></i></span>
-            งานในอนาคต
+            <span>งานในอนาคต</span>
           </a>
-          <a href="#faq" class="ui-nav-item">
+          <a id="mobile-nav-link-faq" href="#faq" class="ui-nav-item">
             <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-circle-question"></i></span>
-            FAQ
+            <span>FAQ</span>
           </a>
-          <a href="#portal" class="ui-nav-item bg-red-50 text-red-600">
+          <a id="mobile-nav-link-portal" href="#portal" class="ui-nav-item bg-red-50 text-red-600">
             <span class="w-9 h-9 rounded-lg bg-red-100 flex items-center justify-center text-red-500 shrink-0"><i class="fa-solid fa-door-open"></i></span>
-            ระบบสารสนเทศ
+            <span>ระบบสารสนเทศ</span>
           </a>
         </nav>
       </div>
@@ -1111,10 +1129,10 @@
   <section class="pb-24 pt-4 scroll-mt-20">
     <div class="max-w-5xl mx-auto px-4 text-center">
       <div class="mb-10 reveal">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight font-montserrat">
+        <h2 id="discover-video-title" class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight font-montserrat">
           Discover <span class="text-red-600">SE BUU</span>
         </h2>
-        <p class="text-slate-500 mt-3 max-w-2xl mx-auto text-lg">
+        <p id="discover-video-subtitle" class="text-slate-500 mt-3 max-w-2xl mx-auto text-lg">
           ทำความรู้จักกับหลักสูตรวิศวกรรมซอฟต์แวร์ ผ่านภาพบรรยากาศการเรียนและการทำกิจกรรม
         </p>
       </div>
@@ -1128,7 +1146,7 @@
   <section id="partners" class="py-20 bg-white border-t border-slate-100 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-10 px-4">
-        <p class="text-sm font-bold text-slate-400 uppercase tracking-widest reveal">
+        <p id="partners-title" class="text-sm font-bold text-slate-400 uppercase tracking-widest reveal">
           เครือข่ายองค์กรพันธมิตรและสถานประกอบการ (CWIE Partners)
         </p>
       </div>
@@ -1144,9 +1162,9 @@
   <section id="admission" class="scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 py-20 bg-slate-50">
       <div class="text-center mb-12 px-4">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
+        <h2 id="admission-heading" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
           พร้อมที่จะมาเป็นครอบครัว <br class="md:hidden" /><span class="text-red-600">SE BUU</span> หรือยัง?</h2>
-        <p class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">เตรียมตัวให้พร้อม!
+        <p id="admission-subheading" class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">เตรียมตัวให้พร้อม!
           ส่องเส้นทางการสมัครและรอบการคัดเลือกล่าสุด (TCAS)</p>
       </div>
 
@@ -1193,10 +1211,10 @@
       </svg>
     </div>
     <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
-      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-10 reveal reveal-delay-100">
+      <h2 id="makul-heading" class="text-4xl md:text-5xl font-extrabold tracking-tight mb-10 reveal reveal-delay-100">
         "มกุล (Cluster)" — <span class="text-red-500">More than a Team</span>
       </h2>
-      <p class="text-slate-300 text-xl max-w-4xl mx-auto leading-relaxed reveal reveal-delay-200">
+      <p id="makul-description" class="text-slate-300 text-xl max-w-4xl mx-auto leading-relaxed reveal reveal-delay-200">
         เพื่อนร่วมชั้นเรียนหาได้ทั่วไป แต่เราสร้าง <strong>"ทีมร่วมรบ"</strong> <br>
         มกุล คือระบบกลุ่มย่อยที่จับคู่ให้นิสิตได้สร้างสัมพันธ์ เรียนรู้การทำงานร่วมกัน 
         และฝึกความเป็นผู้นำ/ผู้ตาม (PLO8) ตั้งแต่วันแรกที่เข้าเรียน เพื่อให้ทุกคนมีเพื่อนร่วมทางที่คอยสนับสนุนและผลักดันกันตลอด 4 ปี
@@ -1207,22 +1225,22 @@
           <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <i class="fa-solid fa-handshake-angle text-3xl text-blue-400"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-white">ปรับตัวง่าย ไม่ทิ้งใครไว้หลัง</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">มีพี่ๆ และเพื่อนคอยพยุง แชร์เทคนิคการเรียน ทำให้ชีวิตเฟรชชี่ราบรื่นและอุ่นใจ</p>
+          <h3 id="makul-card1-title" class="text-xl font-bold mb-3 text-white">ปรับตัวง่าย ไม่ทิ้งใครไว้หลัง</h3>
+          <p id="makul-card1-desc" class="text-slate-400 text-sm leading-relaxed">มีพี่ๆ และเพื่อนคอยพยุง แชร์เทคนิคการเรียน ทำให้ชีวิตเฟรชชี่ราบรื่นและอุ่นใจ</p>
         </div>
         <div class="ui-card-dark">
           <div class="w-14 h-14 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <i class="fa-solid fa-people-arrows text-3xl text-emerald-400"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-white">ฝึก Soft Skills ของจริง</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">การทำงานเป็นทีมคือปัจจัยหลักในสาย Software Process ระบบนี้ปูพื้นฐานให้คุณทันที</p>
+          <h3 id="makul-card2-title" class="text-xl font-bold mb-3 text-white">ฝึก Soft Skills ของจริง</h3>
+          <p id="makul-card2-desc" class="text-slate-400 text-sm leading-relaxed">การทำงานเป็นทีมคือปัจจัยหลักในสาย Software Process ระบบนี้ปูพื้นฐานให้คุณทันที</p>
         </div>
         <div class="ui-card-dark">
           <div class="w-14 h-14 bg-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <i class="fa-solid fa-gamepad text-3xl text-pink-400"></i>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-white">สนุกกับกิจกรรมและทุนการศึกษา</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">มีกิจกรรมหลากหลายและทุนการศึกษาให้ได้รับการสนับสนุนประสบการณ์ตลอดการศึกษา</p>
+          <h3 id="makul-card3-title" class="text-xl font-bold mb-3 text-white">สนุกกับกิจกรรมและทุนการศึกษา</h3>
+          <p id="makul-card3-desc" class="text-slate-400 text-sm leading-relaxed">มีกิจกรรมหลากหลายและทุนการศึกษาให้ได้รับการสนับสนุนประสบการณ์ตลอดการศึกษา</p>
         </div>
       </div>
     </div>
@@ -1232,9 +1250,9 @@
   <section id="timeline" class="py-20 bg-white scroll-mt-20">
     <div class="max-w-5xl mx-auto px-4">
       <div class="text-center mb-20 px-4">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">สงสัยไหม...
+        <h2 id="timeline-heading" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">สงสัยไหม...
           <br /><br /><span class="text-red-600">ตลอด 4 ปีที่ SE</span> เรียนอะไรบ้าง?</h2>
-        <p class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">Roadmap
+        <p id="timeline-subheading" class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">Roadmap
           การเรียนรู้ที่จะเปลี่ยนคุณให้เป็น Software Engineer ตัวจริง</p>
       </div>
 
@@ -1248,10 +1266,10 @@
   <section id="program-overview" class="py-20 bg-slate-50 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12 px-4">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
+        <h2 id="program-overview-heading" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
           แผนการเรียนและ <span class="text-red-600">หลักสูตร</span>
         </h2>
-        <p class="text-slate-500 mt-4 text-lg reveal reveal-delay-100">
+        <p id="program-overview-subheading" class="text-slate-500 mt-4 text-lg reveal reveal-delay-100">
           สรุปข้อมูลหลักสูตรที่ควรรู้ก่อนตัดสินใจสมัครเรียน
         </p>
       </div>
@@ -1269,10 +1287,10 @@
           <i class="fa-brands fa-youtube text-red-600 text-sm"></i>
           <span>Student Showcase • YouTube Playlist</span>
         </div>
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
+        <h2 id="seminar-heading" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
           ผลงานในรายวิชา <span class="text-red-600">สัมมนาวิศวกรรมซอฟต์แวร์</span>
         </h2>
-        <p class="text-slate-500 mt-4 text-lg reveal reveal-delay-100 max-w-3xl mx-auto">
+        <p id="seminar-subheading" class="text-slate-500 mt-4 text-lg reveal reveal-delay-100 max-w-3xl mx-auto">
           รับชมการนำเสนอหัวข้อสัมมนาวิชาการและการค้นคว้าเทคโนโลยีทางวิศวกรรมซอฟต์แวร์ของนิสิตชั้นปีที่ 4 ในแต่ละปีการศึกษา
         </p>
       </div>
@@ -1288,9 +1306,9 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="lg:w-1/2 w-full">
-          <h2 class="text-3xl font-bold mb-6 tracking-tight">เครื่องมือ <span
+          <h2 id="tech-stack-heading" class="text-3xl font-bold mb-6 tracking-tight">เครื่องมือ <span
               class="text-red-500">ภาษา และเนื้อหาที่เราจะได้เรียน</span></h2>
-          <p class="text-slate-400 mb-8 leading-relaxed text-lg">
+          <p id="tech-stack-subheading" class="text-slate-400 mb-8 leading-relaxed text-lg">
               ไม่ใช่แค่ทฤษฎี แต่เราจะได้ลงมือใช้เครื่องมือจริงที่ใช้ในอุตสาหกรรม
           </p>
           <div id="tech-badges" class="flex flex-wrap gap-3">
@@ -1308,9 +1326,9 @@
   <section id="facebook-posts" class="py-20 bg-slate-50 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-slate-900 tracking-tight">อัปเดต <span
+        <h2 id="facebook-heading" class="text-4xl font-bold text-slate-900 tracking-tight">อัปเดต <span
             class="text-red-600">ข่าวสารจากสาขา</span></h2>
-        <p class="text-slate-600 mt-4">ข่าวสารล่าสุดจากเพจวิศวกรรมซอฟต์แวร์ บูรพา</p>
+        <p id="facebook-subheading" class="text-slate-600 mt-4">ข่าวสารล่าสุดจากเพจวิศวกรรมซอฟต์แวร์ บูรพา</p>
       </div>
 
       <div class="bg-white rounded-3xl p-5 px-0 md:p-7 border border-slate-200 shadow-sm">
@@ -1348,9 +1366,9 @@
   <section id="portal" class="bg-white scroll-mt-20">
     <div class="max-w-7xl mx-auto py-24 px-4">
       <div class="text-center mb-20 px-4">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
+        <h2 id="portal-heading" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
           รวมเครื่องมือสำหรับ <br class="md:hidden" /><span class="text-red-600">นิสิตปัจจุบัน</span></h2>
-        <p class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">
+        <p id="portal-subheading" class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">
           แหล่งรวมระบบสำคัญและเครื่องมืออำนวยความสะดวก</p>
       </div>
 
@@ -1365,9 +1383,9 @@
   <section id="future-work" class="py-20 bg-slate-50 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-20 px-4">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">จบไปแล้ว...
+        <h2 id="future-work-heading" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">จบไปแล้ว...
           <br /><span class="text-red-600">อนาคตของคุณ</span> จะไปสุดที่ไหน?</h2>
-        <p class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">ตัวอย่างอาชีพที่เปิดโอกาสให้กับนิสิต SE</p>
+        <p id="future-work-subheading" class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">ตัวอย่างอาชีพที่เปิดโอกาสให้กับนิสิต SE</p>
       </div>
 
       <div id="future-work-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="min-height: 400px;">
@@ -1402,9 +1420,9 @@
   <section id="faq" class="py-20 bg-white scroll-mt-20">
     <div class="max-w-5xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-slate-900 tracking-tight">คำถาม <span class="text-red-600">ที่พบบ่อย
+        <h2 id="faq-heading" class="text-4xl font-bold text-slate-900 tracking-tight">คำถาม <span class="text-red-600">ที่พบบ่อย
             (FAQ)</span></h2>
-        <p class="text-slate-600 mt-4 text-lg">รวบรวมทุกข้อสงสัยให้ฉงนเกี่ยวกับการเรียน SE BUU</p>
+        <p id="faq-subheading" class="text-slate-600 mt-4 text-lg">รวบรวมทุกข้อสงสัยให้ฉงนเกี่ยวกับการเรียน SE BUU</p>
       </div>
 
       <div id="faq-list" class="space-y-4" style="min-height: 300px;">
@@ -1491,22 +1509,22 @@
           <img src="logo-se.jpg" alt="ตราสัญลักษณ์หลักสูตร Software Engineering BUU" class="h-10 grayscale brightness-200" loading="lazy">
           <span class="text-white font-montserrat font-extrabold text-2xl">SE BUU</span>
         </div>
-        <p class="text-sm leading-relaxed">
+        <p id="footer-mission" class="text-sm leading-relaxed">
           สร้างวิศวกรซอฟต์แวร์รุ่นใหม่ที่ขับเคลื่อนโลกด้วยนวัตกรรมและจริยธรรม ภายใต้คณะสารสนเทศศาสตร์ มหาวิทยาลัยบูรพา
         </p>
         <br />
-        <p class="text-sm leading-relaxed">
+        <p id="footer-slogan" class="text-sm leading-relaxed">
           "เรียนหนัก นอนดึก ความถึกต้องเรา วันหยุดไม่ได้หยุด วันลาไม่ได้ลา กลางวันนั่งหาว กลางคืนเฮฮา"
         </p>
       </div>
       <div>
-        <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Quick Links</h3>
+        <h3 id="footer-quick-links-title" class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Quick Links</h3>
         <ul id="quick-links" class="space-y-3 text-sm">
           <!-- Quick links will be injected here via JavaScript -->
         </ul>
       </div>
       <div id="contact-official">
-        <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Contact Us</h3>
+        <h3 id="footer-contact-title" class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Contact Us</h3>
         <div id="contact-us" class="space-y-4">
           <!-- Contact items will be injected here via JavaScript -->
         </div>
@@ -1537,19 +1555,212 @@
 
   <!-- Dynamic Rendering Script -->
   <script>
-      function setCurrentYear() {
+function setCurrentYear() {
         const yearElement = document.getElementById('current-year');
         if (yearElement) {
           yearElement.textContent = new Date().getFullYear();
         }
       }
+
+      // --- Internationalization (i18n) State & Helpers ---
+      let currentLang = 'th';
+      try {
+        const urlParamLang = new URLSearchParams(window.location.search).get('lang');
+        if (urlParamLang === 'en' || urlParamLang === 'th') {
+          currentLang = urlParamLang;
+        } else {
+          const savedLang = localStorage.getItem('se_lang');
+          if (savedLang === 'en' || savedLang === 'th') {
+            currentLang = savedLang;
+          }
+        }
+      } catch (e) {
+        currentLang = 'th';
+      }
+
+      let translationsData = null;
+      let cachedHeroConfig = null;
+      let cachedUspData = null;
+      let cachedAdmissionData = null;
+      let cachedAdmissionTimelineData = null;
+      let cachedProgramOverviewData = null;
+      let cachedTimelineData = null;
+      let cachedSeminarData = null;
+      let cachedTechStackData = null;
+      let cachedPortalData = null;
+      let cachedQuickLinksData = null;
+      let cachedContactData = null;
+      let cachedFaqData = null;
+      let cachedFutureWorkData = null;
+      let cachedPartnersData = null;
+
+      function updateLanguageSwitcherUI() {
+        const isTh = currentLang === 'th';
+        const applyBtnState = (btn, active) => {
+          if (!btn) return;
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+          if (active) {
+            btn.classList.add('bg-red-600', 'text-white', 'shadow-sm');
+            btn.classList.remove('text-slate-600', 'hover:text-slate-900');
+          } else {
+            btn.classList.remove('bg-red-600', 'text-white', 'shadow-sm');
+            btn.classList.add('text-slate-600', 'hover:text-slate-900');
+          }
+        };
+
+        applyBtnState(document.getElementById('lang-switch-th'), isTh);
+        applyBtnState(document.getElementById('lang-switch-en'), !isTh);
+        applyBtnState(document.getElementById('mobile-lang-switch-th'), isTh);
+        applyBtnState(document.getElementById('mobile-lang-switch-en'), !isTh);
+      }
+
+      function updateStaticTranslations() {
+        if (!translationsData) return;
+        const t = translationsData[currentLang] || translationsData['th'];
+        if (!t) return;
+
+        const setHtml = (id, html) => {
+          const el = document.getElementById(id);
+          if (el && html !== undefined) el.innerHTML = html;
+        };
+        const setText = (id, text) => {
+          const el = document.getElementById(id);
+          if (el && text !== undefined) el.textContent = text;
+        };
+
+        // Navigation
+        setText('nav-link-news', t.nav.news);
+        setText('nav-link-admission', t.nav.admission);
+        setText('nav-link-program', t.nav.program);
+        setText('nav-link-timeline', t.nav.timeline);
+        setText('nav-link-seminar', t.nav.seminar);
+        setText('nav-link-career', t.nav.career);
+        setText('nav-link-faq', t.nav.faq);
+        setText('nav-link-portal', t.nav.portal);
+
+        // Mobile Navigation
+        setText('mobile-nav-link-news', t.nav.news);
+        setText('mobile-nav-link-admission', t.nav.admission);
+        setText('mobile-nav-link-program', t.nav.program);
+        setText('mobile-nav-link-timeline', t.nav.timeline);
+        setText('mobile-nav-link-seminar', t.nav.seminar);
+        setText('mobile-nav-link-career', t.nav.career);
+        setText('mobile-nav-link-faq', t.nav.faq);
+        setText('mobile-nav-link-portal', t.nav.portal);
+        setText('mobile-lang-label', t.nav.langLabel);
+
+        // Discover & Partners
+        setHtml('discover-video-title', t.discover.title);
+        setText('discover-video-subtitle', t.discover.subtitle);
+        setText('partners-title', t.partners.title);
+
+        // Admission Heading & Subheading
+        setHtml('admission-heading', t.admission.heading);
+        setText('admission-subheading', t.admission.subtitle);
+
+        // Makul
+        setHtml('makul-heading', t.makul.heading);
+        setHtml('makul-description', t.makul.description);
+        setText('makul-card1-title', t.makul.card1Title);
+        setText('makul-card1-desc', t.makul.card1Desc);
+        setText('makul-card2-title', t.makul.card2Title);
+        setText('makul-card2-desc', t.makul.card2Desc);
+        setText('makul-card3-title', t.makul.card3Title);
+        setText('makul-card3-desc', t.makul.card3Desc);
+
+        // Timeline
+        setHtml('timeline-heading', t.timeline.heading);
+        setText('timeline-subheading', t.timeline.subtitle);
+
+        // Program Overview
+        setHtml('program-overview-heading', t.programOverview.heading);
+        setText('program-overview-subheading', t.programOverview.subtitle);
+
+        // Seminar
+        setHtml('seminar-heading', t.seminar.heading);
+        setText('seminar-subheading', t.seminar.subtitle);
+
+        // Tech Stack
+        setHtml('tech-stack-heading', t.techStack.heading);
+        setText('tech-stack-subheading', t.techStack.subtitle);
+
+        // Facebook
+        setHtml('facebook-heading', t.facebook.heading);
+        setText('facebook-subheading', t.facebook.subtitle);
+
+        // Portals
+        setHtml('portal-heading', t.portal.heading);
+        setText('portal-subheading', t.portal.subtitle);
+
+        // Future Work
+        setHtml('future-work-heading', t.futureWork.heading);
+        setText('future-work-subheading', t.futureWork.subtitle);
+
+        // FAQ
+        setHtml('faq-heading', t.faq.heading);
+        setText('faq-subheading', t.faq.subtitle);
+
+        // Footer
+        setText('footer-mission', t.footer.mission);
+        setText('footer-slogan', t.footer.slogan);
+        setText('footer-quick-links-title', t.footer.quickLinks);
+        setText('footer-contact-title', t.footer.contactUs);
+      }
+
+      function setLanguage(lang) {
+        if (lang !== 'th' && lang !== 'en') return;
+        currentLang = lang;
+        try {
+          localStorage.setItem('se_lang', lang);
+          const url = new URL(window.location);
+          url.searchParams.set('lang', lang);
+          window.history.replaceState({}, '', url);
+        } catch (e) {}
+
+        document.documentElement.lang = lang;
+        updateLanguageSwitcherUI();
+        updateStaticTranslations();
+        rerenderDynamicSections();
+      }
+
+      function rerenderDynamicSections() {
+        if (cachedHeroConfig) initHeroContent(cachedHeroConfig);
+        if (cachedUspData) renderUniqueSellingPoints(cachedUspData);
+        if (cachedAdmissionData) renderAdmission(cachedAdmissionData);
+        if (cachedAdmissionTimelineData) renderAdmissionTimeline(cachedAdmissionTimelineData);
+        if (cachedTimelineData) renderTimeline(cachedTimelineData);
+        if (cachedProgramOverviewData) renderProgramOverview(cachedProgramOverviewData);
+        if (cachedSeminarData) renderSeminarShowcase(cachedSeminarData);
+        if (cachedTechStackData) renderTechStack(cachedTechStackData);
+        if (cachedPortalData) renderPortals(cachedPortalData);
+        if (cachedQuickLinksData) renderQuickLinks(cachedQuickLinksData);
+        if (cachedContactData) renderContactUs(cachedContactData);
+        if (cachedFaqData) renderFAQ(cachedFaqData);
+        if (cachedFaqData && cachedContactData && cachedProgramOverviewData) {
+          renderStructuredData({
+            faqData: cachedFaqData,
+            contactData: cachedContactData,
+            programOverviewData: cachedProgramOverviewData
+          });
+        }
+        if (cachedFutureWorkData) renderFutureWork(cachedFutureWorkData);
+      }
+      // ----------------------------------------------------
   
       function renderSeminarShowcase(items = []) {
         const container = document.getElementById('seminar-container');
         if (!container) return;
 
+        const isEn = currentLang === 'en';
+        const t = translationsData ? (translationsData[currentLang] || translationsData.th).seminar : {
+          latest: 'ล่าสุด',
+          openYoutube: 'เปิดดูใน YouTube',
+          nowPlaying: 'กำลังเล่นอยู่นี้',
+          selectToWatch: 'เลือกรับชม'
+        };
+
         if (!Array.isArray(items) || items.length === 0) {
-          container.innerHTML = '<p class="text-slate-500 text-center">กำลังอัปเดตข้อมูลผลงานสัมมนา</p>';
+          container.innerHTML = `<p class="text-slate-500 text-center">${isEn ? 'Updating seminar showcase' : 'กำลังอัปเดตข้อมูลผลงานสัมมนา'}</p>`;
           return;
         }
 
@@ -1558,6 +1769,10 @@
         const render = () => {
           const current = items[selectedIndex] || items[0];
           const embedUrl = `https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(current.playlistId)}`;
+
+          const currentYearTitle = isEn && current.academicYearEn ? current.academicYearEn : (current.academicYear || current.title);
+          const currentTitle = isEn && current.titleEn ? current.titleEn : current.title;
+          const currentDesc = isEn && current.descriptionEn ? current.descriptionEn : (current.description || '');
 
           container.innerHTML = `
             <!-- Year Selector Tabs -->
@@ -1568,13 +1783,14 @@
                   ? 'bg-red-600 text-white shadow-lg shadow-red-600/30 ring-2 ring-red-600'
                   : 'bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900';
                 const badge = index === 0
-                  ? `<span class="ml-1.5 px-2 py-0.5 text-[10px] font-extrabold uppercase rounded-full ${isActive ? 'bg-white/25 text-white' : 'bg-red-100 text-red-600'}">ล่าสุด</span>`
+                  ? `<span class="ml-1.5 px-2 py-0.5 text-[10px] font-extrabold uppercase rounded-full ${isActive ? 'bg-white/25 text-white' : 'bg-red-100 text-red-600'}">${t.latest}</span>`
                   : '';
+                const tabLabel = isEn && item.academicYearEn ? item.academicYearEn : (item.academicYear || item.title);
                 return `
                   <button type="button"
                     data-seminar-index="${index}"
                     class="px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 flex items-center ${activeClass}">
-                    <span>${item.academicYear || item.title}</span>
+                    <span>${tabLabel}</span>
                     ${badge}
                   </button>
                 `;
@@ -1586,7 +1802,7 @@
               <div class="relative w-full rounded-2xl overflow-hidden bg-slate-950 shadow-inner" style="aspect-ratio: 16 / 9;">
                 <iframe
                   id="seminar-player-iframe"
-                  title="${current.title}"
+                  title="${currentTitle}"
                   src="${embedUrl}"
                   class="w-full h-full absolute inset-0 border-0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1602,16 +1818,16 @@
                     <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-red-100 text-red-700">
                       <i class="fa-brands fa-youtube text-red-600"></i> YouTube Playlist
                     </span>
-                    <span class="text-xs text-slate-400 font-semibold">• ${current.academicYear || ''}</span>
+                    <span class="text-xs text-slate-400 font-semibold">• ${currentYearTitle}</span>
                   </div>
-                  <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">${current.title}</h3>
-                  <p class="text-slate-600 text-sm mt-1 max-w-2xl">${current.description || ''}</p>
+                  <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">${currentTitle}</h3>
+                  <p class="text-slate-600 text-sm mt-1 max-w-2xl">${currentDesc}</p>
                 </div>
 
                 <a href="${current.url}" target="_blank" rel="noopener noreferrer"
                   class="ui-btn ui-btn-md bg-red-600 hover:bg-red-500 text-white font-bold inline-flex items-center justify-center gap-2 shrink-0 shadow-lg shadow-red-900/20">
                   <i class="fa-brands fa-youtube text-lg"></i>
-                  <span>เปิดดูใน YouTube</span>
+                  <span>${t.openYoutube}</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
                 </a>
               </div>
@@ -1622,32 +1838,38 @@
               ${items.map((item, index) => {
                 const isActive = index === selectedIndex;
                 const border = isActive ? 'border-red-500 ring-2 ring-red-500/20 bg-red-50/40' : 'border-slate-200 hover:border-slate-300 bg-white';
+                const cardYearBadge = isEn
+                  ? (item.yearEn || item.academicYearEn || item.academicYear)
+                  : (item.year ? `ปี ${item.year}` : item.academicYear);
+                const itemTitle = isEn && item.titleEn ? item.titleEn : item.title;
+                const itemDesc = isEn && item.descriptionEn ? item.descriptionEn : (item.description || '');
+
                 return `
                   <div class="ui-card-compact border rounded-2xl p-4 transition-all duration-200 flex flex-col justify-between ${border}">
                     <div>
                       <div class="flex items-center justify-between gap-2 mb-2">
                         <span class="text-xs font-bold px-2.5 py-1 rounded-lg ${isActive ? 'bg-red-600 text-white' : 'bg-slate-100 text-slate-600'}">
-                          ${item.year ? `ปี ${item.year}` : item.academicYear}
+                          ${cardYearBadge}
                         </span>
                         <a href="${item.url}" target="_blank" rel="noopener noreferrer"
                           class="text-slate-400 hover:text-red-600 text-xs font-bold inline-flex items-center gap-1"
-                          title="เปิดใน YouTube">
+                          title="${t.openYoutube}">
                           <i class="fa-brands fa-youtube text-base text-red-600"></i>
                         </a>
                       </div>
-                      <h4 class="font-extrabold text-slate-900 text-base mb-1">${item.title}</h4>
-                      <p class="text-slate-500 text-xs line-clamp-2">${item.description || ''}</p>
+                      <h4 class="font-extrabold text-slate-900 text-base mb-1">${itemTitle}</h4>
+                      <p class="text-slate-500 text-xs line-clamp-2">${itemDesc}</p>
                     </div>
 
                     <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                       <button type="button" data-seminar-index="${index}"
                         class="text-xs font-bold ${isActive ? 'text-red-600' : 'text-slate-700 hover:text-red-600'} inline-flex items-center gap-1">
                         <i class="fa-solid ${isActive ? 'fa-circle-play text-red-600' : 'fa-play text-xs'}"></i>
-                        ${isActive ? 'กำลังเล่นอยู่นี้' : 'เลือกรับชม'}
+                        ${isActive ? t.nowPlaying : t.selectToWatch}
                       </button>
                       <a href="${item.url}" target="_blank" rel="noopener noreferrer"
                         class="text-xs text-slate-400 hover:text-red-600 flex items-center gap-1">
-                        <span>เปิดบน YouTube</span>
+                        <span>${t.openYoutube}</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                       </a>
                     </div>
@@ -1678,16 +1900,21 @@
       function renderUniqueSellingPoints(items = []) {
         const container = document.getElementById('usp-grid');
         if (!container) return;
-  
-        container.innerHTML = items.map(item => `
-          <div class="flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 text-2xl shadow-inner">
-              <i class="${item.icon}"></i>
+
+        const isEn = currentLang === 'en';
+        container.innerHTML = items.map(item => {
+          const title = (isEn && item.titleEn) ? item.titleEn : item.title;
+          const desc = (isEn && item.descriptionEn) ? item.descriptionEn : item.description;
+          return `
+            <div class="flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 text-2xl shadow-inner">
+                <i class="${item.icon}"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">${title}</h3>
+              <p class="text-slate-600">${desc}</p>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-slate-900">${item.title}</h3>
-            <p class="text-slate-600">${item.description}</p>
-          </div>
-        `).join('');
+          `;
+        }).join('');
       }
   
       function renderAdmission(admissionData = {}) {
@@ -1697,11 +1924,31 @@
         const commonContainer = document.getElementById('admission-common-qualifications');
         const viewMoreContainer = document.getElementById('admission-view-more');
         if (!container) return;
+
+        const isEn = currentLang === 'en';
+        const t = translationsData ? (translationsData[currentLang] || translationsData.th).admission : {
+          selectedRound: 'รายละเอียดรอบที่เลือก',
+          noVocational: 'ไม่รับวุฒิ ปวช.',
+          minCredits: 'หน่วยกิตขั้นต่ำ',
+          science: 'วิทยาศาสตร์',
+          math: 'คณิตศาสตร์',
+          english: 'ภาษาต่างประเทศ',
+          examSubjects: 'วิชาที่ใช้คะแนน',
+          noExamSubjects: 'รอบนี้ไม่กำหนดวิชาคะแนนส่วนกลางเพิ่มเติม',
+          conditions: 'เงื่อนไขเฉพาะรอบ',
+          defaultCondition: 'ใช้เงื่อนไขทั่วไปตามประกาศรับสมัครของมหาวิทยาลัย',
+          matrixTitle: 'เทียบหน่วยกิตขั้นต่ำแต่ละรอบ',
+          creditMatrixSub: 'Credit Matrix',
+          subjectGroup: 'กลุ่มสาระ',
+          commonQual: 'คุณสมบัติที่ควรมี',
+          openStatus: 'เปิดรับสมัครอยู่',
+          viewMore: 'ดูเพิ่มเติม'
+        };
   
         const rounds = Array.isArray(admissionData.rounds) ? admissionData.rounds : [];
-        const commonQualifications = Array.isArray(admissionData.commonQualifications)
-          ? admissionData.commonQualifications
-          : [];
+        const commonQualifications = isEn && Array.isArray(admissionData.commonQualificationsEn)
+          ? admissionData.commonQualificationsEn
+          : (Array.isArray(admissionData.commonQualifications) ? admissionData.commonQualifications : []);
   
         const getAdmissionStatus = (item) => {
           if (item.registrationStart && item.registrationEnd) {
@@ -1710,19 +1957,17 @@
             const endDate = new Date(`${item.registrationEnd}T23:59:59`);
   
             if (now >= startDate && now <= endDate) {
-              return { status: 'open', statusLabel: 'เปิดรับสมัครอยู่' };
+              return { status: 'open', statusLabel: t.openStatus };
             }
-  
             return null;
           }
   
           if (item.status === 'open') {
             return {
               status: 'open',
-              statusLabel: item.statusLabel || 'เปิดรับสมัครอยู่'
+              statusLabel: isEn ? (item.statusLabelEn || t.openStatus) : (item.statusLabel || t.openStatus)
             };
           }
-  
           return null;
         };
   
@@ -1746,6 +1991,8 @@
             const statusBadge = (statusInfo && statusInfo.status === 'open')
               ? `<span class="bg-emerald-100 text-emerald-700 ring-green-500/20 text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset whitespace-nowrap">${statusInfo.statusLabel}</span>`
               : '';
+            const desc = isEn && item.descriptionEn ? item.descriptionEn : (item.description || '');
+            const period = isEn && item.periodEn ? item.periodEn : (item.period || '');
   
             return `
               <button type="button" data-admission-round-index="${index}"
@@ -1755,8 +2002,8 @@
                   ${statusBadge}
                 </div>
                 <h4 class="font-extrabold text-xl mt-3 tracking-tight text-slate-800">${item.title}</h4>
-                <p class="text-slate-600 text-sm mt-2 leading-relaxed">${item.description || ''}</p>
-                ${item.period ? `<p class="text-red-500 text-xs font-bold mt-3">${item.period}</p>` : ''}
+                <p class="text-slate-600 text-sm mt-2 leading-relaxed">${desc}</p>
+                ${period ? `<p class="text-red-500 text-xs font-bold mt-3">${period}</p>` : ''}
               </button>
             `;
           }).join('');
@@ -1777,58 +2024,61 @@
   
           const round = rounds[selectedIndex];
           if (!round) {
-            detailContainer.innerHTML = '<p class="text-slate-500">กำลังอัปเดตรายละเอียดรอบรับสมัคร</p>';
+            detailContainer.innerHTML = `<p class="text-slate-500">${isEn ? 'Updating admission details' : 'กำลังอัปเดตรายละเอียดรอบรับสมัคร'}</p>`;
             return;
           }
   
           const credits = sanitizeCredits(round.creditRequirements);
-          const examSubjects = Array.isArray(round.examSubjects) ? round.examSubjects : [];
-          const requirements = Array.isArray(round.roundSpecificRequirements)
-            ? round.roundSpecificRequirements
-            : [];
+          const examSubjects = isEn && Array.isArray(round.examSubjectsEn)
+            ? round.examSubjectsEn
+            : (Array.isArray(round.examSubjects) ? round.examSubjects : []);
+          const requirements = isEn && Array.isArray(round.roundSpecificRequirementsEn)
+            ? round.roundSpecificRequirementsEn
+            : (Array.isArray(round.roundSpecificRequirements) ? round.roundSpecificRequirements : []);
+          const detail = isEn && round.detailEn ? round.detailEn : (round.detail || round.description || '');
   
           detailContainer.innerHTML = `
             <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
               <div>
-                <p class="text-xs font-bold uppercase tracking-wider text-red-600 mb-2">รายละเอียดรอบที่เลือก</p>
+                <p class="text-xs font-bold uppercase tracking-wider text-red-600 mb-2">${t.selectedRound}</p>
                 <h3 class="text-3xl font-extrabold text-slate-900 tracking-tight">${round.round} • ${round.title}</h3>
-                <p class="text-slate-600 mt-3 max-w-3xl">${round.detail || round.description || ''}</p>
+                <p class="text-slate-600 mt-3 max-w-3xl">${detail}</p>
               </div>
               <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-red-100 text-red-700 font-bold text-xs whitespace-nowrap h-fit">
-                ไม่รับวุฒิ ปวช.
+                ${t.noVocational}
               </span>
             </div>
   
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
               <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                <p class="text-xs uppercase tracking-wider text-slate-500 font-bold">วิทยาศาสตร์</p>
+                <p class="text-xs uppercase tracking-wider text-slate-500 font-bold">${t.science}</p>
                 <p class="text-3xl font-extrabold text-slate-900 mt-2">${credits.science}</p>
-                <p class="text-sm text-slate-500 mt-1">หน่วยกิตขั้นต่ำ</p>
+                <p class="text-sm text-slate-500 mt-1">${t.minCredits}</p>
               </div>
               <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                <p class="text-xs uppercase tracking-wider text-slate-500 font-bold">คณิตศาสตร์</p>
+                <p class="text-xs uppercase tracking-wider text-slate-500 font-bold">${t.math}</p>
                 <p class="text-3xl font-extrabold text-slate-900 mt-2">${credits.math}</p>
-                <p class="text-sm text-slate-500 mt-1">หน่วยกิตขั้นต่ำ</p>
+                <p class="text-sm text-slate-500 mt-1">${t.minCredits}</p>
               </div>
               <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                <p class="text-xs uppercase tracking-wider text-slate-500 font-bold">ภาษาต่างประเทศ</p>
+                <p class="text-xs uppercase tracking-wider text-slate-500 font-bold">${t.english}</p>
                 <p class="text-3xl font-extrabold text-slate-900 mt-2">${credits.english}</p>
-                <p class="text-sm text-slate-500 mt-1">หน่วยกิตขั้นต่ำ</p>
+                <p class="text-sm text-slate-500 mt-1">${t.minCredits}</p>
               </div>
             </div>
   
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
               <div class="rounded-2xl border border-slate-200 p-4">
-                <h4 class="text-base font-extrabold text-slate-800 mb-2">วิชาที่ใช้คะแนน</h4>
+                <h4 class="text-base font-extrabold text-slate-800 mb-2">${t.examSubjects}</h4>
                 ${examSubjects.length > 0
                   ? `<ul class="space-y-2 text-sm text-slate-600">${examSubjects.map((subject) => `<li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1 text-xs"></i><span>${subject}</span></li>`).join('')}</ul>`
-                  : '<p class="text-sm text-slate-500">รอบนี้ไม่กำหนดวิชาคะแนนส่วนกลางเพิ่มเติม</p>'}
+                  : `<p class="text-sm text-slate-500">${t.noExamSubjects}</p>`}
               </div>
               <div class="rounded-2xl border border-slate-200 p-4">
-                <h4 class="text-base font-extrabold text-slate-800 mb-2">เงื่อนไขเฉพาะรอบ</h4>
+                <h4 class="text-base font-extrabold text-slate-800 mb-2">${t.conditions}</h4>
                 ${requirements.length > 0
                   ? `<ul class="space-y-2 text-sm text-slate-600">${requirements.map((item) => `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-red-500 mt-1"></i><span>${item}</span></li>`).join('')}</ul>`
-                  : '<p class="text-sm text-slate-500">ใช้เงื่อนไขทั่วไปตามประกาศรับสมัครของมหาวิทยาลัย</p>'}
+                  : `<p class="text-sm text-slate-500">${t.defaultCondition}</p>`}
               </div>
             </div>
           `;
@@ -1838,21 +2088,21 @@
           if (!compareContainer) return;
   
           const rows = [
-            { label: 'วิทยาศาสตร์', key: 'science' },
-            { label: 'คณิตศาสตร์', key: 'math' },
-            { label: 'ภาษาต่างประเทศ', key: 'english' },
+            { label: t.science, key: 'science' },
+            { label: t.math, key: 'math' },
+            { label: t.english, key: 'english' },
           ];
   
           compareContainer.innerHTML = `
             <div class="flex items-center justify-between gap-3 mb-4">
-              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">เทียบหน่วยกิตขั้นต่ำแต่ละรอบ</h3>
-              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Credit Matrix</span>
+              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">${t.matrixTitle}</h3>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">${t.creditMatrixSub}</span>
             </div>
             <div class="overflow-x-auto">
               <table class="w-full text-sm min-w-[640px]">
                 <thead>
                   <tr class="border-b border-slate-200 text-slate-500">
-                    <th class="text-left py-3 px-2 font-bold">กลุ่มสาระ</th>
+                    <th class="text-left py-3 px-2 font-bold">${t.subjectGroup}</th>
                     ${rounds.map((round) => `<th class="text-center py-3 px-2 font-bold">${round.round}</th>`).join('')}
                   </tr>
                 </thead>
@@ -1877,7 +2127,7 @@
   
           commonContainer.innerHTML = `
             <div class="flex items-center justify-between gap-3 mb-4">
-              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">คุณสมบัติที่ควรมี</h3>
+              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">${t.commonQual}</h3>
             </div>
             ${commonQualifications.length > 0
               ? `<ul class="grid grid-cols-1 md:grid-cols-2 gap-3">${commonQualifications.map((item) => `
@@ -1886,12 +2136,12 @@
                     <span>${item}</span>
                   </li>
                 `).join('')}</ul>`
-              : '<p class="text-slate-500">กำลังอัปเดตคุณสมบัติผู้สมัคร</p>'}
+              : `<p class="text-slate-500">${isEn ? 'Updating admission qualifications' : 'กำลังอัปเดตคุณสมบัติผู้สมัคร'}</p>`}
           `;
         };
   
         if (rounds.length === 0) {
-          container.innerHTML = '<p class="text-slate-500">กำลังอัปเดตรอบรับสมัคร</p>';
+          container.innerHTML = `<p class="text-slate-500">${isEn ? 'Updating admission rounds' : 'กำลังอัปเดตรอบรับสมัคร'}</p>`;
         } else {
           renderRoundButtons();
           renderRoundDetail();
@@ -1909,10 +2159,11 @@
             .filter((item) => item && item.url)
             .map((item, index) => {
               const baseClass = index === 0 ? 'ui-btn-primary' : 'ui-btn-outline';
+              const label = (isEn && item.labelEn) ? item.labelEn : (item.label || t.viewMore);
               return `
                 <a href="${item.url}" target="_blank" rel="noopener noreferrer"
                   class="ui-btn ui-btn-md ${baseClass}">
-                  ${item.label || 'ดูเพิ่มเติม'} <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                  ${label} <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
               `;
             });
@@ -1926,6 +2177,9 @@
       function renderAdmissionTimeline(items = []) {
         const container = document.getElementById('admission-timeline-list');
         if (!container) return;
+
+        const isEn = currentLang === 'en';
+        const openLabel = isEn ? 'Open Now' : 'เปิดรับสมัครอยู่';
   
         const getTimelineStatus = (item = {}) => {
           if (item.registrationStart && item.registrationEnd) {
@@ -1934,17 +2188,17 @@
             const endDate = new Date(`${item.registrationEnd}T23:59:59`);
   
             if (now >= startDate && now <= endDate) {
-              return { status: 'open', label: 'Open Now' };
+              return { status: 'open', label: openLabel };
             }
             return null;
           }
   
-          if (item.status === 'open') return { status: 'open', label: 'Open Now' };
+          if (item.status === 'open') return { status: 'open', label: openLabel };
           return null;
         };
   
         if (!Array.isArray(items) || items.length === 0) {
-          container.innerHTML = '<p class="text-slate-500">กำลังอัปเดตข้อมูล timeline การรับสมัคร</p>';
+          container.innerHTML = `<p class="text-slate-500">${isEn ? 'Updating admission timeline' : 'กำลังอัปเดตข้อมูล timeline การรับสมัคร'}</p>`;
           return;
         }
   
@@ -1953,6 +2207,9 @@
           const statusBadge = (statusInfo && statusInfo.status === 'open')
             ? `<span class="text-[11px] font-bold px-2.5 py-1 rounded-full ring-1 ring-inset bg-emerald-100 text-emerald-700 ring-green-500/20">${statusInfo.label}</span>`
             : '';
+          const period = isEn && item.periodEn ? item.periodEn : (item.period || '');
+          const title = isEn && item.titleEn ? item.titleEn : (item.title || '');
+          const desc = isEn && item.descriptionEn ? item.descriptionEn : (item.description || '');
   
           return `
             <div class="admission-timeline-item relative pl-10">
@@ -1960,11 +2217,11 @@
               <span class="absolute left-0 top-1 w-8 h-8 rounded-full bg-white border-2 border-red-500 flex items-center justify-center text-red-600 text-xs font-extrabold">${index + 1}</span>
               <div class="bg-white border border-slate-200 rounded-2xl p-4 md:p-5 shadow-sm">
                 <div class="flex flex-wrap items-center gap-2 justify-between">
-                  <p class="text-sm font-bold text-red-600">${item.period || ''}</p>
+                  <p class="text-sm font-bold text-red-600">${period}</p>
                   ${statusBadge}
                 </div>
-                <h4 class="text-lg font-extrabold text-slate-900 mt-2">${item.title || ''}</h4>
-                <p class="text-slate-600 text-sm mt-1 leading-relaxed">${item.description || ''}</p>
+                <h4 class="text-lg font-extrabold text-slate-900 mt-2">${title}</h4>
+                <p class="text-slate-600 text-sm mt-1 leading-relaxed">${desc}</p>
               </div>
             </div>
           `;
@@ -1974,47 +2231,86 @@
       function renderProgramOverview(programData = {}) {
         const container = document.getElementById('program-overview-content');
         if (!container) return;
+
+        const isEn = currentLang === 'en';
+        const t = translationsData ? (translationsData[currentLang] || translationsData.th).programOverview : {
+          degreeLabel: 'ชื่อปริญญา',
+          thaiShortLabel: 'ชื่อย่อภาษาไทย',
+          englishShortLabel: 'ชื่อย่อภาษาอังกฤษ',
+          creditStructure: 'โครงสร้างหลักสูตร',
+          totalCredits: 'หน่วยกิตรวม',
+          creditsUnit: 'หน่วยกิต',
+          curriculumDocs: 'เล่มหลักสูตรและเอกสารที่เกี่ยวข้อง',
+          download: 'ดาวน์โหลด',
+          ploTitle: 'ผลการเรียนรู้ที่คาดหวัง (PLO)',
+          tuition: 'ค่าใช้จ่าย',
+          tuitionPerTerm: 'ค่าใช้จ่ายต่อภาคการศึกษา',
+          tuitionTotal: 'ค่าใช้จ่ายตลอดหลักสูตร',
+          studyFormat: 'รูปแบบการศึกษา'
+        };
   
         const degree = programData.degree || {};
         const creditStructure = Array.isArray(programData.creditStructure) ? programData.creditStructure : [];
         const documents = Array.isArray(programData.curriculumDocuments) ? programData.curriculumDocuments : [];
-        const studyFormat = Array.isArray(programData.studyFormat) ? programData.studyFormat : [];
-        const plo2565 = Array.isArray(programData.plo?.['2565']) ? programData.plo['2565'] : [];
-        const plo2564 = Array.isArray(programData.plo?.['2564']) ? programData.plo['2564'] : [];
+        const studyFormat = isEn && Array.isArray(programData.studyFormatEn)
+          ? programData.studyFormatEn
+          : (Array.isArray(programData.studyFormat) ? programData.studyFormat : []);
+  
+        const plo2565 = isEn && Array.isArray(programData.plo?.['2565_en'])
+          ? programData.plo['2565_en']
+          : (Array.isArray(programData.plo?.['2565']) ? programData.plo['2565'] : []);
+        const plo2564 = isEn && Array.isArray(programData.plo?.['2564_en'])
+          ? programData.plo['2564_en']
+          : (Array.isArray(programData.plo?.['2564']) ? programData.plo['2564'] : []);
+
+        const degreeMainTitle = isEn
+          ? (degree.englishFull || 'Bachelor of Science (Software Engineering)')
+          : (degree.thaiFull || 'วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)');
+        const degreeSubTitle = isEn
+          ? (degree.thaiFull || 'วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)')
+          : (degree.englishFull || 'Bachelor of Science (Software Engineering)');
+        const desc = isEn && programData.descriptionEn ? programData.descriptionEn : (programData.description || '');
+
+        const perSemesterVal = isEn && programData.tuition?.perSemesterEn
+          ? programData.tuition.perSemesterEn
+          : (programData.tuition?.perSemester || '-');
+        const totalVal = isEn && programData.tuition?.totalEn
+          ? programData.tuition.totalEn
+          : (programData.tuition?.total || '-');
   
         container.innerHTML = `
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-6">
             <div class="lg:col-span-2 ui-card mobile-flat-shell">
-              <p class="text-xs font-bold uppercase tracking-wider text-slate-500">ชื่อปริญญา</p>
-              <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">${degree.thaiFull || 'วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)'}</h3>
-              <p class="text-slate-600 mt-2">${degree.englishFull || ''}</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-500">${t.degreeLabel}</p>
+              <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">${degreeMainTitle}</h3>
+              <p class="text-slate-600 mt-2">${degreeSubTitle}</p>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 text-sm">
                 <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
-                  <p class="text-slate-500 font-bold">ชื่อย่อภาษาไทย</p>
+                  <p class="text-slate-500 font-bold">${t.thaiShortLabel}</p>
                   <p class="text-slate-800 font-extrabold mt-1">${degree.thaiShort || '-'}</p>
                 </div>
                 <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
-                  <p class="text-slate-500 font-bold">ชื่อย่อภาษาอังกฤษ</p>
+                  <p class="text-slate-500 font-bold">${t.englishShortLabel}</p>
                   <p class="text-slate-800 font-extrabold mt-1">${degree.englishShort || '-'}</p>
                 </div>
               </div>
-              <p class="text-slate-600 mt-5 leading-relaxed">${programData.description || ''}</p>
+              ${desc ? `<p class="text-slate-600 mt-5 leading-relaxed">${desc}</p>` : ''}
             </div>
   
             <div class="ui-card mobile-flat-shell">
-              <p class="text-xs font-bold uppercase tracking-wider text-slate-500">ภาพรวมหลักสูตร</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-500">${isEn ? 'Program Overview' : 'ภาพรวมหลักสูตร'}</p>
               <div class="space-y-3 mt-4">
                 <div class="rounded-xl bg-red-50 border border-red-100 p-4">
-                  <p class="text-xs text-red-700 font-bold">หน่วยกิตรวม</p>
+                  <p class="text-xs text-red-700 font-bold">${t.totalCredits}</p>
                   <p class="text-3xl font-extrabold text-red-700 mt-1">${programData.totalCredits || 131}</p>
                 </div>
                 <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
-                  <p class="text-xs text-slate-500 font-bold">ค่าใช้จ่ายต่อภาคการศึกษา</p>
-                  <p class="text-xl font-extrabold text-slate-800 mt-1">${programData.tuition?.perSemester || '-'}</p>
+                  <p class="text-xs text-slate-500 font-bold">${t.tuitionPerTerm}</p>
+                  <p class="text-xl font-extrabold text-slate-800 mt-1">${perSemesterVal}</p>
                 </div>
                 <div class="rounded-xl bg-slate-50 border border-slate-200 p-4">
-                  <p class="text-xs text-slate-500 font-bold">ค่าใช้จ่ายตลอดหลักสูตร</p>
-                  <p class="text-xl font-extrabold text-slate-800 mt-1">${programData.tuition?.total || '-'}</p>
+                  <p class="text-xs text-slate-500 font-bold">${t.tuitionTotal}</p>
+                  <p class="text-xl font-extrabold text-slate-800 mt-1">${totalVal}</p>
                 </div>
               </div>
             </div>
@@ -2022,52 +2318,57 @@
   
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-6">
             <div class="ui-card mobile-flat-shell">
-              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">รูปแบบการศึกษา</h3>
+              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">${t.studyFormat}</h3>
               <ul class="mt-4 space-y-3 text-slate-700 text-sm leading-relaxed">
                 ${studyFormat.map((item) => `<li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1 text-xs"></i><span>${item}</span></li>`).join('')}
               </ul>
             </div>
   
             <div class="ui-card mobile-flat-shell">
-              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">โครงสร้างหลักสูตร</h3>
+              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">${t.creditStructure}</h3>
               <div class="mt-4 space-y-3">
-                ${creditStructure.map((item) => `
-                  <div class="rounded-xl border border-slate-200 p-4">
-                    <div class="flex items-center justify-between gap-3">
-                      <p class="font-bold text-slate-800 text-sm">${item.category}</p>
-                      <p class="font-extrabold text-red-600 text-lg">${item.credits}</p>
+                ${creditStructure.map((item) => {
+                  const cat = isEn && item.categoryEn ? item.categoryEn : item.category;
+                  const note = isEn && item.noteEn ? item.noteEn : (item.note || '');
+                  return `
+                    <div class="rounded-xl border border-slate-200 p-4">
+                      <div class="flex items-center justify-between gap-3">
+                        <p class="font-bold text-slate-800 text-sm">${cat}</p>
+                        <p class="font-extrabold text-red-600 text-lg">${item.credits} ${isEn ? 'Credits' : 'หน่วยกิต'}</p>
+                      </div>
+                      ${note ? `<p class="text-xs text-slate-500 mt-1">${note}</p>` : ''}
                     </div>
-                    <p class="text-xs text-slate-500 mt-1">${item.note || ''}</p>
-                  </div>
-                `).join('')}
+                  `;
+                }).join('')}
               </div>
             </div>
           </div>
   
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-6">
             <div class="ui-card mobile-flat-shell">
-              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">เล่มหลักสูตรและเอกสารที่เกี่ยวข้อง</h3>
+              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">${t.curriculumDocs}</h3>
               <ul class="mt-4 space-y-3 text-sm">
                 ${documents.map((doc) => {
+                  const docTitle = isEn && doc.titleEn ? doc.titleEn : doc.title;
                   if (doc.url) {
-                    return `<li><a href="${doc.url}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 hover:border-red-200 hover:bg-red-50 p-3 transition"><span class="text-slate-700">${doc.title}</span><span class="text-red-600 font-bold">ดาวน์โหลด</span></a></li>`;
+                    return `<li><a href="${doc.url}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 rounded-xl border border-slate-200 hover:border-red-200 hover:bg-red-50 p-3 transition"><span class="text-slate-700">${docTitle}</span><span class="text-red-600 font-bold">${t.download}</span></a></li>`;
                   }
-                  return `<li class="rounded-xl border border-slate-200 bg-slate-50 p-3 flex items-center justify-between gap-3"><span class="text-slate-700">${doc.title}</span><span class="text-slate-400 font-bold">รออัปเดตลิงก์</span></li>`;
+                  return `<li class="rounded-xl border border-slate-200 bg-slate-50 p-3 flex items-center justify-between gap-3"><span class="text-slate-700">${docTitle}</span><span class="text-slate-400 font-bold">${isEn ? 'Link Pending' : 'รออัปเดตลิงก์'}</span></li>`;
                 }).join('')}
               </ul>
             </div>
   
             <div class="ui-card mobile-flat-shell">
-              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">ผลการเรียนรู้ที่คาดหวัง (PLO)</h3>
+              <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">${t.ploTitle}</h3>
               <div class="mt-4 space-y-3">
                 <details class="rounded-xl border border-slate-200 p-4" open>
-                  <summary class="cursor-pointer font-bold text-slate-800">หลักสูตรปรับปรุง พ.ศ. 2565</summary>
+                  <summary class="cursor-pointer font-bold text-slate-800">${isEn ? 'Curriculum Revision 2022 (B.E. 2565)' : 'หลักสูตรปรับปรุง พ.ศ. 2565'}</summary>
                   <ul class="mt-3 space-y-2 text-sm text-slate-700 leading-relaxed">
                     ${plo2565.map((item) => `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-red-500 mt-1"></i><span>${item}</span></li>`).join('')}
                   </ul>
                 </details>
                 <details class="rounded-xl border border-slate-200 p-4">
-                  <summary class="cursor-pointer font-bold text-slate-800">หลักสูตรปรับปรุง พ.ศ. 2564</summary>
+                  <summary class="cursor-pointer font-bold text-slate-800">${isEn ? 'Curriculum Revision 2021 (B.E. 2564)' : 'หลักสูตรปรับปรุง พ.ศ. 2564'}</summary>
                   <ul class="mt-3 space-y-2 text-sm text-slate-700 leading-relaxed">
                     ${plo2564.map((item) => `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-red-500 mt-1"></i><span>${item}</span></li>`).join('')}
                   </ul>
@@ -2084,18 +2385,14 @@
   
         if (badgesContainer) {
           const badges = techStack.badges ?? [];
-          
-          // Handle both array of strings (legacy) and array of category objects (new format)
           let badgesHtml = '';
           
           if (Array.isArray(badges) && badges.length > 0) {
             if (typeof badges[0] === 'string') {
-              // Legacy format: array of strings
               badgesHtml = badges.map(label => `
                 <span class="tech-badge ${badges[0] ? 'bg-blue-100 text-blue-900 border border-blue-300' : ''}">${label}</span>
               `).join('');
             } else {
-              // New format: array of category objects
               badgesHtml = badges.map(categoryObj => `
                 <div class="mb-6">
                   <span class="tech-badge-category text-white/60">${categoryObj.category}</span>
@@ -2114,57 +2411,72 @@
   
         if (highlightsContainer) {
           const highlights = techStack.highlights ?? [];
-          highlightsContainer.innerHTML = highlights.map(item => `
-            <div class="tech-highlight">
-              <div class="tech-highlight-icon">
-                <i class="${item.icon} text-4xl ${item.iconColor}"></i>
+          const isEn = currentLang === 'en';
+          highlightsContainer.innerHTML = highlights.map(item => {
+            const desc = isEn && item.descriptionEn ? item.descriptionEn : (item.description || '');
+            return `
+              <div class="tech-highlight">
+                <div class="tech-highlight-icon">
+                  <i class="${item.icon} text-4xl ${item.iconColor}"></i>
+                </div>
+                <p class="tech-highlight-title">${item.title}</p>
+                <p class="tech-highlight-description">${desc}</p>
               </div>
-              <p class="tech-highlight-title">${item.title}</p>
-              <p class="tech-highlight-description">${item.description || ''}</p>
-            </div>
-          `).join('');
+            `;
+          }).join('');
         }
       }
   
       function renderPortals(items = []) {
         const container = document.getElementById('portal-grid');
         if (!container) return;
+
+        const isEn = currentLang === 'en';
+        const openLabel = isEn ? 'Open Portal' : 'เข้าใช้งาน';
   
-        container.innerHTML = items.map(item => `
-          <a href="${item.url}" target="_blank" class="portal-card ui-card-elevated group flex items-start gap-5 h-full">
-            <div class="${item.themeColor} text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-md ${item.shadow} group-hover:scale-105 transition shrink-0 ring-4 ring-red-50">
-              <i class="${item.icon} text-xl"></i>
-            </div>
-            <div class="flex flex-col flex-grow min-h-[4rem]">
-              <h4 class="font-bold text-lg text-slate-800 tracking-tight">${item.title}</h4>
-              <p class="text-slate-500 mt-1.5 leading-relaxed text-sm line-clamp-2">${item.description}</p>
-              <div class="mt-4 text-red-600 font-bold text-sm group-hover:translate-x-1 transition-transform">เข้าใช้งาน <i class="fa-solid fa-arrow-right ml-1"></i></div>
-            </div>
-          </a>
-        `).join('');
+        container.innerHTML = items.map(item => {
+          const title = isEn && item.titleEn ? item.titleEn : item.title;
+          const desc = isEn && item.descriptionEn ? item.descriptionEn : item.description;
+          return `
+            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="portal-card ui-card-elevated group flex items-start gap-5 h-full">
+              <div class="${item.themeColor} text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-md ${item.shadow} group-hover:scale-105 transition shrink-0 ring-4 ring-red-50">
+                <i class="${item.icon} text-xl"></i>
+              </div>
+              <div class="flex flex-col flex-grow min-h-[4rem]">
+                <h4 class="font-bold text-lg text-slate-800 tracking-tight">${title}</h4>
+                <p class="text-slate-500 mt-1.5 leading-relaxed text-sm line-clamp-2">${desc}</p>
+                <div class="mt-4 text-red-600 font-bold text-sm group-hover:translate-x-1 transition-transform">${openLabel} <i class="fa-solid fa-arrow-right ml-1"></i></div>
+              </div>
+            </a>
+          `;
+        }).join('');
       }
   
       function renderQuickLinks(items = []) {
         const container = document.getElementById('quick-links');
         if (!container) return;
-  
-        container.innerHTML = items.map(item => `
-          <li><a href="${item.url}" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition">${item.label}</a></li>
-        `).join('');
+
+        const isEn = currentLang === 'en';
+        container.innerHTML = items.map(item => {
+          const label = isEn && item.labelEn ? item.labelEn : item.label;
+          return `<li><a href="${item.url}" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition">${label}</a></li>`;
+        }).join('');
       }
   
       function renderContactUs(items = []) {
         const container = document.getElementById('contact-us');
         if (!container) return;
-  
+
+        const isEn = currentLang === 'en';
         container.innerHTML = items.map(item => {
+          const label = isEn && item.labelEn ? item.labelEn : item.label;
           if (item.type === 'link' && item.url) {
             const isExternal = !(item.url.startsWith('mailto:') || item.url.startsWith('tel:'));
             const targetAttrs = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
             return `
               <a href="${item.url}" ${targetAttrs} class="flex items-center space-x-3 hover:text-white transition">
                 <i class="${item.icon}"></i>
-                <span>${item.label}</span>
+                <span>${label}</span>
               </a>
             `;
           }
@@ -2172,7 +2484,7 @@
           return `
             <div class="flex items-start space-x-3">
               <i class="${item.icon}"></i>
-              <span class="text-sm">${item.label}</span>
+              <span class="text-sm">${label}</span>
             </div>
           `;
         }).join('');
@@ -2181,300 +2493,286 @@
       function renderFAQ(items = []) {
         const container = document.getElementById('faq-list');
         if (!container) return;
-  
-        container.innerHTML = items.map(item => `
-          <details class="group ui-card-compact">
-            <summary class="list-none cursor-pointer flex items-start justify-between gap-4">
-              <h3 class="font-bold text-slate-900 text-lg">${item.question}</h3>
-              <span class="text-red-600 mt-1 transition-transform group-open:rotate-180">
-                <i class="fa-solid fa-chevron-down"></i>
-              </span>
-            </summary>
-            <p class="text-slate-600 mt-4 leading-relaxed">${item.answer}</p>
-          </details>
-        `).join('');
+
+        const isEn = currentLang === 'en';
+        container.innerHTML = items.map(item => {
+          const q = isEn && item.questionEn ? item.questionEn : item.question;
+          const a = isEn && item.answerEn ? item.answerEn : item.answer;
+          return `
+            <details class="group ui-card-compact">
+              <summary class="list-none cursor-pointer flex items-start justify-between gap-4">
+                <h3 class="font-bold text-slate-900 text-lg">${q}</h3>
+                <span class="text-red-600 mt-1 transition-transform group-open:rotate-180">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </summary>
+              <p class="text-slate-600 mt-4 leading-relaxed">${a}</p>
+            </details>
+          `;
+        }).join('');
       }
   
       function escapeHtml(value = '') {
         return String(value)
-          .replaceAll('&', '&amp;')
-          .replaceAll('<', '&lt;')
-          .replaceAll('>', '&gt;')
-          .replaceAll('"', '&quot;')
-          .replaceAll("'", '&#39;');
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
       }
   
       function parseInlineMarkdown(text = '') {
         return escapeHtml(text)
-          .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-          .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-          .replace(/\*(.+?)\*/g, '<em>$1</em>')
-          .replace(/`(.+?)`/g, '<code>$1</code>');
+          .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+          .replace(/\*(.*?)\*/g, '<em>$1</em>')
+          .replace(/`([^`]+)`/g, '<code class="bg-slate-100 text-red-600 px-1 py-0.5 rounded text-xs">$1</code>')
+          .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-red-600 hover:underline">$1</a>');
       }
   
       function markdownToHtml(markdown = '') {
-        const lines = markdown.replace(/\r\n/g, '\n').split('\n');
-        const blocks = [];
-        let paragraphBuffer = [];
-        let listBuffer = [];
+        if (!markdown || typeof markdown !== 'string') return '';
   
-        const flushParagraph = () => {
-          if (paragraphBuffer.length === 0) return;
-          blocks.push(`<p>${parseInlineMarkdown(paragraphBuffer.join(' '))}</p>`);
-          paragraphBuffer = [];
-        };
+        const lines = markdown.split(/\r?\n/);
+        const html = [];
+        let inList = false;
   
-        const flushList = () => {
-          if (listBuffer.length === 0) return;
-          blocks.push(`<ul>${listBuffer.map(item => `<li>${parseInlineMarkdown(item)}</li>`).join('')}</ul>`);
-          listBuffer = [];
+        const closeListIfNeeded = () => {
+          if (inList) {
+            html.push('</ul>');
+            inList = false;
+          }
         };
   
         lines.forEach((line) => {
           const trimmed = line.trim();
   
           if (!trimmed) {
-            flushParagraph();
-            flushList();
+            closeListIfNeeded();
             return;
           }
   
-          const headingMatch = trimmed.match(/^(#{1,3})\s+(.+)$/);
-          if (headingMatch) {
-            flushParagraph();
-            flushList();
-            const level = headingMatch[1].length;
-            const headingTag = level === 1 ? 'h2' : level === 2 ? 'h3' : 'h4';
-            blocks.push(`<${headingTag}>${parseInlineMarkdown(headingMatch[2])}</${headingTag}>`);
+          if (trimmed.startsWith('![')) {
+            closeListIfNeeded();
+            const match = trimmed.match(/^!\[(.*?)\]\((.*?)\)$/);
+            if (match) {
+              const [, alt, src] = match;
+              html.push(`
+                <figure class="my-4">
+                  <img src="${src}" alt="${escapeHtml(alt)}" class="rounded-xl border border-slate-200 w-full max-h-96 object-cover shadow-sm" loading="lazy">
+                  ${alt ? `<figcaption class="text-xs text-slate-500 mt-2 text-center">${escapeHtml(alt)}</figcaption>` : ''}
+                </figure>
+              `);
+              return;
+            }
+          }
+  
+          if (trimmed.startsWith('### ')) {
+            closeListIfNeeded();
+            html.push(`<h4 class="text-lg font-bold text-slate-800 mt-5 mb-2">${parseInlineMarkdown(trimmed.slice(4))}</h4>`);
             return;
           }
   
-          const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);
-          if (imageMatch) {
-            flushParagraph();
-            flushList();
-            const imageAlt = parseInlineMarkdown(imageMatch[1] || '');
-            const imageSrc = escapeHtml(imageMatch[2]);
-            blocks.push(`<figure><img src="${imageSrc}" alt="${imageAlt}" loading="lazy" class="cursor-pointer hover:opacity-90 transition-opacity" title="คลิกเพื่อขยายดูรูปภาพ">${imageAlt ? `<figcaption>${imageAlt}</figcaption>` : ''}</figure>`);
+          if (trimmed.startsWith('## ')) {
+            closeListIfNeeded();
+            html.push(`<h3 class="text-xl font-extrabold text-slate-900 mt-6 mb-3">${parseInlineMarkdown(trimmed.slice(3))}</h3>`);
             return;
           }
   
-          const quoteMatch = trimmed.match(/^>\s+(.+)$/);
-          if (quoteMatch) {
-            flushParagraph();
-            flushList();
-            blocks.push(`<blockquote>${parseInlineMarkdown(quoteMatch[1])}</blockquote>`);
+          if (trimmed.startsWith('# ')) {
+            closeListIfNeeded();
+            html.push(`<h2 class="text-2xl font-black text-slate-900 mt-8 mb-4">${parseInlineMarkdown(trimmed.slice(2))}</h2>`);
             return;
           }
   
-          const listMatch = trimmed.match(/^-\s+(.+)$/);
-          if (listMatch) {
-            flushParagraph();
-            listBuffer.push(listMatch[1]);
+          if (trimmed.startsWith('- ')) {
+            if (!inList) {
+              html.push('<ul class="space-y-2 my-3 text-slate-700">');
+              inList = true;
+            }
+            html.push(`<li class="flex items-start gap-2"><span class="text-red-500 mt-1">•</span><span>${parseInlineMarkdown(trimmed.slice(2))}</span></li>`);
             return;
           }
   
-          flushList();
-          paragraphBuffer.push(trimmed);
+          closeListIfNeeded();
+          html.push(`<p class="text-slate-600 leading-relaxed my-2">${parseInlineMarkdown(trimmed)}</p>`);
         });
   
-        flushParagraph();
-        flushList();
-  
-        return blocks.join('');
+        closeListIfNeeded();
+        return html.join('');
       }
   
       function markdownToPlainText(markdown = '') {
+        if (!markdown || typeof markdown !== 'string') return '';
+  
         return markdown
-          .replace(/\r\n/g, '\n')
-          .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '')
-          .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '$1')
-          .replace(/^#{1,6}\s+/gm, '')
-          .replace(/^>\s+/gm, '')
-          .replace(/^[-*]\s+/gm, '• ')
-          .replace(/\*\*(.+?)\*\*/g, '$1')
-          .replace(/\*(.+?)\*/g, '$1')
-          .replace(/`(.+?)`/g, '$1')
-          .replace(/\n{2,}/g, '\n\n')
+          .replace(/!\[.*?\]\(.*?\)/g, '')
+          .replace(/\[(.*?)\]\(.*?\)/g, '$1')
+          .replace(/`([^`]+)`/g, '$1')
+          .replace(/#{1,6}\s+/g, '')
+          .replace(/^\s*[-*+]\s+/gm, '')
+          .replace(/\*\*(.*?)\*\*/g, '$1')
+          .replace(/\*(.*?)\*/g, '$1')
+          .replace(/\r?\n+/g, ' ')
+          .replace(/\s+/g, ' ')
           .trim();
       }
   
       function stripHtmlTags(value = '') {
-        return String(value).replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+        return String(value).replace(/<[^>]+>/g, '').trim();
       }
   
       function renderStructuredData({ faqData = [], contactData = [], programOverviewData = {} } = {}) {
-        const scriptElement = document.getElementById('structured-data-se-buu');
-        if (!scriptElement) return;
+        const structuredDataElement = document.getElementById('structured-data-se-buu');
+        if (!structuredDataElement) return;
   
-        const freshnessDate =
-          programOverviewData.lastUpdated
-          || document.querySelector('#key-facts time[datetime]')?.getAttribute('datetime')
-          || '2026-04-02';
+        const isEn = currentLang === 'en';
+        const contactEmail = contactData.find(item => item.icon?.includes('envelope'))?.label || 'se@buu.ac.th';
+        const contactTel = contactData.find(item => item.icon?.includes('phone'))?.label || '038-102222 ต่อ 1300';
+        const contactAddress = contactData.find(item => item.icon?.includes('location'))?.label
+          || 'Faculty of Informatics, Burapha University, Chonburi, Thailand';
   
-        const siteUrl = 'https://se.informatics.buu.ac.th/';
-        const websiteId = `${siteUrl}#website`;
-        const organizationId = `${siteUrl}#organization`;
-        const courseId = `${siteUrl}#course`;
-        const faqId = `${siteUrl}#faq`;
-        const sameAsLinks = Array.isArray(contactData)
-          ? contactData
-            .filter(item => item && item.type === 'link' && typeof item.url === 'string' && /^https?:\/\//i.test(item.url))
-            .map(item => item.url)
-          : [];
-        const primaryContactLink = sameAsLinks[0];
-        const faqItems = Array.isArray(faqData)
-          ? faqData
-            .filter(item => item && item.question && item.answer)
-            .map(item => ({
-              '@type': 'Question',
-              name: stripHtmlTags(item.question),
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: stripHtmlTags(item.answer)
-              }
-            }))
-          : [];
+        const degreeName = isEn
+          ? (programOverviewData.degree?.englishFull || 'Bachelor of Science (Software Engineering)')
+          : (programOverviewData.degree?.thaiFull || 'หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาวิศวกรรมซอฟต์แวร์');
+        const institutionName = isEn ? 'Faculty of Informatics, Burapha University' : 'คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา';
   
-        const organization = {
-          '@type': 'CollegeOrUniversity',
-          '@id': organizationId,
-          name: 'สาขาวิชาวิศวกรรมซอฟต์แวร์ คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา',
-          url: siteUrl,
-          description: 'หลักสูตรวิศวกรรมซอฟต์แวร์ที่มุ่งเน้นการพัฒนาซอฟต์แวร์เชิงระบบ การทำงานเป็นทีม และประสบการณ์จริงกับภาคอุตสาหกรรม',
-          logo: {
-            '@type': 'ImageObject',
-            url: `${siteUrl}logo-se.jpg`
-          },
-          image: `${siteUrl}logo-se.jpg`,
-          department: {
-            '@type': 'CollegeOrUniversity',
-            name: 'คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา'
-          }
-        };
+        const mainEntities = (Array.isArray(faqData) ? faqData : [])
+          .filter(item => item && (item.question || item.questionEn) && (item.answer || item.answerEn))
+          .map(item => ({
+            '@type': 'Question',
+            'name': isEn && item.questionEn ? item.questionEn : item.question,
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': stripHtmlTags(isEn && item.answerEn ? item.answerEn : item.answer)
+            }
+          }));
   
-        if (sameAsLinks.length > 0) {
-          organization.sameAs = sameAsLinks;
-        }
-  
-        if (primaryContactLink) {
-          organization.contactPoint = [{
-            '@type': 'ContactPoint',
-            contactType: 'admissions',
-            url: primaryContactLink,
-            availableLanguage: ['th', 'en']
-          }];
-        }
-  
-        const graph = [
+        const structuredGraph = [
           {
-            '@type': 'WebSite',
-            '@id': websiteId,
-            url: siteUrl,
-            name: 'Software Engineering BUU',
-            description: 'เว็บไซต์หลักสูตรวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยบูรพา สำหรับข้อมูลหลักสูตร การรับสมัคร และเส้นทางอาชีพ',
-            inLanguage: 'th-TH',
-            publisher: { '@id': organizationId },
-            dateModified: freshnessDate
+            '@type': 'EducationalOrganization',
+            '@id': 'https://se.informatics.buu.ac.th/#organization',
+            'name': institutionName,
+            'alternateName': ['SE BUU', 'วิศวกรรมซอฟต์แวร์ มหาวิทยาลัยบูรพา'],
+            'url': 'https://se.informatics.buu.ac.th/',
+            'logo': 'https://se.informatics.buu.ac.th/logo-se.jpg',
+            'email': contactEmail,
+            'telephone': contactTel,
+            'address': {
+              '@type': 'PostalAddress',
+              'streetAddress': contactAddress,
+              'addressLocality': 'Chonburi',
+              'addressCountry': 'TH'
+            }
           },
-          organization,
           {
-            '@type': 'Course',
-            '@id': courseId,
-            name: 'หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาวิศวกรรมซอฟต์แวร์',
-            description: programOverviewData.description || 'หลักสูตรปริญญาตรี 4 ปี เน้นกระบวนการพัฒนาซอฟต์แวร์แบบลงมือจริง การทำงานร่วมกับสถานประกอบการ และการเตรียมความพร้อมสู่อุตสาหกรรมดิจิทัล',
-            url: `${siteUrl}#program-overview`,
-            provider: { '@id': organizationId },
-            educationalCredentialAwarded: 'Bachelor of Science (Software Engineering)',
-            inLanguage: 'th-TH',
-            isAccessibleForFree: true,
-            dateModified: freshnessDate
+            '@type': 'EducationalOccupationalProgram',
+            '@id': 'https://se.informatics.buu.ac.th/#program',
+            'name': degreeName,
+            'programType': 'BachelorDegree',
+            'provider': {
+              '@id': 'https://se.informatics.buu.ac.th/#organization'
+            },
+            'educationalCredentialAwarded': isEn ? (programOverviewData.degree?.englishShort || 'B.Sc. (Software Engineering)') : (programOverviewData.degree?.thaiShort || 'วท.บ. (วิศวกรรมซอฟต์แวร์)'),
+            'timeToComplete': 'P4Y',
+            'inLanguage': isEn ? 'en-US' : 'th-TH',
+            'description': isEn && programOverviewData.descriptionEn ? programOverviewData.descriptionEn : (programOverviewData.description || 'Bachelor of Science Program in Software Engineering at Burapha University.')
           }
         ];
   
-        if (faqItems.length > 0) {
-          graph.push({
+        if (mainEntities.length > 0) {
+          structuredGraph.push({
             '@type': 'FAQPage',
-            '@id': faqId,
-            url: `${siteUrl}#faq`,
-            inLanguage: 'th-TH',
-            mainEntity: faqItems
+            '@id': 'https://se.informatics.buu.ac.th/#faq',
+            'mainEntity': mainEntities
           });
         }
   
-        scriptElement.textContent = JSON.stringify({
+        structuredDataElement.textContent = JSON.stringify({
           '@context': 'https://schema.org',
-          '@graph': graph
+          '@graph': structuredGraph
         }, null, 2);
       }
   
       function buildTimelineExcerpt(markdown = '', maxLength = 800) {
         const plainText = markdownToPlainText(markdown);
-        if (!plainText) {
-          return 'กำลังอัปเดตเนื้อหาสำหรับหัวข้อนี้';
-        }
-  
-        if (plainText.length <= maxLength) {
-          return plainText;
-        }
-  
-        return `${plainText.slice(0, maxLength).trimEnd()}...`;
+        if (!plainText) return '';
+        if (plainText.length <= maxLength) return plainText;
+        return `${plainText.slice(0, maxLength).trim()}...`;
       }
   
       async function fetchText(url) {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return await response.text();
+        } catch (e) {
+          console.error('Could not fetch markdown text: ', e);
+          return '';
         }
-        return await response.text();
       }
   
       async function hydrateTimelineFromMarkdown(items = []) {
-        const hydratedItems = await Promise.all(items.map(async (item) => {
-          if (!item || typeof item !== 'object') return item;
+        if (!Array.isArray(items)) return [];
   
-          let markdownContent = '';
-          if (typeof item.content === 'string') {
-            markdownContent = item.content;
-          } else if (typeof item.contentFile === 'string' && item.contentFile.length > 0) {
-            try {
-              markdownContent = await fetchText(item.contentFile);
-            } catch (error) {
-              console.error('Error loading markdown:', item.contentFile, error);
-            }
+        return Promise.all(items.map(async (item) => {
+          if (!item || typeof item !== 'object') return item;
+          if (!item.contentFile) return item;
+  
+          const rawMarkdown = await fetchText(item.contentFile);
+          if (!rawMarkdown) return item;
+  
+          const hydratedItem = { ...item };
+          hydratedItem.modalDetails = markdownToHtml(rawMarkdown);
+  
+          if (typeof item.description !== 'string' || item.description.trim().length === 0) {
+            hydratedItem.description = buildTimelineExcerpt(rawMarkdown, 800);
           }
   
-          const fallbackHtml = typeof item.modalDetails === 'string' ? item.modalDetails : '';
-          const modalDetails = markdownContent ? markdownToHtml(markdownContent) : fallbackHtml;
-  
-          return {
-            ...item,
-            description: buildTimelineExcerpt(markdownContent || markdownToPlainText(fallbackHtml)),
-            modalDetails
-          };
+          return hydratedItem;
         }));
-  
-        return hydratedItems;
       }
   
       function normalizeTimelineImages(item = {}) {
-        const imageList = Array.isArray(item.images) && item.images.length > 0
-          ? item.images
-          : (item.image ? [item.image] : []);
+        if (!item || typeof item !== 'object') return [];
   
-        return imageList
-          .map(image => {
-            if (typeof image === 'string') {
-              return { src: image, alt: item.imageAlt || item.title };
-            }
+        const normalizeSingleImage = (rawImage, defaultAlt) => {
+          if (typeof rawImage === 'string') {
+            return {
+              src: rawImage,
+              alt: defaultAlt,
+            };
+          }
   
-            if (image?.src) {
-              return { src: image.src, alt: image.alt || item.imageAlt || item.title };
-            }
+          if (rawImage && typeof rawImage === 'object' && typeof rawImage.src === 'string') {
+            return {
+              src: rawImage.src,
+              alt: typeof rawImage.alt === 'string' && rawImage.alt.trim().length > 0
+                ? rawImage.alt
+                : defaultAlt,
+            };
+          }
   
-            return null;
-          })
-          .filter(Boolean);
+          return null;
+        };
+  
+        const defaultAlt = typeof item.imageAlt === 'string' && item.imageAlt.trim().length > 0
+          ? item.imageAlt
+          : (typeof item.title === 'string' ? item.title : 'Timeline photo');
+  
+        if (Array.isArray(item.images)) {
+          return item.images
+            .map((image) => normalizeSingleImage(image, defaultAlt))
+            .filter((image) => Boolean(image && image.src));
+        }
+  
+        if (item.image) {
+          const single = normalizeSingleImage(item.image, defaultAlt);
+          return single ? [single] : [];
+        }
+  
+        return [];
       }
   
       async function renderTimeline(items = []) {
@@ -2482,11 +2780,16 @@
         if (!container) return;
   
         const timelineItems = await hydrateTimelineFromMarkdown(items);
+        const isEn = currentLang === 'en';
+        const t = translationsData ? (translationsData[currentLang] || translationsData.th).timeline : {
+          readMore: 'ดูเพิ่มเติม',
+          close: 'ปิดหน้าต่าง'
+        };
   
         const timelineViewerData = timelineItems.map(item => {
           return {
-            year: item.year,
-            title: item.title,
+            year: isEn && item.yearEn ? item.yearEn : item.year,
+            title: isEn && item.titleEn ? item.titleEn : item.title,
             images: normalizeTimelineImages(item),
             modalDetails: item.modalDetails || ''
           };
@@ -2538,8 +2841,11 @@
             `;
           }
   
-          const shouldShowReadMore = (item.description || '').length > 140;
-
+          const yearLabel = isEn && item.yearEn ? item.yearEn : item.year;
+          const titleLabel = isEn && item.titleEn ? item.titleEn : item.title;
+          const descText = isEn && item.descriptionEn ? item.descriptionEn : item.description;
+          const shouldShowReadMore = (descText || '').length > 140;
+  
           return `
             <div class="relative md:pl-12">
               <div class="hidden md:block absolute left-5 top-0 h-full w-px bg-gradient-to-b from-red-300 to-red-100"></div>
@@ -2550,20 +2856,20 @@
                   <i class="fa-solid fa-expand text-lg"></i>
                 </div>
                 <div class="flex flex-wrap items-center gap-3 mb-4 pr-12">
-                  <span class="bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20 text-xs font-bold px-3 py-1 rounded-full shadow-sm">${item.year}</span>
-                  <h3 class="text-xl md:text-2xl font-bold text-slate-800 tracking-tight">${item.title}</h3>
+                  <span class="bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20 text-xs font-bold px-3 py-1 rounded-full shadow-sm">${yearLabel}</span>
+                  <h3 class="text-xl md:text-2xl font-bold text-slate-800 tracking-tight">${titleLabel}</h3>
                 </div>
   
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-start">
                   <div class="${hasImages ? 'md:col-span-3' : 'md:col-span-5'}">
-                    <p class="md:hidden text-slate-600 leading-relaxed timeline-mobile-summary whitespace-pre-line">${escapeHtml(item.description)}</p>
-                    <p class="hidden md:block text-slate-600 leading-relaxed timeline-description pointer-events-none whitespace-pre-line">${escapeHtml(item.description)}</p>
+                    <p class="md:hidden text-slate-600 leading-relaxed timeline-mobile-summary whitespace-pre-line">${escapeHtml(descText)}</p>
+                    <p class="hidden md:block text-slate-600 leading-relaxed timeline-description pointer-events-none whitespace-pre-line">${escapeHtml(descText)}</p>
                     ${shouldShowReadMore ? `
                       <button
                         type="button"
                         class="mt-3 md:hidden inline-flex items-center gap-2 text-sm font-bold text-red-600 hover:text-red-700 transition"
                         data-timeline-readmore="${yearIndex}">
-                        <span>ดูเพิ่มเติม</span>
+                        <span>${t.readMore}</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
                       </button>
                     ` : ''}
@@ -2583,6 +2889,9 @@
       function renderFutureWork(items = []) {
         const container = document.getElementById('future-work-grid');
         if (!container) return;
+
+        const isEn = currentLang === 'en';
+        const cardTooltip = isEn ? 'Click to view details' : 'คลิกเพื่อดูรายละเอียด';
   
         const colors = [
           { from: '#dbeafe', to: '#93c5fd', text: '#1d4ed8', bg: ['#3b82f6', '#1d4ed8'] },
@@ -2596,21 +2905,22 @@
           { from: '#ffedd5', to: '#fdba74', text: '#9a3412', bg: ['#f97316', '#9a3412'] }
         ];
   
-        // Store data for modal
         container.dataset.careerItems = JSON.stringify(items);
   
         container.innerHTML = items.map((item, index) => {
           const c = colors[index % colors.length];
+          const title = isEn && item.titleEn ? item.titleEn : item.title;
+          const desc = isEn && item.descriptionEn ? item.descriptionEn : item.description;
           return `
-          <div class="flip-card" data-career-index="${index}" title="คลิกเพื่อดูรายละเอียด">
+          <div class="flip-card" data-career-index="${index}" title="${cardTooltip}">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shrink-0 shadow-inner" style="background: linear-gradient(135deg, ${c.from}, ${c.to}); color: ${c.text};">
                   <i class="${item.icon}" aria-hidden="true"></i>
                 </div>
                 <div style="flex:1;min-width:0;">
-                  <h3 class="font-bold text-slate-800 tracking-tight" style="font-size:1.05rem;">${item.title}</h3>
-                  <p class="text-slate-400 mt-1 text-xs leading-relaxed">${item.description}</p>
+                  <h3 class="font-bold text-slate-800 tracking-tight" style="font-size:1.05rem;">${title}</h3>
+                  <p class="text-slate-400 mt-1 text-xs leading-relaxed">${desc}</p>
                 </div>
                 <div class="shrink-0 text-slate-200" style="font-size:1rem;">
                   <i class="fa-solid fa-chevron-right"></i>
@@ -2620,7 +2930,6 @@
           </div>`;
         }).join('');
   
-        // Click to open career modal
         container.addEventListener('click', (e) => {
           const card = e.target.closest('[data-career-index]');
           if (!card) return;
@@ -2630,17 +2939,20 @@
           if (!item) return;
           const c = colors[index % colors.length];
   
-          // Animate card
           card.classList.add('launching');
   
-          // Open modal after card flip starts
           setTimeout(() => {
+            const isEnNow = currentLang === 'en';
             const modal = document.getElementById('career-modal');
             const panel = document.getElementById('career-modal-panel');
             const header = document.getElementById('career-modal-header');
-            document.getElementById('career-modal-title').textContent = item.title;
-            document.getElementById('career-modal-desc').textContent = item.description;
-            document.getElementById('career-modal-detail').textContent = item.detail || item.description;
+            const title = isEnNow && item.titleEn ? item.titleEn : item.title;
+            const desc = isEnNow && item.descriptionEn ? item.descriptionEn : item.description;
+            const detail = isEnNow && item.detailEn ? item.detailEn : (item.detail || item.description);
+
+            document.getElementById('career-modal-title').textContent = title;
+            document.getElementById('career-modal-desc').textContent = desc;
+            document.getElementById('career-modal-detail').textContent = detail;
             document.getElementById('career-modal-icon').innerHTML = `<i class="${item.icon}"></i>`;
             if (header) header.style.background = `linear-gradient(135deg, ${c.bg[0]}, ${c.bg[1]})`;
   
@@ -2701,7 +3013,23 @@
         const portalContainer = document.getElementById('portal-grid');
   
         try {
-          const [uspData, admissionData, admissionTimelineData, programOverviewData, timelineData, seminarData, techStackData, portalData, quickLinksData, contactData, faqData, futureWorkData, partnersData] = await Promise.all([
+          const [
+            translations,
+            uspData,
+            admissionData,
+            admissionTimelineData,
+            programOverviewData,
+            timelineData,
+            seminarData,
+            techStackData,
+            portalData,
+            quickLinksData,
+            contactData,
+            faqData,
+            futureWorkData,
+            partnersData
+          ] = await Promise.all([
+            fetchJson('./data/translations.json'),
             fetchJson('./data/usp.json'),
             fetchJson('./data/admission.json'),
             fetchJson('./data/admission-timeline.json'),
@@ -2717,19 +3045,26 @@
             fetchJson('./data/partners.json'),
           ]);
   
-          renderUniqueSellingPoints(uspData);
-            renderAdmission(admissionData);
-            renderAdmissionTimeline(admissionTimelineData);
-          await renderTimeline(timelineData);
-            renderProgramOverview(programOverviewData);
-          renderSeminarShowcase(seminarData);
-          renderTechStack(techStackData);
-          renderPortals(portalData);
-          renderQuickLinks(quickLinksData);
-          renderContactUs(contactData);
-          renderFAQ(faqData);
-          renderStructuredData({ faqData, contactData, programOverviewData });
-          renderFutureWork(futureWorkData);
+          translationsData = translations;
+          cachedUspData = uspData;
+          cachedAdmissionData = admissionData;
+          cachedAdmissionTimelineData = admissionTimelineData;
+          cachedProgramOverviewData = programOverviewData;
+          cachedTimelineData = timelineData;
+          cachedSeminarData = seminarData;
+          cachedTechStackData = techStackData;
+          cachedPortalData = portalData;
+          cachedQuickLinksData = quickLinksData;
+          cachedContactData = contactData;
+          cachedFaqData = faqData;
+          cachedFutureWorkData = futureWorkData;
+          cachedPartnersData = partnersData;
+
+          // Apply initial language state
+          document.documentElement.lang = currentLang;
+          updateLanguageSwitcherUI();
+          updateStaticTranslations();
+          rerenderDynamicSections();
           renderPartners(partnersData);
         } catch (error) {
           console.error('Error loading JSON:', error);
@@ -2748,7 +3083,7 @@
           return await response.json();
         } catch (e) {
           console.error("Could not fetch JSON: ", e);
-          return []; // คืนค่าเป็น Array ว่างถ้าโหลดไม่สำเร็จ เพื่อไม่ให้หน้าเว็บพัง
+          return [];
         }
       }
   
@@ -2789,14 +3124,16 @@
   
       function applyHeroCta(buttonElement, ctaConfig) {
         if (!buttonElement || !ctaConfig || typeof ctaConfig !== 'object') return;
-        if (typeof ctaConfig.label === 'string') {
-          buttonElement.textContent = ctaConfig.label;
+        const isEn = currentLang === 'en';
+        const label = (isEn && ctaConfig.labelEn) ? ctaConfig.labelEn : ctaConfig.label;
+        if (typeof label === 'string') {
+          buttonElement.textContent = label;
         }
         if (typeof ctaConfig.href === 'string') {
           buttonElement.href = ctaConfig.href;
         }
       }
-
+  
       function initHeroContent(config) {
         const badgeElement = document.getElementById('hero-badge-text');
         const titleElement = document.getElementById('hero-title');
@@ -2804,13 +3141,16 @@
         const primaryCta = document.getElementById('hero-primary-cta');
         const secondaryCta = document.getElementById('hero-secondary-cta');
         const quickLinksContainer = document.getElementById('hero-quick-links');
+        const exploreMoreElement = document.getElementById('hero-explore-more');
   
         if (!config || typeof config !== 'object') {
           return;
         }
+
+        const isEn = currentLang === 'en';
   
-        if (badgeElement && typeof config.badgeText === 'string') {
-          badgeElement.textContent = config.badgeText;
+        if (badgeElement) {
+          badgeElement.textContent = (isEn && config.badgeTextEn) ? config.badgeTextEn : (config.badgeText || '');
         }
   
         if (
@@ -2826,20 +3166,30 @@
           `;
         }
   
-        if (descriptionElement && typeof config.description === 'string') {
-          descriptionElement.textContent = config.description.trim();
+        if (descriptionElement) {
+          const desc = (isEn && config.descriptionEn) ? config.descriptionEn : (config.description || '');
+          descriptionElement.textContent = desc.trim();
         }
-
+  
         applyHeroCta(primaryCta, config.primaryCta);
         applyHeroCta(secondaryCta, config.secondaryCta);
   
         if (quickLinksContainer && Array.isArray(config.quickLinks)) {
           quickLinksContainer.innerHTML = config.quickLinks
-            .filter((item) => item && typeof item.label === 'string' && typeof item.href === 'string')
-            .map((item) => `<a href="${item.href}" class="ui-pill ui-pill-hero">${item.label}</a>`)
+            .filter((item) => item && (item.label || item.labelEn) && typeof item.href === 'string')
+            .map((item) => {
+              const label = (isEn && item.labelEn) ? item.labelEn : item.label;
+              return `<a href="${item.href}" class="ui-pill ui-pill-hero">${label}</a>`;
+            })
             .join('');
         }
-  
+
+        if (exploreMoreElement && translationsData) {
+          const t = translationsData[currentLang] || translationsData.th;
+          if (t?.hero?.exploreMore) {
+            exploreMoreElement.textContent = t.hero.exploreMore;
+          }
+        }
       }
   
       async function initHeroCarousel() {
@@ -2847,69 +3197,120 @@
         const prevButton = document.getElementById('hero-carousel-prev');
         const nextButton = document.getElementById('hero-carousel-next');
         const dotsContainer = document.getElementById('hero-carousel-dots');
-
-        if (!imageElement || !dotsContainer) return;
+  
+        if (!imageElement) {
+          return;
+        }
   
         const heroImages = await loadHeroImages();
-        if (heroImages.length === 0) return;
-  
+        const fallbackImage = './images/hero/hero-1.webp';
+        const carouselImages = heroImages.length > 0 ? heroImages : [fallbackImage];
         let currentIndex = 0;
-        let timerId = null;
+        let slideTimer = null;
+        let isTransitioning = false;
   
-        const renderDots = () => {
-          dotsContainer.innerHTML = heroImages.map((_, index) => `
-            <button type="button"
-              class="hero-dot w-2.5 h-2.5 rounded-full transition ${index === currentIndex ? 'bg-white' : 'bg-white/50'}"
-              data-hero-index="${index}"
-              aria-label="Go to slide ${index + 1}"></button>
-          `).join('');
+        const preloadImage = (src) => {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = src;
+          });
         };
   
-        const goToSlide = (index) => {
-          const lastIndex = heroImages.length - 1;
-          if (index < 0) {
-            currentIndex = lastIndex;
-          } else if (index > lastIndex) {
-            currentIndex = 0;
-          } else {
-            currentIndex = index;
-          }
+        const renderDots = () => {
+          if (!dotsContainer) return;
   
-          if (imageElement) {
-            imageElement.src = heroImages[currentIndex];
-            imageElement.alt = `บรรยากาศการเรียนและกิจกรรมหลักสูตรวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยบูรพา ภาพที่ ${currentIndex + 1}`;
+          dotsContainer.innerHTML = carouselImages
+            .map((_, index) => {
+              const activeClass = index === currentIndex
+                ? 'w-7 bg-red-600'
+                : 'w-2 bg-white/70 hover:bg-white';
+              return `<button type="button" class="h-2 rounded-full transition-all duration-300 ${activeClass}" data-hero-slide="${index}" aria-label="Go to slide ${index + 1}"></button>`;
+            })
+            .join('');
+        };
+  
+        const showSlide = async (targetIndex, direction = 1) => {
+          if (isTransitioning || carouselImages.length === 0) return;
+  
+          const total = carouselImages.length;
+          const nextIndex = (targetIndex + total) % total;
+          if (nextIndex === currentIndex && imageElement.getAttribute('src')) return;
+  
+          isTransitioning = true;
+          const nextSrc = carouselImages[nextIndex];
+          await preloadImage(nextSrc);
+  
+          imageElement.style.opacity = '0';
+          imageElement.style.transform = `translateX(${direction > 0 ? '12px' : '-12px'}) scale(1.02)`;
+  
+          setTimeout(() => {
+            imageElement.src = nextSrc;
+            currentIndex = nextIndex;
+            renderDots();
+  
+            requestAnimationFrame(() => {
+              imageElement.style.opacity = '1';
+              imageElement.style.transform = 'translateX(0px) scale(1)';
+            });
+  
+            setTimeout(() => {
+              isTransitioning = false;
+            }, 320);
+          }, 180);
+        };
+  
+        const nextSlide = () => showSlide(currentIndex + 1, 1);
+        const prevSlide = () => showSlide(currentIndex - 1, -1);
+  
+        const startAutoSlide = () => {
+          if (carouselImages.length <= 1) return;
+          stopAutoSlide();
+          slideTimer = setInterval(() => {
+            nextSlide();
+          }, 4500);
+        };
+  
+        const stopAutoSlide = () => {
+          if (slideTimer) {
+            clearInterval(slideTimer);
+            slideTimer = null;
           }
-          renderDots();
         };
   
         const restartAutoSlide = () => {
-          if (timerId) clearInterval(timerId);
-          timerId = setInterval(() => goToSlide(currentIndex + 1), 4500);
+          stopAutoSlide();
+          startAutoSlide();
         };
   
-        // Desktop controls
-        if (prevButton) {
-          prevButton.addEventListener('click', () => {
-            goToSlide(currentIndex - 1);
-            restartAutoSlide();
-          });
-        }
-        if (nextButton) {
-          nextButton.addEventListener('click', () => {
-            goToSlide(currentIndex + 1);
-            restartAutoSlide();
-          });
-        }
-        dotsContainer.addEventListener('click', (event) => {
-          const target = event.target instanceof Element ? event.target.closest('[data-hero-index]') : null;
-          if (!target) return;
-          const index = Number(target.getAttribute('data-hero-index'));
-          if (Number.isNaN(index)) return;
-          goToSlide(index);
+        prevButton?.addEventListener('click', () => {
+          prevSlide();
           restartAutoSlide();
         });
   
-        goToSlide(0);
+        nextButton?.addEventListener('click', () => {
+          nextSlide();
+          restartAutoSlide();
+        });
+  
+        dotsContainer?.addEventListener('click', (event) => {
+          const target = event.target;
+          if (!(target instanceof HTMLElement)) return;
+  
+          const slideAttr = target.getAttribute('data-hero-slide');
+          if (slideAttr === null) return;
+  
+          const targetIndex = Number(slideAttr);
+          if (Number.isNaN(targetIndex)) return;
+  
+          const direction = targetIndex >= currentIndex ? 1 : -1;
+          showSlide(targetIndex, direction);
+          restartAutoSlide();
+        });
+  
+        imageElement.src = carouselImages[0];
+        renderDots();
         restartAutoSlide();
       }
   
@@ -2918,8 +3319,15 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const heroExploreMore = document.getElementById('hero-explore-more');
         const heroConfig = await loadHeroConfig();
+        cachedHeroConfig = heroConfig;
         initHeroContent(heroConfig);
         initHeroCarousel();
+
+        // Language Switcher Bindings
+        document.getElementById('lang-switch-th')?.addEventListener('click', () => setLanguage('th'));
+        document.getElementById('lang-switch-en')?.addEventListener('click', () => setLanguage('en'));
+        document.getElementById('mobile-lang-switch-th')?.addEventListener('click', () => setLanguage('th'));
+        document.getElementById('mobile-lang-switch-en')?.addEventListener('click', () => setLanguage('en'));
   
         heroExploreMore?.addEventListener('click', (event) => {
           event.preventDefault();
@@ -2953,7 +3361,6 @@
             mobileMenuButton.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
             if (icon) { icon.classList.replace('fa-xmark', 'fa-bars'); }
-            // hide from tab order after animation completes
             setTimeout(() => { if (!isOpen) mobileMenu.style.visibility = 'hidden'; }, 380);
           };
   
@@ -3148,7 +3555,6 @@
           blogModal.classList.add('flex');
           document.body.classList.add('overflow-hidden');
           
-          // Trigger reflow for animations
           void blogModal.offsetWidth;
           
           blogModalBackdrop.classList.remove('opacity-0');
@@ -3195,7 +3601,6 @@
              openViewer(activeBlogIndex, currentData[activeBlogIndex].images.length - 1, event.target);
           }
         });
-        // -----------------------
   
         // --- Footer Easter Egg ---
         const openEasterEggModal = () => {
@@ -3245,7 +3650,6 @@
         }
   
         easterEggClose?.addEventListener('click', closeEasterEggModal);
-        // -------------------------
   
         // --- Career Modal Logic ---
         const closeCareerModal = () => {
@@ -3256,14 +3660,12 @@
             modal.classList.add('hidden');
             modal.classList.remove('flex');
             disableModalFocus(modal);
-            // Reset launching state on all cards
             document.querySelectorAll('.flip-card.launching').forEach(c => c.classList.remove('launching'));
           }, 280);
         };
   
         document.getElementById('career-modal-close')?.addEventListener('click', closeCareerModal);
         document.getElementById('career-modal-backdrop')?.addEventListener('click', closeCareerModal);
-        // -------------------------
   
         const renderViewer = () => {
           const data = getTimelineViewerData();
@@ -3375,7 +3777,7 @@
             if (readMoreButton) {
               event.preventDefault();
               event.stopPropagation();
-
+  
               const yearIndex = Number(readMoreButton.getAttribute('data-timeline-readmore'));
               if (Number.isNaN(yearIndex)) return;
               if (window.openBlogModal) {
@@ -3383,7 +3785,7 @@
               }
               return;
             }
-
+  
             const target = event.target instanceof Element ? event.target.closest('[data-timeline-open="true"]') : null;
             if (target) {
               const yearIndex = Number(target.getAttribute('data-year-index'));
@@ -3490,14 +3892,11 @@
   
         setCurrentYear();
         renderDynamicContent().then(() => {
-          // Wait for dynamic content to be rendered before observing
           setTimeout(() => {
-            // Add reveal class to dynamic grids if they don't have it
             const grids = ['#admission-grid > button', '#admission-timeline-list > .admission-timeline-item', '#timeline-list > .relative', '#program-overview-content > div', '#seminar-container > div', '#portal-grid > a', '#future-work-grid > div'];
             grids.forEach(selector => {
               document.querySelectorAll(selector).forEach((el, index) => {
                 el.classList.add('reveal');
-                // Stagger delay based on index
                 if (index % 3 === 1) el.classList.add('reveal-delay-100');
                 if (index % 3 === 2) el.classList.add('reveal-delay-200');
               });
@@ -3506,8 +3905,7 @@
           }, 300);
         });
       });
-  
-  </script>
+    </script>
 
 </body>
 
