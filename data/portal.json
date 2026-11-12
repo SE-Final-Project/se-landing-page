@@ -16,9 +16,9 @@
     "shadow": "shadow-red-100"
   },
   {
-    "title": "ระบบ AppDOSI",
+    "title": "ระบบ spii",
     "description": "ระบบติดตามความก้าวหน้าสำหรับวิชา PSP",
-    "url": "http://se.informatics.buu.ac.th/AppDOSI",
+    "url": "http://se.informatics.buu.ac.th/spii",
     "icon": "fa-solid fa-file-signature",
     "themeColor": "bg-red-600",
     "shadow": "shadow-red-200"
@@ -44,6 +44,30 @@
     "description": "แพลตฟอร์มการเรียนรู้การเขียนโปรแกรมสำหรับนิสิต",
     "url": "http://lpp.informatics.buu.ac.th",
     "icon": "fa-solid fa-laptop-code",
+    "themeColor": "bg-red-800",
+    "shadow": "shadow-red-300"
+  },
+  {
+    "title": "SKILLTEST",
+    "description": "แพลตฟอร์มสอบทักษะการเขียนโปรแกรม",
+    "url": "https://se.informatics.buu.ac.th/skilltest",
+    "icon": "fa-solid fa-laptop-code",
+    "themeColor": "bg-red-800",
+    "shadow": "shadow-red-300"
+  },
+  {
+    "title": "TIME",
+    "description": "เวลา นาฬิกาตอนสอบ",
+    "url": "http://se.informatics.buu.ac.th/time",
+    "icon": "fa-solid fa-clock",
+    "themeColor": "bg-red-800",
+    "shadow": "shadow-red-300"
+  },
+  {
+    "title": "Random",
+    "description": "สุ่มค่าใดๆ",
+    "url": "http://se.informatics.buu.ac.th/random",
+    "icon": "fa-solid fa-dice",
     "themeColor": "bg-red-800",
     "shadow": "shadow-red-300"
   }
