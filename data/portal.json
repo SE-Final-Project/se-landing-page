@@ -20,13 +20,13 @@
     "descriptionEn": "Showcase platform for senior student capstone and course projects"
   },
   {
-    "title": "ระบบ AppDOSI",
+    "title": "ระบบ spii",
     "description": "ระบบติดตามความก้าวหน้าสำหรับวิชา PSP",
-    "url": "http://se.informatics.buu.ac.th/AppDOSI",
+    "url": "http://se.informatics.buu.ac.th/spii",
     "icon": "fa-solid fa-file-signature",
     "themeColor": "bg-red-600",
     "shadow": "shadow-red-200",
-    "titleEn": "AppDOSI System",
+    "titleEn": "spii System",
     "descriptionEn": "Progress tracking system for Personal Software Process (PSP)"
   },
   {
@@ -58,5 +58,35 @@
     "shadow": "shadow-red-300",
     "titleEn": "Learning Programming Platforms",
     "descriptionEn": "Interactive programming practice and automated grading platform"
+  },
+  {
+    "title": "SKILLTEST",
+    "description": "แพลตฟอร์มสอบทักษะการเขียนโปรแกรม",
+    "url": "https://se.informatics.buu.ac.th/skilltest",
+    "icon": "fa-solid fa-laptop-code",
+    "themeColor": "bg-red-800",
+    "shadow": "shadow-red-300",
+    "titleEn": "SKILLTEST",
+    "descriptionEn": "Programming skills assessment and examination platform"
+  },
+  {
+    "title": "TIME",
+    "description": "เวลา นาฬิกาตอนสอบ",
+    "url": "http://se.informatics.buu.ac.th/time",
+    "icon": "fa-solid fa-clock",
+    "themeColor": "bg-red-800",
+    "shadow": "shadow-red-300",
+    "titleEn": "TIME",
+    "descriptionEn": "Exam timer and countdown clock"
+  },
+  {
+    "title": "Random",
+    "description": "สุ่มค่าใดๆ",
+    "url": "http://se.informatics.buu.ac.th/random",
+    "icon": "fa-solid fa-dice",
+    "themeColor": "bg-red-800",
+    "shadow": "shadow-red-300",
+    "titleEn": "Random",
+    "descriptionEn": "Random value and selection generator"
   }
 ]
