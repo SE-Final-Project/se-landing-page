@@ -5,22 +5,27 @@
     "title": "Foundation",
     "titleEn": "Foundation",
     "contentFile": "./data/timeline/year-1.md",
+    "contentFileEn": "./data/timeline/year-1.en.md",
     "images": [
       {
         "src": "./images/aunqa.jpg",
-        "alt": "การประเมินรับรองคุณภาพหลักสูตรระดับอาเซียน (AUN-QA)"
+        "alt": "การประเมินรับรองคุณภาพหลักสูตรระดับอาเซียน (AUN-QA)",
+        "altEn": "ASEAN University Network Quality Assurance (AUN-QA) Assessment"
       },
       {
         "src": "./images/tcas-1.jpg",
-        "alt": "บรรยากาศสัมภาษณ์ TCAS"
+        "alt": "บรรยากาศสัมภาษณ์ TCAS",
+        "altEn": "TCAS Admission Interview Atmosphere"
       },
       {
         "src": "./images/tcas-2.jpg",
-        "alt": "บรรยากาศสัมภาษณ์ TCAS"
+        "alt": "บรรยากาศสัมภาษณ์ TCAS",
+        "altEn": "TCAS Admission Interview Atmosphere"
       },
       {
         "src": "./images/cluster.jpg",
-        "alt": "โลโก้มกุลทั้ง 10 มกุล"
+        "alt": "โลโก้มกุลทั้ง 10 มกุล",
+        "altEn": "Logos of all 10 Makul Clusters"
       }
     ],
     "imageAlt": "เรียนรู้การทำงานและปรับตัวเข้าสู่มหาวิทยาลัย",
@@ -33,34 +38,42 @@
     "title": "Process, Analysis & Development",
     "titleEn": "Process, Analysis & Development",
     "contentFile": "./data/timeline/year-2.md",
+    "contentFileEn": "./data/timeline/year-2.en.md",
     "images": [
       {
         "src": "./images/ossd/1.jpg",
-        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD"
+        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD",
+        "altEn": "OSSD Software Development Camp Atmosphere"
       },
       {
         "src": "./images/ossd/2.jpg",
-        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD"
+        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD",
+        "altEn": "OSSD Software Development Camp Atmosphere"
       },
       {
         "src": "./images/ossd/3.jpg",
-        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD"
+        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD",
+        "altEn": "OSSD Software Development Camp Atmosphere"
       },
       {
         "src": "./images/ossd/4.jpg",
-        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD"
+        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD",
+        "altEn": "OSSD Software Development Camp Atmosphere"
       },
       {
         "src": "./images/ossd/5.jpg",
-        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD"
+        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD",
+        "altEn": "OSSD Software Development Camp Atmosphere"
       },
       {
         "src": "./images/ossd/6.jpg",
-        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD"
+        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD",
+        "altEn": "OSSD Software Development Camp Atmosphere"
       },
       {
         "src": "./images/ossd/7.jpg",
-        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD"
+        "alt": "บรรยากาศค่ายพัฒนาซอฟต์แวร์ OSSD",
+        "altEn": "OSSD Software Development Camp Atmosphere"
       }
     ],
     "imageAlt": "ค่ายแบบเข้มข้นเจาะลึกการสร้างระบบซอฟต์แวร์",
@@ -73,14 +86,17 @@
     "title": "Team Process & Architecture",
     "titleEn": "Team Process & Architecture",
     "contentFile": "./data/timeline/year-3.md",
+    "contentFileEn": "./data/timeline/year-3.en.md",
     "images": [
       {
         "src": "./images/team.jpg",
-        "alt": "บรรยากาศการจับทีม"
+        "alt": "บรรยากาศการจับทีม",
+        "altEn": "Team Formation Atmosphere"
       },
       {
         "src": "./images/se-birthday.jpg",
-        "alt": "เค้กวันเกิดฉลองครบรอบการก่อตั้งสาขา SE"
+        "alt": "เค้กวันเกิดฉลองครบรอบการก่อตั้งสาขา SE",
+        "altEn": "Birthday Cake Celebrating the Founding of SE BUU"
       }
     ],
     "imageAlt": "การทำงานเป็นทีมและระบบขนาดใหญ่",
@@ -93,10 +109,12 @@
     "title": "Co-op, Seminar & Project",
     "titleEn": "Co-op, Seminar & Project",
     "contentFile": "./data/timeline/year-4.md",
+    "contentFileEn": "./data/timeline/year-4.en.md",
     "images": [
       {
         "src": "./images/byese12.jpg",
-        "alt": "รูปรวม SE#12 ในรายวิชาสัมมนาวิศวกรรมซอฟต์แวร์"
+        "alt": "รูปรวม SE#12 ในรายวิชาสัมมนาวิศวกรรมซอฟต์แวร์",
+        "altEn": "SE#12 Group Photo in the Software Engineering Seminar Course"
       }
     ],
     "imageAlt": "ก้าวสู่การเป็นวิศวกรซอฟต์แวร์ระดับมืออาชีพ",

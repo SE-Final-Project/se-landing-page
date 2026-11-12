@@ -9,7 +9,8 @@
       "career": "งานที่ทำได้ในอนาคต",
       "faq": "FAQ",
       "portal": "ระบบสารสนเทศ",
-      "langLabel": "ภาษา / Language"
+      "langLabel": "ภาษา / Language",
+      "skipToMain": "ข้ามไปยังเนื้อหาหลัก"
     },
     "hero": {
       "badge": "บัณฑิตพันธุ์ใหม่เพื่ออุตสาหกรรมดิจิทัล",
@@ -65,10 +66,13 @@
       "card3Desc": "มีกิจกรรมหลากหลายและทุนการศึกษาให้ได้รับการสนับสนุนประสบการณ์ตลอดการศึกษา"
     },
     "timeline": {
-      "heading": "สงสัยไหม... <br /><br /><span class=\"text-red-600\">ตลอด 4 ปีที่ SE</span> เรียนอะไรบ้าง?",
+      "heading": "สงสัยไหม... <br /><span class=\"text-red-600\">ตลอด 4 ปีที่ SE</span> เรียนอะไรบ้าง?",
       "subtitle": "Roadmap การเรียนรู้ที่จะเปลี่ยนคุณให้เป็น Software Engineer ตัวจริง",
       "readMore": "อ่านรายละเอียด",
-      "close": "ปิดหน้าต่าง"
+      "close": "ปิดหน้าต่าง",
+      "prevYear": "ปีก่อนหน้า",
+      "nextYear": "ปีถัดไป",
+      "noDetails": "ไม่พบรายละเอียดเนื้อหาเพิ่มเติม..."
     },
     "programOverview": {
       "heading": "แผนการเรียนและ <span class=\"text-red-600\">หลักสูตร</span>",
@@ -138,7 +142,8 @@
       "career": "Careers",
       "faq": "FAQ",
       "portal": "Student Portals",
-      "langLabel": "Language / ภาษา"
+      "langLabel": "Language / ภาษา",
+      "skipToMain": "Skip to main content"
     },
     "hero": {
       "badge": "Next-Gen Digital Workforce for Industry",
@@ -194,10 +199,13 @@
       "card3Desc": "Enjoy diverse community events, hackathons, and scholarship opportunities throughout your 4 years."
     },
     "timeline": {
-      "heading": "Curious About... <br /><br />What you will learn in <span class=\"text-red-600\">4 Years at SE</span>?",
+      "heading": "Curious About... <br />What you will learn in <span class=\"text-red-600\">4 Years at SE</span>?",
       "subtitle": "A 4-year learning roadmap that turns you into a true professional Software Engineer.",
       "readMore": "Read Details",
-      "close": "Close Window"
+      "close": "Close Window",
+      "prevYear": "Previous Year",
+      "nextYear": "Next Year",
+      "noDetails": "No additional details found..."
     },
     "programOverview": {
       "heading": "Study Plan & <span class=\"text-red-600\">Curriculum</span>",

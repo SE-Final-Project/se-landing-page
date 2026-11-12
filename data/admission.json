@@ -375,8 +375,10 @@
     "labelEn": "myTCAS Portal"
   },
   "commonQualificationsEn": [
-    "Graduates from Science-Math programs or accredited high schools meeting credit requirements",
-    "Strong passion for computing, coding, logic, and modern software technologies",
-    "Commitment to ethical values, intellectual curiosity, and collaborative teamwork"
+    "Accepts applicants from Thai core high school curriculum schools",
+    "Does not accept international school curriculum graduates",
+    "Does not accept vocational (Por Wor Chor / Por Wor Sor) graduates",
+    "Does not accept non-formal education (NFE / Kor Sor Nor) graduates",
+    "Does not accept GED credentials"
   ]
 }

@@ -108,30 +108,6 @@
         opacity: 0.16;
       }
 
-      .hero-orb {
-        position: absolute;
-        pointer-events: none;
-        border-radius: 9999px;
-        filter: blur(74px);
-        opacity: 0.55;
-        mix-blend-mode: screen;
-      }
-
-      .hero-orb-primary {
-        width: min(45vw, 560px);
-        height: min(45vw, 560px);
-        right: -8rem;
-        top: -8rem;
-        background: radial-gradient(circle, rgba(255, 228, 230, 0.62) 0%, rgba(252, 165, 165, 0.26) 45%, rgba(239, 68, 68, 0) 80%);
-      }
-
-      .hero-orb-secondary {
-        width: min(38vw, 460px);
-        height: min(38vw, 460px);
-        left: -10rem;
-        bottom: -10rem;
-        background: radial-gradient(circle, rgba(190, 24, 93, 0.5) 0%, rgba(220, 38, 38, 0.2) 45%, rgba(127, 29, 29, 0) 80%);
-      }
 
       .hero-layout {
         display: grid;
@@ -213,15 +189,6 @@
         backdrop-filter: blur(12px);
       }
 
-      .hero-stage-glow {
-        position: absolute;
-        inset: auto 6% -13% 6%;
-        height: 28%;
-        border-radius: 9999px;
-        background: radial-gradient(circle, rgba(254, 202, 202, 0.5), transparent 70%);
-        filter: blur(18px);
-        pointer-events: none;
-      }
 
       .hero-carousel-frame {
         position: relative;
@@ -809,7 +776,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start; /* logos share one top line; names may wrap below */
         gap: 0.5rem;
         flex-shrink: 0;
       }
@@ -834,6 +801,7 @@
         color: #64748b;
         text-align: center;
         line-height: 1.3;
+        min-height: 2.6em; /* reserve 2 lines: equal card heights */
       }
   
       @keyframes partners-marquee-scroll {
@@ -943,7 +911,7 @@
 </head>
 
 <body class="bg-slate-50 text-slate-800">
-  <a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหาหลัก</a>
+  <a id="skip-to-main" href="#main-content" class="skip-link">ข้ามไปยังเนื้อหาหลัก</a>
 
   <!-- Navbar -->
   <nav class="sticky top-0 z-50 glass">
@@ -1009,36 +977,36 @@
         <!-- Links -->
         <nav class="px-4 py-3 divide-y divide-slate-100">
           <a id="mobile-nav-link-news" href="#facebook-posts" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-newspaper"></i></span>
-            <span>ข่าวสาร</span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-newspaper"></i></span>
+            <span id="mobile-nav-label-news">ข่าวสาร</span>
           </a>
           <a id="mobile-nav-link-admission" href="#admission" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-file-signature"></i></span>
-            <span>การรับสมัคร</span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-file-signature"></i></span>
+            <span id="mobile-nav-label-admission">การรับสมัคร</span>
           </a>
           <a id="mobile-nav-link-program" href="#program-overview" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-book-open"></i></span>
-            <span>หลักสูตร</span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-book-open"></i></span>
+            <span id="mobile-nav-label-program">หลักสูตร</span>
           </a>
           <a id="mobile-nav-link-timeline" href="#timeline" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-timeline"></i></span>
-            <span>Timeline</span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-timeline"></i></span>
+            <span id="mobile-nav-label-timeline">Timeline</span>
           </a>
           <a id="mobile-nav-link-seminar" href="#seminar" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center text-red-600 shrink-0"><i class="fa-brands fa-youtube"></i></span>
-            <span>ผลงานสัมมนา</span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-brands fa-youtube"></i></span>
+            <span id="mobile-nav-label-seminar">ผลงานสัมมนา</span>
           </a>
           <a id="mobile-nav-link-career" href="#future-work" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-briefcase"></i></span>
-            <span>งานในอนาคต</span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-briefcase"></i></span>
+            <span id="mobile-nav-label-career">งานในอนาคต</span>
           </a>
           <a id="mobile-nav-link-faq" href="#faq" class="ui-nav-item">
-            <span class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-circle-question"></i></span>
-            <span>FAQ</span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-circle-question"></i></span>
+            <span id="mobile-nav-label-faq">FAQ</span>
           </a>
           <a id="mobile-nav-link-portal" href="#portal" class="ui-nav-item bg-red-50 text-red-600">
-            <span class="w-9 h-9 rounded-lg bg-red-100 flex items-center justify-center text-red-500 shrink-0"><i class="fa-solid fa-door-open"></i></span>
-            <span>ระบบสารสนเทศ</span>
+            <span class="w-5 text-center text-slate-400 shrink-0"><i class="fa-solid fa-door-open"></i></span>
+            <span id="mobile-nav-label-portal">ระบบสารสนเทศ</span>
           </a>
         </nav>
       </div>
@@ -1049,8 +1017,6 @@
 
   <!-- Hero Section -->
   <section id="about" class="hero-premium text-white px-4 overflow-hidden relative scroll-mt-20 min-h-[100svh]" aria-labelledby="hero-title">
-    <div class="hero-orb hero-orb-primary" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-secondary" aria-hidden="true"></div>
 
     <div class="max-w-7xl mx-auto min-h-[100svh] py-12 md:py-16 lg:py-20 flex flex-col justify-center relative z-10">
       <div class="hero-layout">
@@ -1079,7 +1045,7 @@
           </nav>
 
           <a id="hero-explore-more" href="#hero-next-section" class="hero-scroll-hint w-fit reveal reveal-delay-300" aria-label="เลื่อนไปยังส่วนถัดไป">
-            <span>Explore More</span>
+            <span id="hero-explore-more-text">Explore More</span>
             <i class="fa-solid fa-angles-down" aria-hidden="true"></i>
           </a>
         </header>
@@ -1109,7 +1075,6 @@
               <div id="hero-carousel-dots" class="absolute bottom-3 inset-x-0 flex items-center justify-center gap-2"></div>
             </div>
 
-            <div class="hero-stage-glow" aria-hidden="true"></div>
           </div>
         </aside>
       </div>
@@ -1183,8 +1148,8 @@
       <div class="mt-10 border-t border-slate-200 pt-8">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
           <div>
-            <h3 class="text-2xl font-extrabold text-slate-900 tracking-tight">Admission Timeline</h3>
-            <p class="text-slate-500 mt-1">ลำดับช่วงสำคัญตั้งแต่ประกาศรับสมัครจนถึงเริ่มเรียน</p>
+            <h3 id="admission-timeline-heading" class="text-2xl font-extrabold text-slate-900 tracking-tight">Admission Timeline</h3>
+            <p id="admission-timeline-subheading" class="text-slate-500 mt-1">ลำดับช่วงสำคัญตั้งแต่ประกาศรับสมัครจนถึงเริ่มเรียน</p>
           </div>
         </div>
         <div id="admission-timeline-list" class="space-y-5" style="min-height: 220px;">
@@ -1220,7 +1185,7 @@
         และฝึกความเป็นผู้นำ/ผู้ตาม (PLO8) ตั้งแต่วันแรกที่เข้าเรียน เพื่อให้ทุกคนมีเพื่อนร่วมทางที่คอยสนับสนุนและผลักดันกันตลอด 4 ปี
       </p>
       
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto reveal reveal-delay-300">
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-left reveal reveal-delay-300">
         <div class="ui-card-dark">
           <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <i class="fa-solid fa-handshake-angle text-3xl text-blue-400"></i>
@@ -1251,7 +1216,7 @@
     <div class="max-w-5xl mx-auto px-4">
       <div class="text-center mb-20 px-4">
         <h2 id="timeline-heading" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">สงสัยไหม...
-          <br /><br /><span class="text-red-600">ตลอด 4 ปีที่ SE</span> เรียนอะไรบ้าง?</h2>
+          <br /><span class="text-red-600">ตลอด 4 ปีที่ SE</span> เรียนอะไรบ้าง?</h2>
         <p id="timeline-subheading" class="text-slate-500 mt-6 text-xl reveal reveal-delay-100 font-medium">Roadmap
           การเรียนรู้ที่จะเปลี่ยนคุณให้เป็น Software Engineer ตัวจริง</p>
       </div>
@@ -1283,10 +1248,6 @@
   <section id="seminar" class="py-20 bg-white scroll-mt-20 border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12 px-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wider mb-4 border border-red-200">
-          <i class="fa-brands fa-youtube text-red-600 text-sm"></i>
-          <span>Student Showcase • YouTube Playlist</span>
-        </div>
         <h2 id="seminar-heading" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight reveal leading-tight">
           ผลงานในรายวิชา <span class="text-red-600">สัมมนาวิศวกรรมซอฟต์แวร์</span>
         </h2>
@@ -1340,22 +1301,23 @@
         </div>
 
         <div class="relative md:rounded-2xl overflow-hidden border md:border-slate-200 md:bg-slate-100">
+          <!-- shortcut: uses Meta's legacy show_posts flag; switch back once tabs=timeline returns posts. -->
           <iframe title="Software Engineering BUU Facebook Timeline"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSoftEngBUU&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSoftEngBUU&show_posts=true&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"
             width="500" height="700" class="w-full max-w-[500px] h-[520px] sm:h-[620px] md:h-[700px] mx-auto block"
             style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
             loading="lazy"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
           </iframe>
-          <div class="absolute inset-0" aria-hidden="true"></div>
-          <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent" aria-hidden="true">
+          <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" aria-hidden="true">
           </div>
         </div>
 
         <div class="mt-6 text-center">
           <a href="https://www.facebook.com/SoftEngBUU" target="_blank"
             class="ui-btn ui-btn-md ui-btn-primary">
-            ดูเพิ่มเติมบน Facebook <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+            <span id="facebook-view-more-text">ดูเพิ่มเติมบน Facebook</span> <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
           </a>
         </div>
       </div>
@@ -1402,14 +1364,14 @@
         <div class="flex items-center gap-4 mb-4">
           <div id="career-modal-icon" class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl bg-white/20"></div>
           <div>
-            <div class="text-white/70 text-sm font-semibold uppercase tracking-wider mb-1">อาชีพสำหรับนิสิต SE</div>
+            <div id="career-modal-badge" class="text-white/70 text-sm font-semibold uppercase tracking-wider mb-1">อาชีพสำหรับนิสิต SE</div>
              <p id="career-modal-title" class="text-2xl font-extrabold tracking-tight" role="heading" aria-level="2"></p>
           </div>
         </div>
         <p id="career-modal-desc" class="text-white/80 text-sm leading-relaxed"></p>
       </div>
       <div class="bg-white px-8 py-6">
-        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">รายละเอียดสิ่งที่ต้องทำ</p>
+        <p id="career-modal-what-you-do" class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">รายละเอียดสิ่งที่ต้องทำ</p>
         <p id="career-modal-detail" class="text-slate-600 leading-relaxed text-sm"></p>
         <button id="career-modal-close" type="button" class="mt-6 w-full ui-btn ui-btn-md ui-btn-muted">ปิด</button>
       </div>
@@ -1472,12 +1434,12 @@
             <button id="blog-modal-prev-year" type="button"
               class="ui-btn ui-btn-sm ui-btn-outline disabled:opacity-40 disabled:cursor-not-allowed rounded-full"
               aria-label="Read previous year">
-              <i class="fa-solid fa-arrow-left mr-2"></i> ปีก่อนหน้า
+              <i class="fa-solid fa-arrow-left mr-2"></i><span id="blog-modal-prev-text">ปีก่อนหน้า</span>
             </button>
             <button id="blog-modal-next-year" type="button"
               class="ui-btn ui-btn-sm ui-btn-outline disabled:opacity-40 disabled:cursor-not-allowed rounded-full"
               aria-label="Read next year">
-              ปีถัดไป <i class="fa-solid fa-arrow-right ml-2"></i>
+              <span id="blog-modal-next-text">ปีถัดไป</span><i class="fa-solid fa-arrow-right ml-2"></i>
             </button>
           </div>
 
@@ -1629,6 +1591,7 @@ function setCurrentYear() {
         };
 
         // Navigation
+        setText('skip-to-main', t.nav.skipToMain);
         setText('nav-link-news', t.nav.news);
         setText('nav-link-admission', t.nav.admission);
         setText('nav-link-program', t.nav.program);
@@ -1639,14 +1602,14 @@ function setCurrentYear() {
         setText('nav-link-portal', t.nav.portal);
 
         // Mobile Navigation
-        setText('mobile-nav-link-news', t.nav.news);
-        setText('mobile-nav-link-admission', t.nav.admission);
-        setText('mobile-nav-link-program', t.nav.program);
-        setText('mobile-nav-link-timeline', t.nav.timeline);
-        setText('mobile-nav-link-seminar', t.nav.seminar);
-        setText('mobile-nav-link-career', t.nav.career);
-        setText('mobile-nav-link-faq', t.nav.faq);
-        setText('mobile-nav-link-portal', t.nav.portal);
+        setText('mobile-nav-label-news', t.nav.news);
+        setText('mobile-nav-label-admission', t.nav.admission);
+        setText('mobile-nav-label-program', t.nav.program);
+        setText('mobile-nav-label-timeline', t.nav.timeline);
+        setText('mobile-nav-label-seminar', t.nav.seminar);
+        setText('mobile-nav-label-career', t.nav.career);
+        setText('mobile-nav-label-faq', t.nav.faq);
+        setText('mobile-nav-label-portal', t.nav.portal);
         setText('mobile-lang-label', t.nav.langLabel);
 
         // Discover & Partners
@@ -1657,6 +1620,8 @@ function setCurrentYear() {
         // Admission Heading & Subheading
         setHtml('admission-heading', t.admission.heading);
         setText('admission-subheading', t.admission.subtitle);
+        setText('admission-timeline-heading', t.admission.timelineTitle);
+        setText('admission-timeline-subheading', t.admission.timelineSubtitle);
 
         // Makul
         setHtml('makul-heading', t.makul.heading);
@@ -1668,9 +1633,11 @@ function setCurrentYear() {
         setText('makul-card3-title', t.makul.card3Title);
         setText('makul-card3-desc', t.makul.card3Desc);
 
-        // Timeline
+        // Timeline & Blog Modal
         setHtml('timeline-heading', t.timeline.heading);
         setText('timeline-subheading', t.timeline.subtitle);
+        setText('blog-modal-prev-text', t.timeline.prevYear);
+        setText('blog-modal-next-text', t.timeline.nextYear);
 
         // Program Overview
         setHtml('program-overview-heading', t.programOverview.heading);
@@ -1687,14 +1654,18 @@ function setCurrentYear() {
         // Facebook
         setHtml('facebook-heading', t.facebook.heading);
         setText('facebook-subheading', t.facebook.subtitle);
+        setText('facebook-view-more-text', t.facebook.viewMore);
 
         // Portals
         setHtml('portal-heading', t.portal.heading);
         setText('portal-subheading', t.portal.subtitle);
 
-        // Future Work
+        // Future Work & Career Modal
         setHtml('future-work-heading', t.futureWork.heading);
         setText('future-work-subheading', t.futureWork.subtitle);
+        setText('career-modal-badge', t.futureWork.roleBadge);
+        setText('career-modal-what-you-do', t.futureWork.whatYouDo);
+        setText('career-modal-close', t.futureWork.close);
 
         // FAQ
         setHtml('faq-heading', t.faq.heading);
@@ -1744,6 +1715,7 @@ function setCurrentYear() {
           });
         }
         if (cachedFutureWorkData) renderFutureWork(cachedFutureWorkData);
+        if (cachedPartnersData) renderPartners(cachedPartnersData);
       }
       // ----------------------------------------------------
   
@@ -1900,16 +1872,13 @@ function setCurrentYear() {
       function renderUniqueSellingPoints(items = []) {
         const container = document.getElementById('usp-grid');
         if (!container) return;
-
         const isEn = currentLang === 'en';
         container.innerHTML = items.map(item => {
           const title = (isEn && item.titleEn) ? item.titleEn : item.title;
           const desc = (isEn && item.descriptionEn) ? item.descriptionEn : item.description;
           return `
-            <div class="flex flex-col items-center text-center">
-              <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 text-2xl shadow-inner">
-                <i class="${item.icon}"></i>
-              </div>
+            <div class="flex flex-col items-start text-left border-t-2 border-red-600 pt-5">
+              <i class="${item.icon} text-2xl text-red-600 mb-4" aria-hidden="true"></i>
               <h3 class="text-xl font-bold mb-3 text-slate-900">${title}</h3>
               <p class="text-slate-600">${desc}</p>
             </div>
@@ -2439,7 +2408,7 @@ function setCurrentYear() {
           const desc = isEn && item.descriptionEn ? item.descriptionEn : item.description;
           return `
             <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="portal-card ui-card-elevated group flex items-start gap-5 h-full">
-              <div class="${item.themeColor} text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-md ${item.shadow} group-hover:scale-105 transition shrink-0 ring-4 ring-red-50">
+              <div class="${item.themeColor} text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-md ${item.shadow} shrink-0">
                 <i class="${item.icon} text-xl"></i>
               </div>
               <div class="flex flex-col flex-grow min-h-[4rem]">
@@ -2713,14 +2682,18 @@ function setCurrentYear() {
         }
       }
   
-      async function hydrateTimelineFromMarkdown(items = []) {
+      async function hydrateTimelineFromMarkdown(items = [], isEn = false) {
         if (!Array.isArray(items)) return [];
   
         return Promise.all(items.map(async (item) => {
           if (!item || typeof item !== 'object') return item;
-          if (!item.contentFile) return item;
+          const targetFile = isEn && item.contentFileEn ? item.contentFileEn : item.contentFile;
+          if (!targetFile) return item;
   
-          const rawMarkdown = await fetchText(item.contentFile);
+          let rawMarkdown = await fetchText(targetFile);
+          if (!rawMarkdown && targetFile !== item.contentFile && item.contentFile) {
+            rawMarkdown = await fetchText(item.contentFile);
+          }
           if (!rawMarkdown) return item;
   
           const hydratedItem = { ...item };
@@ -2734,7 +2707,7 @@ function setCurrentYear() {
         }));
       }
   
-      function normalizeTimelineImages(item = {}) {
+      function normalizeTimelineImages(item = {}, isEn = false) {
         if (!item || typeof item !== 'object') return [];
   
         const normalizeSingleImage = (rawImage, defaultAlt) => {
@@ -2746,10 +2719,13 @@ function setCurrentYear() {
           }
   
           if (rawImage && typeof rawImage === 'object' && typeof rawImage.src === 'string') {
+            const preferredAlt = isEn && typeof rawImage.altEn === 'string' && rawImage.altEn.trim().length > 0
+              ? rawImage.altEn
+              : rawImage.alt;
             return {
               src: rawImage.src,
-              alt: typeof rawImage.alt === 'string' && rawImage.alt.trim().length > 0
-                ? rawImage.alt
+              alt: typeof preferredAlt === 'string' && preferredAlt.trim().length > 0
+                ? preferredAlt
                 : defaultAlt,
             };
           }
@@ -2757,9 +2733,15 @@ function setCurrentYear() {
           return null;
         };
   
-        const defaultAlt = typeof item.imageAlt === 'string' && item.imageAlt.trim().length > 0
-          ? item.imageAlt
-          : (typeof item.title === 'string' ? item.title : 'Timeline photo');
+        const preferredItemAlt = isEn && typeof item.imageAltEn === 'string' && item.imageAltEn.trim().length > 0
+          ? item.imageAltEn
+          : item.imageAlt;
+        const preferredTitle = isEn && typeof item.titleEn === 'string' && item.titleEn.trim().length > 0
+          ? item.titleEn
+          : item.title;
+        const defaultAlt = typeof preferredItemAlt === 'string' && preferredItemAlt.trim().length > 0
+          ? preferredItemAlt
+          : (typeof preferredTitle === 'string' ? preferredTitle : 'Timeline photo');
   
         if (Array.isArray(item.images)) {
           return item.images
@@ -2779,8 +2761,8 @@ function setCurrentYear() {
         const container = document.getElementById('timeline-list');
         if (!container) return;
   
-        const timelineItems = await hydrateTimelineFromMarkdown(items);
         const isEn = currentLang === 'en';
+        const timelineItems = await hydrateTimelineFromMarkdown(items, isEn);
         const t = translationsData ? (translationsData[currentLang] || translationsData.th).timeline : {
           readMore: 'ดูเพิ่มเติม',
           close: 'ปิดหน้าต่าง'
@@ -2790,15 +2772,18 @@ function setCurrentYear() {
           return {
             year: isEn && item.yearEn ? item.yearEn : item.year,
             title: isEn && item.titleEn ? item.titleEn : item.title,
-            images: normalizeTimelineImages(item),
+            images: normalizeTimelineImages(item, isEn),
             modalDetails: item.modalDetails || ''
           };
         });
   
         container.dataset.timelineViewer = JSON.stringify(timelineViewerData);
+        if (typeof window.__refreshOpenBlogModal === 'function') {
+          window.__refreshOpenBlogModal();
+        }
   
         container.innerHTML = timelineItems.map((item, yearIndex) => {
-          const images = normalizeTimelineImages(item);
+          const images = normalizeTimelineImages(item, isEn);
   
           const renderImageCard = (image, imageIndex, heightClass, variantClass = '', tiltDegrees = 0, extraOverlay = '') => `
             <button type="button"
@@ -2930,42 +2915,45 @@ function setCurrentYear() {
           </div>`;
         }).join('');
   
-        container.addEventListener('click', (e) => {
-          const card = e.target.closest('[data-career-index]');
-          if (!card) return;
-          const index = Number(card.getAttribute('data-career-index'));
-          const allItems = JSON.parse(container.dataset.careerItems || '[]');
-          const item = allItems[index];
-          if (!item) return;
-          const c = colors[index % colors.length];
-  
-          card.classList.add('launching');
-  
-          setTimeout(() => {
-            const isEnNow = currentLang === 'en';
-            const modal = document.getElementById('career-modal');
-            const panel = document.getElementById('career-modal-panel');
-            const header = document.getElementById('career-modal-header');
-            const title = isEnNow && item.titleEn ? item.titleEn : item.title;
-            const desc = isEnNow && item.descriptionEn ? item.descriptionEn : item.description;
-            const detail = isEnNow && item.detailEn ? item.detailEn : (item.detail || item.description);
+        if (!container.dataset.clickBound) {
+          container.dataset.clickBound = 'true';
+          container.addEventListener('click', (e) => {
+            const card = e.target.closest('[data-career-index]');
+            if (!card) return;
+            const index = Number(card.getAttribute('data-career-index'));
+            const allItems = JSON.parse(container.dataset.careerItems || '[]');
+            const item = allItems[index];
+            if (!item) return;
+            const c = colors[index % colors.length];
 
-            document.getElementById('career-modal-title').textContent = title;
-            document.getElementById('career-modal-desc').textContent = desc;
-            document.getElementById('career-modal-detail').textContent = detail;
-            document.getElementById('career-modal-icon').innerHTML = `<i class="${item.icon}"></i>`;
-            if (header) header.style.background = `linear-gradient(135deg, ${c.bg[0]}, ${c.bg[1]})`;
-  
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            requestAnimationFrame(() => {
-              modal.classList.add('career-modal-open');
-            });
-            if (typeof window.__enableModalFocus === 'function') {
-              window.__enableModalFocus(modal, '#career-modal-close');
-            }
-          }, 200);
-        });
+            card.classList.add('launching');
+
+            setTimeout(() => {
+              const isEnNow = currentLang === 'en';
+              const modal = document.getElementById('career-modal');
+              const panel = document.getElementById('career-modal-panel');
+              const header = document.getElementById('career-modal-header');
+              const title = isEnNow && item.titleEn ? item.titleEn : item.title;
+              const desc = isEnNow && item.descriptionEn ? item.descriptionEn : item.description;
+              const detail = isEnNow && item.detailEn ? item.detailEn : (item.detail || item.description);
+
+              document.getElementById('career-modal-title').textContent = title;
+              document.getElementById('career-modal-desc').textContent = desc;
+              document.getElementById('career-modal-detail').textContent = detail;
+              document.getElementById('career-modal-icon').innerHTML = `<i class="${item.icon}"></i>`;
+              if (header) header.style.background = `linear-gradient(135deg, ${c.bg[0]}, ${c.bg[1]})`;
+
+              modal.classList.remove('hidden');
+              modal.classList.add('flex');
+              requestAnimationFrame(() => {
+                modal.classList.add('career-modal-open');
+              });
+              if (typeof window.__enableModalFocus === 'function') {
+                window.__enableModalFocus(modal, '#career-modal-close');
+              }
+            }, 200);
+          });
+        }
       }
   
       function renderPartners(items = []) {
@@ -2976,9 +2964,12 @@ function setCurrentYear() {
           container.innerHTML = '';
           return;
         }
+
+        const isEn = currentLang === 'en';
   
         const renderPartnerCard = (item = {}) => {
-          const partnerName = escapeHtml(item.name || 'Partner');
+          const rawName = (isEn && item.nameEn) ? item.nameEn : (item.name || 'Partner');
+          const partnerName = escapeHtml(rawName);
           const hasLogo = typeof item.logo === 'string' && item.logo.trim().length > 0;
           const initials = partnerName
             .split(' ')
@@ -2986,16 +2977,17 @@ function setCurrentYear() {
             .slice(0, 2)
             .map(word => word[0]?.toUpperCase() || '')
             .join('') || 'PT';
+          const logoAltPrefix = isEn ? 'Partner organization logo' : 'โลโก้องค์กรพันธมิตร';
   
           const logoMarkup = hasLogo
-                ? `<img src="${item.logo}" alt="โลโก้องค์กรพันธมิตร ${partnerName}" class="h-full w-full object-contain"
+                ? `<img src="${item.logo}" alt="${logoAltPrefix} ${partnerName}" class="h-full w-full object-contain"
                   loading="lazy"
                   onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                 <span class="hidden text-xs font-extrabold text-slate-400 tracking-wide">${initials}</span>`
             : `<span class="text-xs font-extrabold text-slate-400 tracking-wide">${initials}</span>`;
   
           return `
-            <div class="partner-card grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105" title="${partnerName}">
+            <div class="partner-card grayscale hover:grayscale-0 transition-[filter] duration-300" title="${partnerName}">
               <div class="partner-logo-shell">
                 ${logoMarkup}
               </div>
@@ -3065,11 +3057,10 @@ function setCurrentYear() {
           updateLanguageSwitcherUI();
           updateStaticTranslations();
           rerenderDynamicSections();
-          renderPartners(partnersData);
         } catch (error) {
           console.error('Error loading JSON:', error);
           if (portalContainer) {
-            portalContainer.innerHTML = '<p>ไม่สามารถโหลดข้อมูลได้ในขณะนี้</p>';
+            portalContainer.innerHTML = `<p>${currentLang === 'en' ? 'Unable to load data at this time.' : 'ไม่สามารถโหลดข้อมูลได้ในขณะนี้'}</p>`;
           }
         }
       }
@@ -3184,10 +3175,11 @@ function setCurrentYear() {
             .join('');
         }
 
-        if (exploreMoreElement && translationsData) {
+        const exploreMoreTextElement = document.getElementById('hero-explore-more-text');
+        if (exploreMoreTextElement && translationsData) {
           const t = translationsData[currentLang] || translationsData.th;
           if (t?.hero?.exploreMore) {
-            exploreMoreElement.textContent = t.hero.exploreMore;
+            exploreMoreTextElement.textContent = t.hero.exploreMore;
           }
         }
       }
@@ -3523,13 +3515,22 @@ function setCurrentYear() {
           const yearData = tlData[safeIndex];
           if (!yearData) return;
   
+          const noDetailsText = translationsData
+            ? ((translationsData[currentLang] || translationsData.th).timeline?.noDetails || 'ไม่พบรายละเอียดเนื้อหาเพิ่มเติม...')
+            : (currentLang === 'en' ? 'No additional details found...' : 'ไม่พบรายละเอียดเนื้อหาเพิ่มเติม...');
           activeBlogIndex = safeIndex;
           blogModalEyebrow.textContent = `${yearData.year} • ${yearData.title}`;
-          blogModalBody.innerHTML = yearData.modalDetails || '<p class="text-center text-slate-500 py-10">ไม่พบรายละเอียดเนื้อหาเพิ่มเติม...</p>';
+          blogModalBody.innerHTML = yearData.modalDetails || `<p class="text-center text-slate-500 py-10">${noDetailsText}</p>`;
           updateBlogNavigationButtons(activeBlogIndex, tlData.length);
   
           if (blogModalScrollContainer) {
             blogModalScrollContainer.scrollTo({ top: 0, behavior: 'auto' });
+          }
+        };
+
+        window.__refreshOpenBlogModal = () => {
+          if (isBlogModalVisible()) {
+            renderBlogModalByIndex(activeBlogIndex);
           }
         };
   
@@ -3593,7 +3594,7 @@ function setCurrentYear() {
           if (foundIndex !== -1) {
              openViewer(activeBlogIndex, foundIndex, event.target);
           } else {
-             const newImgObj = { src: clickedSrc, alt: event.target.alt || 'รูปภาพประกอบ' };
+             const newImgObj = { src: clickedSrc, alt: event.target.alt || (currentLang === 'en' ? 'Illustration' : 'รูปภาพประกอบ') };
              const currentData = getTimelineViewerData();
              if (!currentData[activeBlogIndex].images) currentData[activeBlogIndex].images = [];
              currentData[activeBlogIndex].images.push(newImgObj);
