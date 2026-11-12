@@ -14,3 +14,4 @@ Courses use real-world problem statements from partner companies. Your team's de
 ### Activity Gallery
 ![Team Formation Atmosphere](./images/team.jpg)
 ![Birthday Cake Celebrating the Founding of SE BUU](./images/se-birthday.jpg)
+

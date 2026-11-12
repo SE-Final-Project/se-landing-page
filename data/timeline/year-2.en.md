@@ -19,3 +19,4 @@ You will attend the **"Software Development Training Camp"**, an intensive off-c
 ![OSSD Software Development Camp Atmosphere](./images/ossd/5.jpg)
 ![OSSD Software Development Camp Atmosphere](./images/ossd/6.jpg)
 ![OSSD Software Development Camp Atmosphere](./images/ossd/7.jpg)
+

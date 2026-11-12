@@ -18,3 +18,4 @@ Watch 4th-year students present their academic seminar topics by academic year o
 
 ### Activity Gallery
 ![SE#12 Group Photo in the Software Engineering Seminar Course](./images/byese12.jpg)
+
