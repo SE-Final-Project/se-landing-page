@@ -88,5 +88,15 @@
     "shadow": "shadow-red-300",
     "titleEn": "Random",
     "descriptionEn": "Random value and selection generator"
+  },
+  {
+    "title": "SRE-AI",
+    "description": "ระบบจัดการการเรียนรู้ วิชาวิศวกรรมความต้องการซอฟต์แวร์ยุค AI",
+    "url": "https://se.informatics.buu.ac.th/sre",
+    "icon": "fa-solid fa-clipboard-list",
+    "themeColor": "bg-red-800",
+    "shadow": "shadow-red-300",
+    "titleEn": "SRE-AI",
+    "descriptionEn": "Learning management system for the Software Requirements Engineering in the AI Era course"
   }
 ]
